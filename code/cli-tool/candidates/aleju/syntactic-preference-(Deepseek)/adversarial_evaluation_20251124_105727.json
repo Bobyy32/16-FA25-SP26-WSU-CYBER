@@ -1,0 +1,175 @@
+{
+  "timestamp": "2025-11-24T10:57:27.237473",
+  "summary": {
+    "total_tests": 1,
+    "per_model_stats": {
+      "random_forest": {
+        "evasion_success_rate": 0.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": -0.05284066162020451,
+        "total_evasion_successes": 0
+      },
+      "sgd": {
+        "evasion_success_rate": 0.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": -0.010951158433287644,
+        "total_evasion_successes": 0
+      },
+      "naive_bayes": {
+        "evasion_success_rate": 0.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": 0.0,
+        "total_evasion_successes": 0
+      },
+      "neural_network": {
+        "evasion_success_rate": 0.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": -8.344650268554688e-07,
+        "total_evasion_successes": 0
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "timestamp": "2025-11-24T10:57:26.455898",
+      "true_author": "aleju",
+      "target_author": "aladdinpersson",
+      "original_predictions": {
+        "random_forest": {
+          "predicted_author": "aleju",
+          "confidence": 0.9950689223057644,
+          "correct": true
+        },
+        "sgd": {
+          "predicted_author": "aleju",
+          "confidence": 0.9109635906177761,
+          "correct": true
+        },
+        "naive_bayes": {
+          "predicted_author": "aleju",
+          "confidence": 1.0,
+          "correct": true
+        },
+        "neural_network": {
+          "predicted_author": "aleju",
+          "confidence": 0.9999998807907104,
+          "correct": true
+        }
+      },
+      "modified_predictions": {
+        "random_forest": {
+          "predicted_author": "aleju",
+          "confidence": 0.9422282606855599,
+          "correct": true
+        },
+        "sgd": {
+          "predicted_author": "aleju",
+          "confidence": 0.9000124321844885,
+          "correct": true
+        },
+        "naive_bayes": {
+          "predicted_author": "aleju",
+          "confidence": 1.0,
+          "correct": true
+        },
+        "neural_network": {
+          "predicted_author": "aleju",
+          "confidence": 0.9999990463256836,
+          "correct": true
+        }
+      },
+      "evasion_results": {
+        "random_forest": {
+          "evasion_success": false,
+          "misattribution_success": false,
+          "confidence_change": -0.05284066162020451
+        },
+        "sgd": {
+          "evasion_success": false,
+          "misattribution_success": false,
+          "confidence_change": -0.010951158433287644
+        },
+        "naive_bayes": {
+          "evasion_success": false,
+          "misattribution_success": false,
+          "confidence_change": 0.0
+        },
+        "neural_network": {
+          "evasion_success": false,
+          "misattribution_success": false,
+          "confidence_change": -8.344650268554688e-07
+        }
+      },
+      "stylometry_analysis": {
+        "original": {
+          "naming": {
+            "camel_case_ratio": 0.0001125112511251125,
+            "snake_case_ratio": 0.0916966696669667,
+            "upper_case_ratio": 0.01698919891989199,
+            "avg_identifier_length": 5.484023402340234
+          },
+          "indentation": {
+            "has_tabs": false,
+            "has_spaces": true,
+            "avg_indent_width": 8.666904422253923,
+            "indent_consistency": 0
+          },
+          "comments": {
+            "comment_density": 0.03211517165005537,
+            "docstring_count": 18,
+            "inline_comment_count": 3
+          },
+          "whitespace": {
+            "avg_line_length": 51.78503401360544,
+            "blank_line_ratio": 0.18604651162790697,
+            "max_line_length": 173
+          },
+          "imports": {
+            "from_import_ratio": 0.6666666666666666,
+            "direct_import_ratio": 0.3333333333333333,
+            "total_import_count": 18
+          },
+          "functions": {
+            "function_count": 53,
+            "avg_function_name_length": 15.547169811320755,
+            "avg_function_body_length": 4268.6
+          }
+        },
+        "modified": {
+          "naming": {
+            "camel_case_ratio": 0.0002813731007315701,
+            "snake_case_ratio": 0.2056837366347777,
+            "upper_case_ratio": 0.009848058525604952,
+            "avg_identifier_length": 6.6789532920652785
+          },
+          "indentation": {
+            "has_tabs": false,
+            "has_spaces": true,
+            "avg_indent_width": 7.87332521315469,
+            "indent_consistency": 0
+          },
+          "comments": {
+            "comment_density": 0.0,
+            "docstring_count": 18,
+            "inline_comment_count": 0
+          },
+          "whitespace": {
+            "avg_line_length": 41.67012687427912,
+            "blank_line_ratio": 0.21396192203082504,
+            "max_line_length": 173
+          },
+          "imports": {
+            "from_import_ratio": 0.5714285714285714,
+            "direct_import_ratio": 0.42857142857142855,
+            "total_import_count": 14
+          },
+          "functions": {
+            "function_count": 53,
+            "avg_function_name_length": 15.547169811320755,
+            "avg_function_body_length": 1419.4375
+          }
+        }
+      }
+    }
+  ]
+}

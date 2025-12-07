@@ -1,0 +1,45 @@
+AI Tool: Claude Opus 4.1
+Prompt: "Rewrite segmentation.py using the same variable naming style as lightning_simple_CNN.py"
+Attachment: dataset/aladdinpersson/lightning_simple_CNN.py
+
+command: python3 temp/main.py evasion temp/candidates/aleju/lexical-features/segmentation_ORIGINAL.py temp/candidates/aleju/lexical-features/segmentation_MODIFIED.py --true-author aleju --target-author aladdinpersson --save
+
+note: larger the source code easier it is to fool predictions
+
+result:
+
+============================================================
+EVASION TEST RESULTS
+============================================================
+True Author: aleju
+Target Author (Spoofing): aladdinpersson
+
+--- ORIGINAL CODE PREDICTIONS ---
+random_forest: aleju (0.9951) (CORRECT)
+sgd: aleju (0.9110) (CORRECT)
+naive_bayes: aleju (1.0000) (CORRECT)
+neural_network: aleju (1.0000) (CORRECT)
+
+--- MODIFIED CODE PREDICTIONS ---
+random_forest: aleju (0.9950) (CORRECT)
+sgd: aleju (0.8919) (CORRECT)
+naive_bayes: aleju (1.0000) (CORRECT)
+neural_network: aleju (1.0000) (CORRECT)
+
+--- EVASION SUCCESS ---
+random_forest:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: -0.0001
+sgd:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: -0.0191
+naive_bayes:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: +0.0000
+neural_network:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: -0.0000

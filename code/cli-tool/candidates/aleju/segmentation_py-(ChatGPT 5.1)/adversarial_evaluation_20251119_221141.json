@@ -1,0 +1,175 @@
+{
+  "timestamp": "2025-11-19T22:11:41.006278",
+  "summary": {
+    "total_tests": 1,
+    "per_model_stats": {
+      "random_forest": {
+        "evasion_success_rate": 1.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": -0.21818662542148026,
+        "total_evasion_successes": 1
+      },
+      "sgd": {
+        "evasion_success_rate": 1.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": -0.12589546765846393,
+        "total_evasion_successes": 1
+      },
+      "naive_bayes": {
+        "evasion_success_rate": 1.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": -0.042947719476896795,
+        "total_evasion_successes": 1
+      },
+      "neural_network": {
+        "evasion_success_rate": 1.0,
+        "misattribution_success_rate": 0.0,
+        "avg_confidence_change": -0.0002028942108154297,
+        "total_evasion_successes": 1
+      }
+    }
+  },
+  "detailed_results": [
+    {
+      "timestamp": "2025-11-19T22:11:40.356284",
+      "true_author": "aleju",
+      "target_author": "aladdinpersson",
+      "original_predictions": {
+        "random_forest": {
+          "predicted_author": "aleju",
+          "confidence": 0.9950689223057644,
+          "correct": true
+        },
+        "sgd": {
+          "predicted_author": "aleju",
+          "confidence": 0.9109635906177761,
+          "correct": true
+        },
+        "naive_bayes": {
+          "predicted_author": "aleju",
+          "confidence": 1.0,
+          "correct": true
+        },
+        "neural_network": {
+          "predicted_author": "aleju",
+          "confidence": 0.9999998807907104,
+          "correct": true
+        }
+      },
+      "modified_predictions": {
+        "random_forest": {
+          "predicted_author": "UNKNOWN",
+          "confidence": 0.7768822968842841,
+          "correct": false
+        },
+        "sgd": {
+          "predicted_author": "UNKNOWN",
+          "confidence": 0.7850681229593122,
+          "correct": false
+        },
+        "naive_bayes": {
+          "predicted_author": "microsoft",
+          "confidence": 0.9570522805231032,
+          "correct": false
+        },
+        "neural_network": {
+          "predicted_author": "UNKNOWN",
+          "confidence": 0.999796986579895,
+          "correct": false
+        }
+      },
+      "evasion_results": {
+        "random_forest": {
+          "evasion_success": true,
+          "misattribution_success": false,
+          "confidence_change": -0.21818662542148026
+        },
+        "sgd": {
+          "evasion_success": true,
+          "misattribution_success": false,
+          "confidence_change": -0.12589546765846393
+        },
+        "naive_bayes": {
+          "evasion_success": true,
+          "misattribution_success": false,
+          "confidence_change": -0.042947719476896795
+        },
+        "neural_network": {
+          "evasion_success": true,
+          "misattribution_success": false,
+          "confidence_change": -0.0002028942108154297
+        }
+      },
+      "stylometry_analysis": {
+        "original": {
+          "naming": {
+            "camel_case_ratio": 0.0001125112511251125,
+            "snake_case_ratio": 0.0916966696669667,
+            "upper_case_ratio": 0.01698919891989199,
+            "avg_identifier_length": 5.484023402340234
+          },
+          "indentation": {
+            "has_tabs": false,
+            "has_spaces": true,
+            "avg_indent_width": 8.666904422253923,
+            "indent_consistency": 0
+          },
+          "comments": {
+            "comment_density": 0.03211517165005537,
+            "docstring_count": 18,
+            "inline_comment_count": 3
+          },
+          "whitespace": {
+            "avg_line_length": 51.78503401360544,
+            "blank_line_ratio": 0.18604651162790697,
+            "max_line_length": 173
+          },
+          "imports": {
+            "from_import_ratio": 0.6666666666666666,
+            "direct_import_ratio": 0.3333333333333333,
+            "total_import_count": 18
+          },
+          "functions": {
+            "function_count": 53,
+            "avg_function_name_length": 15.547169811320755,
+            "avg_function_body_length": 4268.6
+          }
+        },
+        "modified": {
+          "naming": {
+            "camel_case_ratio": 0.0,
+            "snake_case_ratio": 0.1875,
+            "upper_case_ratio": 0.020833333333333332,
+            "avg_identifier_length": 6.015873015873016
+          },
+          "indentation": {
+            "has_tabs": false,
+            "has_spaces": true,
+            "avg_indent_width": 8.491525423728813,
+            "indent_consistency": 0
+          },
+          "comments": {
+            "comment_density": 0.08359133126934984,
+            "docstring_count": 5,
+            "inline_comment_count": 14
+          },
+          "whitespace": {
+            "avg_line_length": 38.152671755725194,
+            "blank_line_ratio": 0.18885448916408668,
+            "max_line_length": 92
+          },
+          "imports": {
+            "from_import_ratio": 0.4166666666666667,
+            "direct_import_ratio": 0.5833333333333334,
+            "total_import_count": 12
+          },
+          "functions": {
+            "function_count": 19,
+            "avg_function_name_length": 12.473684210526315,
+            "avg_function_body_length": 3008.6666666666665
+          }
+        }
+      }
+    }
+  ]
+}

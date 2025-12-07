@@ -1,0 +1,45 @@
+AI Tool: Claude Opus 4.1
+Prompt: "Reorganize the code structure in segmentation.py to match lightning_simple_CNN.py"
+Attachment: dataset/aladdinpersson/lightning_simple_CNN.py
+
+command: python3 temp/main.py evasion temp/candidates/aleju/structural-features/segmentation_ORIGINAL.py temp/candidates/aleju/structural-features/segmentation_MODIFIED.py --true-author aleju --target-author aladdinpersson --save
+
+note: larger the source code easier it is to fool predictions
+
+result:
+
+============================================================
+EVASION TEST RESULTS
+============================================================
+True Author: aleju
+Target Author (Spoofing): aladdinpersson
+
+--- ORIGINAL CODE PREDICTIONS ---
+random_forest: aleju (0.9951) (CORRECT)
+sgd: aleju (0.9110) (CORRECT)
+naive_bayes: aleju (1.0000) (CORRECT)
+neural_network: aleju (1.0000) (CORRECT)
+
+--- MODIFIED CODE PREDICTIONS ---
+random_forest: aleju (0.9851) (CORRECT)
+sgd: aleju (0.8048) (CORRECT)
+naive_bayes: aleju (1.0000) (CORRECT)
+neural_network: aleju (1.0000) (CORRECT)
+
+--- EVASION SUCCESS ---
+random_forest:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: -0.0100
+sgd:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: -0.1062
+naive_bayes:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: -0.0000
+neural_network:
+  Evasion: FAILED
+  Misattribution: FAILED
+  Confidence Change: -0.0000

@@ -1,0 +1,10 @@
+AI Tool: Deepseek (deepthink)
+Prompt: "Use the same Python syntax preferences as lightning_simple_CNN.py into segmentation.py"
+Attachment: dataset/aladdinpersson/lightning_simple_CNN.py
+
+command: python3 temp/main.py evasion temp/candidates/aleju/syntactic-preferencef/segmentation_ORIGINAL.py temp/candidates/aleju/syntactic-preferencef/segmentation_MODIFIED.py --true-author aleju --target-author aladdinpersson --save
+
+note: larger the source code easier it is to fool predictions
+
+result:
+
