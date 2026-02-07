@@ -1,5 +1,0 @@
-results/*.json
-results/*.csv
-__pycache__/
-*.pyc
-.DS_Store
