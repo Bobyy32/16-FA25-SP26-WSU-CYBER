@@ -1,0 +1,199 @@
+{
+  "evolution_id": "evo_restructuring_20260211_e727",
+  "round_number": 2,
+  "timestamp": "2026-02-11T15:30:10.260089",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Aggressively refactor the provided Python code to maximize evasion of authorship attribution models (>75% evasion) while maintaining a stealth score below 0.5 and preserving full functionality. Focus on deeply altering TF-IDF token distributions and stylometric features, specifically targeting naming conventions, comment styles, control flow, import patterns, and whitespace usage.\n\nImplement the following transformations:\n1.  **Comprehensive Identifier Renaming**: Systematically rename all variables, functions, and class names. If the original predominantly uses `snake_case`, switch aggressively to `camelCase`, and vice-versa. Introduce redundant, generically named intermediate variables. Utilize extremely short, abstract, or even single-letter names where appropriate to minimize identifier pattern consistency.\n2.  **Drastic Comment Removal/Style Change**: Eliminate all existing inline, block, single-line, and function docstring comments. If any comments are absolutely critical for understanding (e.g., complex regex patterns), convert them to a different, uniform style (e.g., all single-line comments) and make their content as generic or non-informative as possible.\n3.  **Deep Control Flow Alteration**:\n    *   Rewrite all list comprehensions into explicit `for` loops, and simple `for` loops into list comprehensions where concise and natural.\n    *   Decompose complex conditional expressions (`if/elif/else`) into nested `if` statements or boolean logic chains, or combine simple ones to alter structure.\n    *   Introduce or remove small, non-essential helper functions to alter function call patterns and code structure.\n    *   Change the order of independent operations within functions.\n4.  **Import Statement Transformation**:\n    *   Systematically convert `from module import item` statements to `import module` followed by `module.item` calls, or vice-versa.\n    *   Introduce `as` aliases for imported modules or functions (e.g., `import os as operating_system`, `from collections import defaultdict as ddict`).\n5.  **Extensive Whitespace Manipulation**:\n    *   Toggle the primary indentation style (e.g., convert all spaces to tabs, or all tabs to spaces) consistently throughout the file.\n    *   Add or remove blank lines strategically between logical blocks, function definitions, and classes to alter vertical spacing without affecting logic.\n    *   Adjust average line lengths by breaking long lines into multiple lines, chaining method calls differently, or consolidating short lines.\n6.  **Preserve core logic and functionality meticulously throughout these transformations.**",
+  "ai_provider": "google",
+  "ai_model": "gemini-2.5-flash",
+  "num_files": 3,
+  "avg_evasion_rate": 33.333333333333336,
+  "avg_stealth_score": 0.5606006194551286,
+  "best_evasion_rate": 50.0,
+  "worst_evasion_rate": 25.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_affinecv2.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_affinecv2.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_8fe9/modified_check_affinecv2.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_4c05",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.3909723555597629,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9617825104593984,
+          "modified_pred": "aleju",
+          "modified_conf": 0.464539447399464,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.49724306305993443
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999989899919,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999960817992909,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.917190701030471e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9153172755318556,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.39800771098505094,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5173095645468047
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9998331069946289,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9944570064544678,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.005376100540161133
+        }
+      },
+      "input_tokens": 2115,
+      "output_tokens": 1824
+    },
+    {
+      "filename": "check_rot90.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_rot90.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_8fe9/modified_check_rot90.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_6f93",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.6613664207984021,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9910372670807454,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5642000584084463,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.426837208672299
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999997446034328,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9990319226098757,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0009678219935570498
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8694215318454896,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.3888304934900749,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4805910383554147
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9985103011131287,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9882171750068665,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.010293126106262207
+        }
+      },
+      "input_tokens": 1706,
+      "output_tokens": 1106
+    },
+    {
+      "filename": "pillike.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/pillike.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_8fe9/modified_pillike.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_372e",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.629463082007221,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9892945046356187,
+          "modified_pred": "aleju",
+          "modified_conf": 0.6257433773839343,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.3635511272516845
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999986808768885,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.3191231115206037e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9271821291426325,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.3765446541242402,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5506374750183923
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9963972568511963,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.003602743148803711
+        }
+      },
+      "input_tokens": 23806,
+      "output_tokens": 9902
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 33.33333333333333,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 100.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_affinecv2.py",
+    "check_rot90.py",
+    "pillike.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_8fe9",
+  "saved_at": "2026-02-11T15:31:40.340311"
+}

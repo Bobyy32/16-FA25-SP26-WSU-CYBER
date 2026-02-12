@@ -1,0 +1,199 @@
+{
+  "evolution_id": "",
+  "round_number": 0,
+  "timestamp": "2026-02-11T15:18:52.821708",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure using helper functions and generic variable names",
+  "ai_provider": "google",
+  "ai_model": "gemini-2.5-flash",
+  "num_files": 3,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.3479202006518914,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_average_blur.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_average_blur.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_5c45/modified_check_average_blur.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_8373",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.5424346104572207,
+      "stealth_category": "low",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9716194654050743,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9211321353217582,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.05048733008331607
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999854978,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999960149444114,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.985041086451702e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9197407358673226,
+          "modified_pred": "aleju",
+          "modified_conf": 0.7266371644572874,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.1931035714100352
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999850988388062,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9512045383453369,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.04878056049346924
+        }
+      },
+      "input_tokens": 569,
+      "output_tokens": 1337
+    },
+    {
+      "filename": "check_bilateral_blur.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_bilateral_blur.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_5c45/modified_check_bilateral_blur.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_cff9",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.4714076055536445,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9716194654050743,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9601140890609883,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.011505376344085994
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999872387,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999959160846,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 4.0711540805205004e-09
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9180775788780257,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8595811935199672,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.058496385358058456
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999833106994629,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999568462371826,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.6464462280273438e-05
+        }
+      },
+      "input_tokens": 797,
+      "output_tokens": 1126
+    },
+    {
+      "filename": "polys.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/polys.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_5c45/modified_polys.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_5760",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.02991838594480883,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9171313145055366,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9121313145055366,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0050000000000000044
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999964473,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999999978542,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -1.4068746168049984e-12
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8291893992924585,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8364662232198861,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.007276823927427567
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999819993972778,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999854564666748,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -3.4570693969726562e-06
+        }
+      },
+      "input_tokens": 27070,
+      "output_tokens": 26873
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 0.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_average_blur.py",
+    "check_bilateral_blur.py",
+    "polys.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_5c45",
+  "saved_at": "2026-02-11T15:22:43.560234"
+}

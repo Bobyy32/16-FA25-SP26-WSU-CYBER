@@ -1,0 +1,53 @@
+{
+  "evolution_id": "",
+  "round_number": 0,
+  "timestamp": "2026-02-11T15:15:03.433310",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure using helper functions and generic variable names",
+  "ai_provider": "google",
+  "ai_model": "gemini-2.5-pro",
+  "num_files": 3,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.0,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_affinecv2.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_affinecv2.py",
+      "transform_success": false,
+      "transform_error": "google-genai package not installed. Install with: pip install google-genai",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_clouds.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_clouds.py",
+      "transform_success": false,
+      "transform_error": "google-genai package not installed. Install with: pip install google-genai",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "pillike.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/pillike.py",
+      "transform_success": false,
+      "transform_error": "google-genai package not installed. Install with: pip install google-genai",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {},
+  "files_tested": [
+    "check_affinecv2.py",
+    "check_clouds.py",
+    "pillike.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_4697",
+  "saved_at": "2026-02-11T15:15:03.436686"
+}

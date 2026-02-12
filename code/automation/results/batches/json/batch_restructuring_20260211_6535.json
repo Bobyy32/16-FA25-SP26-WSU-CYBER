@@ -1,0 +1,73 @@
+{
+  "evolution_id": "evo_restructuring_20260211_0dff",
+  "round_number": 1,
+  "timestamp": "2026-02-11T16:04:02.046150",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure using helper functions and generic variable names",
+  "ai_provider": "google",
+  "ai_model": "gemini-2-flash",
+  "num_files": 5,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.0,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_affinecv2.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_affinecv2.py",
+      "transform_success": false,
+      "transform_error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_jigsaw.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_jigsaw.py",
+      "transform_success": false,
+      "transform_error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_superpixels.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_superpixels.py",
+      "transform_success": false,
+      "transform_error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "contrast.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/contrast.py",
+      "transform_success": false,
+      "transform_error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "data.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/data.py",
+      "transform_success": false,
+      "transform_error": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-2-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {},
+  "files_tested": [
+    "check_affinecv2.py",
+    "check_jigsaw.py",
+    "check_superpixels.py",
+    "contrast.py",
+    "data.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_6535",
+  "saved_at": "2026-02-11T16:04:04.475526"
+}

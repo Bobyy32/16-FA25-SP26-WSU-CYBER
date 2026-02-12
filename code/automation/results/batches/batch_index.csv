@@ -1,0 +1,136 @@
+batch_id,evolution_id,round_number,timestamp,category,author,prompt_text,ai_provider,ai_model,num_files,avg_evasion_rate,avg_stealth_score,best_evasion_rate,worst_evasion_rate,full_evasion_count,json_path
+batch_restructuring_20260207_531e,,0,2026-02-07T15:16:49.484408,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-coder:30b-a3b-q4_K_M,5,0.0000,0.1904,0.0000,0.0000,0,json/batch_restructuring_20260207_531e.json
+batch_restructuring_20260207_c383,evo_restructuring_20260207_40ae,1,2026-02-07T15:37:15.127509,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen2.5-coder:14b,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260207_c383.json
+batch_restructuring_20260207_30fa,evo_restructuring_20260207_40ae,2,2026-02-07T15:37:15.140955,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen2.5-coder:14b,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260207_30fa.json
+batch_restructuring_20260207_5a7e,evo_restructuring_20260207_40ae,3,2026-02-07T15:37:15.147519,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen2.5-coder:14b,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260207_5a7e.json
+batch_restructuring_20260207_fe83,evo_restructuring_20260207_40ae,4,2026-02-07T15:37:15.153872,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen2.5-coder:14b,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260207_fe83.json
+batch_restructuring_20260207_86de,evo_restructuring_20260207_40ae,5,2026-02-07T15:37:15.160404,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen2.5-coder:14b,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260207_86de.json
+batch_restructuring_20260207_b6da,evo_restructuring_20260207_9092,1,2026-02-07T15:41:09.034737,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-coder:30b-a3b-q4_K_M,5,0.0000,0.0656,0.0000,0.0000,0,json/batch_restructuring_20260207_b6da.json
+batch_restructuring_20260207_dd5a,evo_restructuring_20260207_9092,2,2026-02-07T15:56:39.488124,restructuring,aleju,"Restructure the Python code to evade attribution models by implementing the following specific transformations while maintaining functionality:
+
+1. **Variable and Function Renaming**:
+   - Replace ...",ollama,qwen3-coder:30b-a3b-q4_K_M,5,0.0000,0.1400,0.0000,0.0000,0,json/batch_restructuring_20260207_dd5a.json
+batch_restructuring_20260207_91e5,evo_restructuring_20260207_9092,3,2026-02-07T16:12:43.513372,restructuring,aleju,"Restructure the Python code to evade attribution models by implementing the following aggressive transformations while maintaining full functionality:
+
+1. **Deep Variable and Function Renaming**:
+ ...",ollama,qwen3-coder:30b-a3b-q4_K_M,5,18.7500,0.2206,75.0000,0.0000,0,json/batch_restructuring_20260207_91e5.json
+batch_restructuring_20260207_405f,evo_restructuring_20260207_9092,4,2026-02-07T16:29:59.155326,restructuring,aleju,"Restructure the Python code to evade attribution models by implementing the following highly aggressive transformations while maintaining full functionality:
+
+1. **Complete Naming Convention Overha...",ollama,qwen3-coder:30b-a3b-q4_K_M,5,0.0000,0.0033,0.0000,0.0000,0,json/batch_restructuring_20260207_405f.json
+batch_restructuring_20260207_9dd4,evo_restructuring_20260207_9092,5,2026-02-07T16:51:02.461271,restructuring,aleju,"Restructure the Python code to evade attribution models by implementing the following highly aggressive transformations while maintaining full functionality:
+
+1. **Complete Token Distribution Disru...",ollama,qwen3-coder:30b-a3b-q4_K_M,5,0.0000,0.0663,0.0000,0.0000,0,json/batch_restructuring_20260207_9dd4.json
+batch_restructuring_20260211_4697,,0,2026-02-11T15:15:03.433310,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-pro,3,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_4697.json
+batch_restructuring_20260211_db34,,0,2026-02-11T15:15:24.024805,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-pro,3,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_db34.json
+batch_restructuring_20260211_5c45,,0,2026-02-11T15:18:52.821708,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-flash,3,0.0000,0.3479,0.0000,0.0000,0,json/batch_restructuring_20260211_5c45.json
+batch_restructuring_20260211_4615,evo_restructuring_20260211_e727,1,2026-02-11T15:27:36.043956,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-flash,3,0.0000,0.1280,0.0000,0.0000,0,json/batch_restructuring_20260211_4615.json
+batch_restructuring_20260211_8fe9,evo_restructuring_20260211_e727,2,2026-02-11T15:30:10.260089,restructuring,aleju,Aggressively refactor the provided Python code to maximize evasion of authorship attribution models (>75% evasion) while maintaining a stealth score below 0.5 and preserving full functionality. Foc...,google,gemini-2.5-flash,3,33.3333,0.5606,50.0000,25.0000,0,json/batch_restructuring_20260211_8fe9.json
+batch_restructuring_20260211_8a1a,evo_restructuring_20260211_e727,3,2026-02-11T15:32:04.682774,restructuring,aleju,Aggressively refactor the provided Python code to maximize evasion of authorship attribution models (target >75% evasion) while ensuring a stealth score below 0.5 and preserving full functionality....,google,gemini-2.5-flash,3,16.6667,0.5416,25.0000,0.0000,0,json/batch_restructuring_20260211_8a1a.json
+batch_restructuring_20260211_31e3,,0,2026-02-11T15:43:30.239664,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-flash,5,0.0000,0.4172,0.0000,0.0000,0,json/batch_restructuring_20260211_31e3.json
+batch_restructuring_20260211_f40e,,0,2026-02-11T15:51:44.308328,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-flash,5,12.5000,0.5222,25.0000,0.0000,0,json/batch_restructuring_20260211_f40e.json
+batch_restructuring_20260211_fc61,evo_restructuring_20260211_66a4,1,2026-02-11T15:59:58.605960,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-pro,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_fc61.json
+batch_restructuring_20260211_a80f,evo_restructuring_20260211_66a4,2,2026-02-11T16:00:00.446619,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-pro,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_a80f.json
+batch_restructuring_20260211_d382,evo_restructuring_20260211_66a4,3,2026-02-11T15:59:59.428544,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-pro,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_d382.json
+batch_restructuring_20260211_bee4,evo_restructuring_20260211_66a4,4,2026-02-11T16:00:00.765046,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-pro,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_bee4.json
+batch_restructuring_20260211_0e14,evo_restructuring_20260211_66a4,5,2026-02-11T16:00:01.878551,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-pro,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_0e14.json
+batch_restructuring_20260211_6535,evo_restructuring_20260211_0dff,1,2026-02-11T16:04:02.046150,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2-flash,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_6535.json
+batch_restructuring_20260211_f0a2,evo_restructuring_20260211_0dff,2,2026-02-11T16:04:04.682745,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2-flash,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_f0a2.json
+batch_restructuring_20260211_fb77,evo_restructuring_20260211_0dff,3,2026-02-11T16:04:06.201285,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2-flash,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_fb77.json
+batch_restructuring_20260211_4b78,evo_restructuring_20260211_0dff,4,2026-02-11T16:04:07.527018,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2-flash,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_4b78.json
+batch_restructuring_20260211_1e5d,evo_restructuring_20260211_9b9b,1,2026-02-11T16:08:44.272857,restructuring,aleju,Restructure using helper functions and generic variable names,google,gemini-2.5-flash-lite,5,0.0000,0.2105,0.0000,0.0000,0,json/batch_restructuring_20260211_1e5d.json
+batch_restructuring_20260211_cc1f,evo_restructuring_20260211_9b9b,2,2026-02-11T16:10:00.615499,restructuring,aleju,"Modify the Python code to evade authorship attribution models, prioritizing changes that significantly alter TF-IDF token distribution and stylometric features while preserving functionality.
+
+**Tr...",google,gemini-2.5-flash-lite,5,15.0000,0.3603,50.0000,0.0000,0,json/batch_restructuring_20260211_cc1f.json
+batch_restructuring_20260211_08dd,evo_restructuring_20260211_9b9b,3,2026-02-11T16:10:33.010154,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Aggressive Variable and Function Renaming:**
+    *   Replace all variable and function names with single, randomly chosen letters (e.g., `x`, `y`, `z`, `a`, ...",google,gemini-2.5-flash-lite,5,15.0000,0.4481,25.0000,0.0000,0,json/batch_restructuring_20260211_08dd.json
+batch_restructuring_20260211_70bb,evo_restructuring_20260211_9b9b,4,2026-02-11T16:11:08.216567,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Extreme Name Obfuscation:**
+    *   Replace *all* identifiers (variables, functions, classes, parameters) with single, random lowercase letters (e.g., `a`, `...",google,gemini-2.5-flash-lite,5,0.0000,0.2836,0.0000,0.0000,0,json/batch_restructuring_20260211_70bb.json
+batch_restructuring_20260211_002c,evo_restructuring_20260211_9b9b,5,2026-02-11T16:11:21.380654,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation:**
+    *   Replace *all* identifiers (variables, function names, class names, parameter names) with the shortest possible arbi...",google,gemini-2.5-flash-lite,5,0.0000,0.1421,0.0000,0.0000,0,json/batch_restructuring_20260211_002c.json
+batch_restructuring_20260211_c347,evo_restructuring_20260211_9b9b,6,2026-02-11T16:11:30.664267,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_c347.json
+batch_restructuring_20260211_45c0,evo_restructuring_20260211_9b9b,7,2026-02-11T16:11:32.378984,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_45c0.json
+batch_restructuring_20260211_9be9,evo_restructuring_20260211_9b9b,8,2026-02-11T16:11:34.528825,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_9be9.json
+batch_restructuring_20260211_bf77,evo_restructuring_20260211_9b9b,9,2026-02-11T16:11:36.105022,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_bf77.json
+batch_restructuring_20260211_0f64,evo_restructuring_20260211_9b9b,10,2026-02-11T16:11:38.124679,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_0f64.json
+batch_restructuring_20260211_85ca,evo_restructuring_20260211_9b9b,11,2026-02-11T16:11:40.296491,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_85ca.json
+batch_restructuring_20260211_9462,evo_restructuring_20260211_9b9b,12,2026-02-11T16:11:42.343062,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_9462.json
+batch_restructuring_20260211_a602,evo_restructuring_20260211_9b9b,13,2026-02-11T16:11:44.360918,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.5238,0.0000,0.0000,0,json/batch_restructuring_20260211_a602.json
+batch_restructuring_20260211_803a,evo_restructuring_20260211_9b9b,14,2026-02-11T16:11:48.928914,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_803a.json
+batch_restructuring_20260211_66b2,evo_restructuring_20260211_9b9b,15,2026-02-11T16:11:50.524632,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_66b2.json
+batch_restructuring_20260211_4e04,evo_restructuring_20260211_9b9b,16,2026-02-11T16:11:52.805957,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_4e04.json
+batch_restructuring_20260211_a85f,evo_restructuring_20260211_9b9b,17,2026-02-11T16:11:54.901842,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_a85f.json
+batch_restructuring_20260211_262c,evo_restructuring_20260211_9b9b,18,2026-02-11T16:11:54.214909,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_262c.json
+batch_restructuring_20260211_cbf9,evo_restructuring_20260211_9b9b,19,2026-02-11T16:11:56.533698,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_cbf9.json
+batch_restructuring_20260211_4325,evo_restructuring_20260211_9b9b,20,2026-02-11T16:11:58.367893,restructuring,aleju,"**Transformation Instructions:**
+
+1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**
+    *   Replace *all* user-defined identifiers (variables, function names, class names, p...",google,gemini-2.5-flash-lite,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_4325.json
+batch_restructuring_20260211_3280,evo_restructuring_20260211_3936,1,2026-02-11T16:30:06.784434,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_3280.json
+batch_restructuring_20260211_2b2b,evo_restructuring_20260211_3936,2,2026-02-11T16:30:06.806418,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_2b2b.json
+batch_restructuring_20260211_ef5d,evo_restructuring_20260211_3936,3,2026-02-11T16:30:06.819188,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_ef5d.json
+batch_restructuring_20260211_e5ba,evo_restructuring_20260211_3936,4,2026-02-11T16:30:06.831428,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_e5ba.json
+batch_restructuring_20260211_6c0f,evo_restructuring_20260211_3936,5,2026-02-11T16:30:06.843459,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_6c0f.json
+batch_restructuring_20260211_b936,evo_restructuring_20260211_3936,6,2026-02-11T16:30:06.855810,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_b936.json
+batch_restructuring_20260211_8ac2,evo_restructuring_20260211_3936,7,2026-02-11T16:30:06.868880,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_8ac2.json
+batch_restructuring_20260211_77c0,evo_restructuring_20260211_3936,8,2026-02-11T16:30:06.881474,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_77c0.json
+batch_restructuring_20260211_10ab,evo_restructuring_20260211_3936,9,2026-02-11T16:30:06.894006,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_10ab.json
+batch_restructuring_20260211_0dcb,evo_restructuring_20260211_3936,10,2026-02-11T16:30:06.908035,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_0dcb.json
+batch_restructuring_20260211_995c,evo_restructuring_20260211_3936,11,2026-02-11T16:30:06.920652,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_995c.json
+batch_restructuring_20260211_e4e7,evo_restructuring_20260211_3936,12,2026-02-11T16:30:06.933289,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_e4e7.json
+batch_restructuring_20260211_ed6b,evo_restructuring_20260211_3936,13,2026-02-11T16:30:06.945461,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_ed6b.json
+batch_restructuring_20260211_cb83,evo_restructuring_20260211_3936,14,2026-02-11T16:30:06.957492,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_cb83.json
+batch_restructuring_20260211_be9b,evo_restructuring_20260211_3936,15,2026-02-11T16:30:06.969799,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b ,5,0.0000,0.0000,0.0000,0.0000,0,json/batch_restructuring_20260211_be9b.json
+batch_restructuring_20260211_2c3b,evo_restructuring_20260211_cb11,1,2026-02-11T16:32:41.681944,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-vl:8b,5,0.0000,0.3089,0.0000,0.0000,0,json/batch_restructuring_20260211_2c3b.json
+batch_restructuring_20260211_2180,evo_restructuring_20260211_cb11,2,2026-02-11T16:39:43.472674,restructuring,aleju,"Transform the provided Python code to maximize evasion of the authorship attribution system by implementing aggressive, functional changes that target all four models (Random Forest, Naive Bayes, S...",ollama,qwen3-vl:8b,5,0.0000,0.2061,0.0000,0.0000,0,json/batch_restructuring_20260211_2180.json
+batch_restructuring_20260211_e1c1,evo_restructuring_20260211_cb11,3,2026-02-11T16:57:41.545080,restructuring,aleju,"Transform the provided Python code to maximize evasion of the authorship attribution system by implementing these aggressive, targeted modifications:
+
+1. **Token Distribution Overhaul**:
+   - Renam...",ollama,qwen3-vl:8b,5,33.3333,0.5142,75.0000,0.0000,0,json/batch_restructuring_20260211_e1c1.json

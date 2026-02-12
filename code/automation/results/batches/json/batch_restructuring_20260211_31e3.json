@@ -1,0 +1,266 @@
+{
+  "evolution_id": "",
+  "round_number": 0,
+  "timestamp": "2026-02-11T15:43:30.239664",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure using helper functions and generic variable names",
+  "ai_provider": "google",
+  "ai_model": "gemini-2.5-flash",
+  "num_files": 5,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.4172260719311709,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_multiply_hue_and_saturation.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_multiply_hue_and_saturation.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_31e3/modified_check_multiply_hue_and_saturation.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_1022",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.546248188852233,
+      "stealth_category": "low",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9753245979159848,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.024675402084015197
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999978186,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999979870609,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.01075778250015e-09
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9313461098504111,
+          "modified_pred": "aleju",
+          "modified_conf": 0.866021043082525,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.06532506676788608
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999905824661255,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9998807907104492,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00010979175567626953
+        }
+      },
+      "input_tokens": 472,
+      "output_tokens": 1066
+    },
+    {
+      "filename": "check_randaugment.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_randaugment.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_31e3/modified_check_randaugment.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_4392",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.5887605183188175,
+      "stealth_category": "low",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9746897625156217,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9224810297585618,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.05220873275705984
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999998153,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999814994904549,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.850050936036407e-05
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9397313739811928,
+          "modified_pred": "aleju",
+          "modified_conf": 0.7025435204937948,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.23718785348739801
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999984502792358,
+          "modified_pred": "aleju",
+          "modified_conf": 0.990145206451416,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.009853243827819824
+        }
+      },
+      "input_tokens": 425,
+      "output_tokens": 1308
+    },
+    {
+      "filename": "check_superpixels.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_superpixels.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_31e3/modified_check_superpixels.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_d042",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.453542224494783,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9716194654050743,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9650472603854111,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.006572205019663158
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999920917,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999835960837,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.639600799574481e-08
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9136304891899785,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8160514999806967,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.09757898920928176
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999898672103882,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9997199177742004,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00026994943618774414
+        }
+      },
+      "input_tokens": 428,
+      "output_tokens": 971
+    },
+    {
+      "filename": "contrast.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/contrast.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_31e3/modified_contrast.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_1bf3",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.08035335605885018,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9950872817955113,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9892976984621779,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.005789583333333459
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.928314493158572,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9285960911387332,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.00028159798016125226
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        }
+      },
+      "input_tokens": 18696,
+      "output_tokens": 16874
+    },
+    {
+      "filename": "validation.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/validation.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 46.17607921s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '46s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 0.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_multiply_hue_and_saturation.py",
+    "check_randaugment.py",
+    "check_superpixels.py",
+    "contrast.py",
+    "validation.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_31e3",
+  "saved_at": "2026-02-11T15:46:14.736885"
+}

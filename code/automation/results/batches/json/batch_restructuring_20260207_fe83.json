@@ -1,0 +1,73 @@
+{
+  "evolution_id": "evo_restructuring_20260207_40ae",
+  "round_number": 4,
+  "timestamp": "2026-02-07T15:37:15.153872",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure using helper functions and generic variable names",
+  "ai_provider": "ollama",
+  "ai_model": "qwen2.5-coder:14b",
+  "num_files": 5,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.0,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_bilateral_blur.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_bilateral_blur.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen2.5-coder:14b' not found in Ollama. Available models: ['qwen3-coder:30b-a3b-q4_K_M']. Pull it with: ollama pull qwen2.5-coder:14b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_canny.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_canny.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen2.5-coder:14b' not found in Ollama. Available models: ['qwen3-coder:30b-a3b-q4_K_M']. Pull it with: ollama pull qwen2.5-coder:14b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_rot90.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_rot90.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen2.5-coder:14b' not found in Ollama. Available models: ['qwen3-coder:30b-a3b-q4_K_M']. Pull it with: ollama pull qwen2.5-coder:14b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "utils.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/utils.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen2.5-coder:14b' not found in Ollama. Available models: ['qwen3-coder:30b-a3b-q4_K_M']. Pull it with: ollama pull qwen2.5-coder:14b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "validation.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/validation.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen2.5-coder:14b' not found in Ollama. Available models: ['qwen3-coder:30b-a3b-q4_K_M']. Pull it with: ollama pull qwen2.5-coder:14b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {},
+  "files_tested": [
+    "check_bilateral_blur.py",
+    "check_canny.py",
+    "check_rot90.py",
+    "utils.py",
+    "validation.py"
+  ],
+  "batch_id": "batch_restructuring_20260207_fe83",
+  "saved_at": "2026-02-07T15:37:15.159132"
+}

@@ -1,0 +1,172 @@
+{
+  "evolution_id": "evo_restructuring_20260211_9b9b",
+  "round_number": 4,
+  "timestamp": "2026-02-11T16:11:08.216567",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "**Transformation Instructions:**\n\n1.  **Extreme Name Obfuscation:**\n    *   Replace *all* identifiers (variables, functions, classes, parameters) with single, random lowercase letters (e.g., `a`, `b`, `c`).\n    *   Where single letters might cause ambiguity or collisions (especially in nested scopes or complex expressions), use short, arbitrary, non-descriptive sequences like `tmp_var_1`, `arg_x`, `func_a`, `obj_b`. Avoid any pattern that hints at original meaning.\n    *   Ensure all internal references and external API calls (if applicable and modifiable) reflect these changes consistently.\n\n2.  **Comment Annihilation and Docstring Removal:**\n    *   Remove *all* comments (inline, block, single-line).\n    *   Remove *all* docstrings. Replace the body of any function that *only* contained a docstring and perhaps a `pass` statement with just `pass`.\n\n3.  **Control Flow Flattening and Simplification:**\n    *   Replace all `if/elif/else` structures with equivalent sequences of assignments and boolean logic where possible. For example, `if a: b = 1 else: b = 0` becomes `b = 1 if a else 0`. If the `else` block is complex, use temporary boolean flags.\n    *   Convert any `for` loop iterating over an index (`range(len(x))`) to an equivalent direct iteration (`for item in x`) or `enumerate` loop, and adjust logic to use items or enumerate values instead of indices where feasible.\n    *   Replace trivial conditional returns like `if condition: return value` with `return value if condition else some_default_or_none` (ensure `some_default_or_none` does not break functionality).\n    *   Seek opportunities to replace sequential `if` statements that set different variables with a single expression using logical operators if the conditions are mutually exclusive or ordered.\n\n4.  **Mandatory and Aggressive Import Restructuring:**\n    *   **Strictly** transform all `from module import item` or `from module import item1, item2` into `import module` followed by using `module.item` or `module.item1`, etc.\n    *   For top-level `import module`, change it to `from module import *` **if and only if** it does not introduce name collisions or break functionality. If `*` import is unsafe, select a minimal, arbitrary subset of commonly used items (e.g., `from module import common_func1, common_func2`). The goal is to change the import *pattern* significantly.\n\n5.  **Extreme Whitespace and Formatting Randomization:**\n    *   Remove all tabs. Standardize indentation to **2 spaces**.\n    *   Introduce inconsistent and excessive spacing *around all operators* (`=`, `+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`, `<=`, `>=`, `and`, `or`, `not`, `in`, `is`, `.` for attribute access) and around parentheses `()` and brackets `[]`. Example: `a=b+c` becomes `a =  b +  c` or `a= ( b + c )`.\n    *   Vary line lengths drastically and arbitrarily, from very short lines (e.g., `< 30` chars) to moderately long lines (e.g., `90-110` chars). Avoid any natural grouping or structure in line breaks.\n    *   Add random empty lines between logical blocks of code, but not predictably (e.g., not after every function definition, but occasionally).\n\n**Targeting Focus:**\n\n*   **Primary Target:** Address the **Naive Bayes, SGD Classifier, and Neural Network** models, which currently have 0% evasion. The Random Forest also needs improvement.\n*   **TF-IDF Token Distribution:** The renaming, control flow flattening, and import restructuring are designed to maximally disrupt token sequences and frequencies. Focus on these areas to create entirely new n-gram patterns.\n*   **Stylometric Features:** Aggressive removal of comments, complete removal of meaningful names, and highly irregular whitespace will heavily impact these features.\n\n**Goal:** Achieve an overall evasion rate of at least 75%. Maintain a stealth score below 0.5. **Crucially, the transformed code must execute identically to the original code.**",
+  "ai_provider": "google",
+  "ai_model": "gemini-2.5-flash-lite",
+  "num_files": 5,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.2836240705020193,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_affinecv2.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_affinecv2.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_70bb/modified_check_affinecv2.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_fe68",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.12756041229012047,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9617825104593984,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8079929840302665,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.1537895264291319
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999989899919,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999703912796,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.8598712287219996e-08
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9153172755318556,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9074575560218808,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.007859719509974772
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9998331069946289,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9994142055511475,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0004189014434814453
+        }
+      },
+      "input_tokens": 2532,
+      "output_tokens": 1404
+    },
+    {
+      "filename": "check_bilateral_blur.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_bilateral_blur.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_70bb/modified_check_bilateral_blur.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_7939",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.43968772871391815,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9716194654050743,
+          "modified_pred": "aleju",
+          "modified_conf": 0.6641296356228199,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.30748982978225436
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999872387,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999997039666,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.8327207246547914e-10
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9180775788780257,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9184880829900007,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.0004105041119750741
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999833106994629,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999735355377197,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 9.775161743164062e-06
+        }
+      },
+      "input_tokens": 1733,
+      "output_tokens": 682
+    },
+    {
+      "filename": "check_canny.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_canny.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 45.434617937s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '45s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "data.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/data.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 44.987399736s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "imgcorruptlike.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/imgcorruptlike.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 44.491311033s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '44s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 0.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_affinecv2.py",
+    "check_bilateral_blur.py",
+    "check_canny.py",
+    "data.py",
+    "imgcorruptlike.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_70bb",
+  "saved_at": "2026-02-11T16:11:17.282631"
+}

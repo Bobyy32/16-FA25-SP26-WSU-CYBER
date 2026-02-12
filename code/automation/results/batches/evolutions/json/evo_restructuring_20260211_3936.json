@@ -1,0 +1,197 @@
+{
+  "evolution_id": "evo_restructuring_20260211_3936",
+  "status": "max_rounds_reached",
+  "category": "restructuring",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3-vl:8b ",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 0,
+  "best_evasion_rate": 0.0,
+  "best_prompt": "Restructure using helper functions and generic variable names",
+  "initial_prompt": "Restructure using helper functions and generic variable names",
+  "all_prompts": [
+    "Restructure using helper functions and generic variable names"
+  ],
+  "files_tested": [
+    "check_average_blur.py",
+    "check_bilateral_blur.py",
+    "check_clouds.py",
+    "opensimplex.py",
+    "validation.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_3280",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 2,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_2b2b",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 3,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_ef5d",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 4,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_e5ba",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 5,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_6c0f",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 6,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_b936",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 7,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_8ac2",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 8,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_77c0",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 9,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_10ab",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 10,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_0dcb",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 11,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_995c",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 12,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_e4e7",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 13,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_ed6b",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 14,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_cb83",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 15,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260211_be9b",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    }
+  ],
+  "started_at": "2026-02-11T16:30:06.782997",
+  "finished_at": "2026-02-11T16:30:06.979821",
+  "saved_at": "2026-02-11T16:30:06.979880"
+}

@@ -1,0 +1,199 @@
+{
+  "evolution_id": "evo_restructuring_20260211_e727",
+  "round_number": 1,
+  "timestamp": "2026-02-11T15:27:36.043956",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure using helper functions and generic variable names",
+  "ai_provider": "google",
+  "ai_model": "gemini-2.5-flash",
+  "num_files": 3,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.12795201450181581,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_affinecv2.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_affinecv2.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_4615/modified_check_affinecv2.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_8b7c",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.20851699201828572,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9617825104593984,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9411272274076573,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.020655283051741136
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999989899919,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999970837408,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.9062511569245544e-09
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9153172755318556,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9122467340749544,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0030705414569012213
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9998331069946289,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9998387098312378,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -5.602836608886719e-06
+        }
+      },
+      "input_tokens": 1596,
+      "output_tokens": 2421
+    },
+    {
+      "filename": "check_rot90.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_rot90.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_4615/modified_check_rot90.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_2dad",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.15563264787162084,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9910372670807454,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9615032116557465,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.029534055424998873
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999997446034328,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999992056257867,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 5.389776460695828e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8694215318454896,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8429682395364019,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.026453292309087773
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9985103011131287,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9984557628631592,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 5.453824996948242e-05
+        }
+      },
+      "input_tokens": 1187,
+      "output_tokens": 1903
+    },
+    {
+      "filename": "pillike.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/pillike.py",
+      "modified_path": "/home/elang/Adversarial_Stylometry/automation/modified_files/batch_restructuring_20260211_4615/modified_pillike.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_a894",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.019706403615540886,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9892945046356187,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9892945046356187,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9271821291426325,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9269610232979789,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00022110584465362404
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        }
+      },
+      "input_tokens": 23287,
+      "output_tokens": 23627
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 0.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_affinecv2.py",
+    "check_rot90.py",
+    "pillike.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_4615",
+  "saved_at": "2026-02-11T15:29:57.049379"
+}

@@ -1,0 +1,73 @@
+{
+  "evolution_id": "evo_restructuring_20260211_9b9b",
+  "round_number": 12,
+  "timestamp": "2026-02-11T16:11:42.343062",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "**Transformation Instructions:**\n\n1.  **Radical Identifier Obfuscation (Aggressive Renaming and Scoping):**\n    *   Replace *all* user-defined identifiers (variables, function names, class names, parameters) with short, single-letter, randomly assigned identifiers.\n    *   For identifiers that would cause syntax errors due to scope or precedence (e.g., within complex list comprehensions, nested functions, or lambda expressions), use extremely short, arbitrary, non-descriptive sequences (e.g., `vx`, `fx`, `px`, `cx`). *Crucially, ensure these sequences are globally unique within the file, even if they are short and arbitrary.*\n    *   For imported module names, change `import module_name` to `import m` and `from module_name import item` to `from m import item`, where `m` is a unique single-letter alias for `module_name`. Then, consistently use `m.item` or `m` throughout the code.\n\n2.  **Complete Comment and Docstring Annihilation:**\n    *   Remove *all* comments (inline, block, single-line).\n    *   Remove *all* docstrings. For any function or class that becomes entirely empty after docstring and comment removal, replace its body with `pass`.\n\n3.  **Control Flow Restructuring and Simplification (Focus on Token Sequence Disruption):**\n    *   **Flatten `if/elif/else` chains:** Convert all conditional structures into a sequence of assignments using conditional expressions or boolean logic. For example, `if cond1: x = v1 elif cond2: x = v2 else: x = v3` should be refactored into something like `x = v1 if cond1 else (v2 if cond2 else v3)`. If this nesting becomes too complex, break it down using temporary boolean flags and sequential assignments.\n    *   **Transform loop structures:** Replace `for i in range(len(lst))` with `for i, elem in enumerate(lst)` and adapt code to use `i` and `elem`. If the index `i` is not directly used but implicitly for accessing `lst[i]`, rewrite to use `elem` directly. If direct iteration `for elem in lst` is possible without losing functionality, use that.\n    *   **Simplify conditional returns:** Replace `if condition: return value` with `return value if condition else default_value`, ensuring `default_value` is functionally equivalent and does not introduce errors (e.g., `None` if appropriate, or the result of an `else` block if refactored).\n\n4.  **Aggressive and Mandatory Import Pattern Swapping (Focus on TF-IDF Disruption):**\n    *   **Strict `from ... import ...` to `import ...` transformation:** Convert *all* `from module import item` or `from module import item1, item2` to `import module` (using the single-letter alias `m` as described in point 1) and then replace all direct uses of `item` with `m.item`. This is the primary goal for this point.\n    *   **`import ...` to `from ... import *` (with caveats):** For any `import module` (now aliased as `import m`), attempt to convert it to `from m import *`. **Only** perform this transformation if it does not introduce name collisions or break functionality. If `*` import is unsafe, revert to `import m` but ensure `m.` is used everywhere. The goal is to drastically change the import tokenization pattern.\n\n5.  **Extreme Whitespace and Formatting Randomization (Focus on Stylometric Features):**\n    *   Remove all tabs. Standardize indentation to **2 spaces**.\n    *   Introduce inconsistent and excessive whitespace *around all operators* (`=`, `+`, `-`, `*`, `/`, `==`, `!=`, `<`, `>`, `<=`, `>=`, `and`, `or`, `not`, `in`, `is`), parentheses `()`, and brackets `[]`. Aim for unpredictable variations like `a =  b +  c` or `a = ( b + c )` or even `a=( b+c )`.\n    *   Vary line lengths arbitrarily and drastically, ranging from very short (e.g., `< 30` characters) to moderately long (e.g., `90-110` characters). Break lines at syntactically valid but logically nonsensical points.\n    *   Insert random, unexpected blank lines between logical code blocks, but not on a predictable schedule (e.g., sometimes after a function definition, sometimes not; sometimes within a loop, sometimes not).\n\n**Targeting Focus:**\n\n*   **Primary Models:** Aggressively target the **Naive Bayes, SGD Classifier, and Neural Network** models. These models currently have 0% evasion and represent the biggest opportunity for improvement. Continue efforts to degrade the Random Forest's performance.\n*   **TF-IDF Token Distribution:** The extreme identifier renaming, mandatory import pattern reversal (especially `import module` to `from module import *` if safe), and control flow flattening are designed to create entirely novel token sequences and drastically alter token frequencies. Focus on these changes for maximum TF-IDF disruption.\n*   **Stylometric Annihilation:** The complete removal of comments, introduction of uniformly meaningless and potentially colliding identifiers (handled carefully), and highly irregular whitespace are critical for bypassing stylometric feature extraction.\n\n**Goal:** Achieve an overall evasion rate of at least 75%. Maintain a stealth score below 0.5. **Crucially, the transformed code must execute identically to the original code.**",
+  "ai_provider": "google",
+  "ai_model": "gemini-2.5-flash-lite",
+  "num_files": 5,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.0,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_affinecv2.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_affinecv2.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 18.865480254s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash-lite', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_bilateral_blur.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_bilateral_blur.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 18.708474601s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash-lite', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_canny.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_canny.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 18.5808026s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "data.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/data.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 18.37876417s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "imgcorruptlike.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/imgcorruptlike.py",
+      "transform_success": false,
+      "transform_error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 17.461744443s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash-lite', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {},
+  "files_tested": [
+    "check_affinecv2.py",
+    "check_bilateral_blur.py",
+    "check_canny.py",
+    "data.py",
+    "imgcorruptlike.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_9462",
+  "saved_at": "2026-02-11T16:11:44.079995"
+}

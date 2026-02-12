@@ -5,7 +5,10 @@ Automated testing framework for adversarial stylometry experiments with comprehe
 ## Overview
 
 This system provides:
-- **Automated testing** of adversarial code modifications against multiple attribution models
+- **Single-file testing** of adversarial code modifications against 4 attribution models
+- **Batch testing** - test one prompt across 5-10 files at once for statistically meaningful results
+- **Prompt evolution** - fully automatic loop that analyzes results and generates improved prompts
+- **AI provider integration** - Ollama (local, free), Anthropic (Claude API), OpenAI (GPT API)
 - **Category-based organization** for different transformation types
 - **Lineage tracking** to trace how modifications evolve across iterations
 - **Detailed metrics** including stealthiness scores and per-model evasion rates
@@ -51,28 +54,40 @@ python -m automation.run_tests original.py modified.py \
 
 ```
 automation/
-├── run_tests.py              # Main test runner script
+├── run_tests.py              # Single-file test runner
+├── batch_runner.py           # Batch testing (1 prompt × N files)
+├── prompt_evolver.py         # Analyze results + generate improved prompts
+├── evolution_runner.py       # Multi-round automated evolution loop
 ├── config.py                 # Configuration (categories, paths, models)
+├── providers/
+│   ├── __init__.py           # Provider registry + get_provider() factory
+│   ├── base.py               # AIProvider ABC + TransformationResult
+│   ├── ollama_provider.py    # Ollama local inference (DEFAULT)
+│   ├── anthropic_provider.py # Claude API integration
+│   └── openai_provider.py    # GPT API integration
 ├── utils/
 │   ├── __init__.py
 │   ├── model_loader.py       # Load saved models from ../saved_models/
 │   ├── feature_extractor.py  # Vectorization and feature extraction
 │   ├── metrics.py            # Stealthiness and evasion metrics
-│   └── results_tracker.py    # CSV and JSON result management
+│   ├── results_tracker.py    # CSV and JSON result management
+│   ├── dataset_scanner.py    # Discover authors/files in dataset_splits/
+│   └── batch_tracker.py      # Batch + evolution CSV/JSON tracking
 ├── results/
 │   ├── index.csv             # Master index linking all runs
 │   ├── restructuring/
 │   │   ├── runs.csv          # All runs for this category
 │   │   └── json/             # Detailed JSON for each run
-│   ├── renaming/
-│   │   ├── runs.csv
-│   │   └── json/
-│   ├── formatting/
-│   │   ├── runs.csv
-│   │   └── json/
-│   └── comments/
-│       ├── runs.csv
-│       └── json/
+│   ├── renaming/ ...
+│   ├── formatting/ ...
+│   ├── comments/ ...
+│   └── batches/
+│       ├── batch_index.csv   # Index of all batch runs
+│       ├── json/             # Per-batch detail JSON
+│       └── evolutions/
+│           └── json/         # Per-evolution detail JSON
+├── modified_files/           # AI-generated modified files
+│   └── {batch_id}/           # One directory per batch
 └── README.md
 ```
 
@@ -239,39 +254,368 @@ runs = list_recent_runs(category: str = None, limit: int = 10) -> List[dict]
 
 Returns recent runs, optionally filtered by category.
 
-## Example Workflow
+### `run_batch_test()`
 
 ```python
-from automation.run_tests import run_adversarial_test, list_recent_runs
-
-# Test multiple transformation iterations
-base_file = "samples/alice/code.py"
-
-# Iteration 1: Basic restructuring
-result1 = run_adversarial_test(
-    original_file=base_file,
-    modified_file="samples/alice/code_v1.py",
-    category="restructuring",
-    author="alice",
-    ai_tool="Claude Sonnet 4",
-    prompt_summary="Extract helper functions"
-)
-
-# Iteration 2: Build on previous
-result2 = run_adversarial_test(
-    original_file=base_file,
-    modified_file="samples/alice/code_v2.py",
-    category="restructuring",
-    author="alice",
-    parent_run_id=result1['run_id'],
-    ai_tool="Claude Sonnet 4",
-    prompt_summary="Rename extracted functions to generic names"
-)
-
-# Check recent runs
-for run in list_recent_runs(category="restructuring", limit=5):
-    print(f"{run['run_id']}: {run['evasion_rate_pct']}% evasion")
+result = run_batch_test(
+    prompt: str,                     # Transformation prompt
+    category: str,                   # Category (restructuring, renaming, etc.)
+    provider: str = "ollama",        # AI provider ('ollama', 'anthropic', 'openai')
+    model: str = None,               # Override default model
+    author: str = None,              # Author to test (required if files not given)
+    files: List[str] = None,         # Explicit file paths (auto-detects author)
+    batch_size: int = 5,             # Files per batch (when using author)
+    evolution_id: str = "",          # Link to parent evolution
+    round_number: int = 0,           # Evolution round number
+    seed: int = None,                # Random seed for file selection
+) -> dict
 ```
+
+Returns:
+```python
+{
+    'batch_id': str,
+    'category': str,
+    'author': str,
+    'prompt': str,
+    'provider': str,
+    'model': str,
+    'aggregates': {
+        'num_files': int,
+        'successful_transforms': int,
+        'avg_evasion_rate': float,
+        'avg_stealth_score': float,
+        'best_evasion_rate': float,
+        'worst_evasion_rate': float,
+        'full_evasion_count': int,
+        'per_model_evasion_rates': dict,
+    },
+    'individual_results': List[dict],
+    'saved_paths': dict,
+}
+```
+
+### `run_evolution()`
+
+```python
+result = run_evolution(
+    initial_prompt: str,                 # Starting prompt
+    category: str,                       # Category
+    provider: str = "ollama",            # AI provider
+    model: str = None,                   # Override default model
+    author: str = None,                  # Author (required)
+    batch_size: int = 5,                 # Files per batch
+    max_rounds: int = 10,                # Max evolution rounds
+    target_evasion_rate: float = 75.0,   # Stop when avg evasion >= this %
+    target_stealth_max: float = 0.5,     # Stop when avg stealth <= this
+    seed: int = None,                    # Random seed
+) -> dict
+```
+
+Returns:
+```python
+{
+    'evolution_id': str,
+    'status': str,               # 'target_met' or 'max_rounds_reached'
+    'best_round': int,
+    'best_evasion_rate': float,
+    'best_prompt': str,
+    'rounds_completed': int,
+    'rounds': List[dict],        # Per-round details
+    'all_prompts': List[str],    # All prompts tried
+    'saved_path': str,
+}
+```
+
+## Example: Full Category Workflow
+
+Working through the `restructuring` category from start to finish.
+
+### Step 1: Explore the dataset
+
+```python
+from automation.utils.dataset_scanner import get_all_authors, select_files_for_batch
+
+# See what authors are available
+authors = get_all_authors()
+print(f"{len(authors)} authors: {list(authors.keys())}")
+
+# Preview files for an author
+files = select_files_for_batch("aleju", split="testing", count=5, seed=42)
+for name, path in files:
+    print(f"  {name}")
+```
+
+### Step 2: Quick-test a prompt idea with a single batch
+
+```python
+from automation.batch_runner import run_batch_test
+
+result = run_batch_test(
+    prompt="Restructure this code: extract repeated logic into helper functions, "
+           "use generic names like process_data and handle_input for new functions",
+    category="restructuring",
+    author="aleju",
+    batch_size=5,
+    seed=42,
+)
+
+print(f"Avg evasion: {result['aggregates']['avg_evasion_rate']:.1f}%")
+print(f"Avg stealth: {result['aggregates']['avg_stealth_score']:.4f}")
+
+# See which models were evaded
+for model, rate in result['aggregates']['per_model_evasion_rates'].items():
+    print(f"  {model}: {rate:.1f}%")
+```
+
+### Step 3: If results are promising, run a full evolution
+
+```python
+from automation.evolution_runner import run_evolution
+
+evo = run_evolution(
+    initial_prompt="Restructure this code: extract repeated logic into helper "
+                   "functions, use generic names like process_data and handle_input",
+    category="restructuring",
+    author="aleju",
+    batch_size=5,
+    max_rounds=10,
+    target_evasion_rate=75.0,
+    seed=42,                    # same seed = same files as step 2
+)
+
+print(f"Status: {evo['status']}")
+print(f"Best evasion: {evo['best_evasion_rate']:.1f}% (round {evo['best_round']})")
+print(f"Best prompt: {evo['best_prompt']}")
+```
+
+### Step 4: Try the winning prompt on a different author
+
+```python
+result2 = run_batch_test(
+    prompt=evo['best_prompt'],   # reuse the evolved prompt
+    category="restructuring",
+    author="clips",              # different author
+    batch_size=5,
+)
+
+print(f"Avg evasion on clips: {result2['aggregates']['avg_evasion_rate']:.1f}%")
+```
+
+### Step 5: Try a different model for comparison
+
+```python
+result3 = run_batch_test(
+    prompt=evo['best_prompt'],
+    category="restructuring",
+    author="aleju",
+    model="deepseek-coder-v2:16b",  # different Ollama model
+    batch_size=5,
+    seed=42,
+)
+
+print(f"deepseek evasion: {result3['aggregates']['avg_evasion_rate']:.1f}%")
+```
+
+### Step 6: Review results
+
+```python
+from automation.utils.batch_tracker import BatchTracker
+
+tracker = BatchTracker()
+
+# List all batches for this category
+batches = tracker.list_batches(category="restructuring")
+for b in batches:
+    print(f"{b['batch_id']}: evasion={b['avg_evasion_rate']}%, "
+          f"stealth={b['avg_stealth_score']}")
+
+# Load full details for a specific evolution
+evo_data = tracker.get_evolution(evo['evolution_id'])
+for r in evo_data['rounds']:
+    print(f"Round {r['round']}: {r['avg_evasion_rate']:.1f}% evasion, "
+          f"prompt: {r['prompt'][:60]}...")
+```
+
+Results are also saved to CSV files you can open in any spreadsheet app:
+- Individual runs: `results/restructuring/runs.csv`
+- Batch summaries: `results/batches/batch_index.csv`
+- Evolution details: `results/batches/evolutions/json/{evo_id}.json`
+
+---
+
+## Batch Testing
+
+Test one prompt across multiple files at once for statistically meaningful results.
+
+### Single Batch (local, free with Ollama)
+
+```python
+from automation.batch_runner import run_batch_test
+
+result = run_batch_test(
+    prompt="Restructure using helper functions and generic variable names",
+    category="restructuring",
+    provider="ollama",           # default - local, free
+    author="aleju",
+    batch_size=5,
+)
+
+print(f"Avg evasion: {result['aggregates']['avg_evasion_rate']:.1f}%")
+print(f"Avg stealth: {result['aggregates']['avg_stealth_score']:.4f}")
+print(f"Best evasion: {result['aggregates']['best_evasion_rate']:.1f}%")
+```
+
+### Batch with specific files
+
+```python
+result = run_batch_test(
+    prompt="Rename all variables to single letters",
+    category="renaming",
+    files=[
+        "dataset_splits/aleju/testing/check_canny.py",
+        "dataset_splits/aleju/testing/check_clouds.py",
+    ],
+)
+```
+
+### Batch with Claude API
+
+```python
+result = run_batch_test(
+    prompt="Restructure using helper functions",
+    category="restructuring",
+    provider="anthropic",        # requires ANTHROPIC_API_KEY env var
+    author="aleju",
+    batch_size=3,
+)
+```
+
+### What happens during a batch
+
+1. Selects files from `dataset_splits/{author}/testing/`
+2. For each file: transforms it via the AI provider, saves the modified version to `modified_files/{batch_id}/`
+3. Runs `run_adversarial_test()` on each original/modified pair
+4. Aggregates results (avg evasion, avg stealth, per-model rates)
+5. Saves batch results to `results/batches/batch_index.csv` + JSON
+
+---
+
+## Prompt Evolution
+
+Fully automatic loop that tests a prompt, analyzes what worked, generates an improved prompt, and repeats.
+
+### Basic Evolution (local, free)
+
+```python
+from automation.evolution_runner import run_evolution
+
+result = run_evolution(
+    initial_prompt="Restructure with generic variable names",
+    category="restructuring",
+    provider="ollama",           # default - local, free
+    author="aleju",
+    batch_size=5,
+    max_rounds=10,
+    target_evasion_rate=75.0,    # stop when >= 75% evasion
+)
+
+print(f"Status: {result['status']}")  # 'target_met' or 'max_rounds_reached'
+print(f"Best prompt (round {result['best_round']}): {result['best_prompt']}")
+print(f"Best evasion: {result['best_evasion_rate']:.1f}%")
+```
+
+### How evolution works
+
+```
+Round 1: Test initial prompt across 5 files
+         → Avg evasion: 25%, stealth: 0.3
+         → Analyze: RF and NB not evaded, need more name changes
+         → AI generates improved prompt
+
+Round 2: Test evolved prompt across same 5 files
+         → Avg evasion: 50%, stealth: 0.35
+         → Analyze: NB still not evaded, try import changes
+         → AI generates improved prompt
+
+Round 3: Test evolved prompt
+         → Avg evasion: 80%, stealth: 0.4
+         → TARGET MET! Stop.
+```
+
+Key design: files are selected **once** in round 1 and reused across all rounds for fair comparison.
+
+### Evolution parameters
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `max_rounds` | 10 | Maximum evolution rounds |
+| `target_evasion_rate` | 75.0 | Stop when avg evasion >= this % |
+| `target_stealth_max` | 0.5 | Stop when avg stealth <= this |
+| `batch_size` | 5 | Files per batch |
+| `seed` | None | Random seed for file selection |
+
+### What the prompt evolver knows
+
+The evolution system tells the AI about:
+- The 4 attribution models and which ones were/weren't evaded
+- The 12 stylometric features the models analyze (comments, naming, whitespace, etc.)
+- TF-IDF n-gram sensitivity
+- Stealth-evasion tradeoff in current results
+- All previous prompts and their results
+- Trend analysis (plateauing detection, weak model targeting)
+
+---
+
+## AI Providers
+
+| Provider | API Key | Cost | Default Model |
+|----------|---------|------|---------------|
+| `ollama` (default) | None needed | Free (local) | `qwen2.5-coder:14b` |
+| `anthropic` | `ANTHROPIC_API_KEY` env var | Paid | `claude-sonnet-4-20250514` |
+| `openai` | `OPENAI_API_KEY` env var | Paid | `gpt-4o` |
+
+### Ollama setup
+
+```bash
+# Install Ollama: https://ollama.ai
+ollama serve                     # start the server
+ollama pull qwen2.5-coder:14b   # pull the default model
+```
+
+### Using a custom model
+
+```python
+result = run_batch_test(
+    prompt="...",
+    category="restructuring",
+    provider="ollama",
+    model="codellama:13b",       # any Ollama model
+    author="aleju",
+)
+```
+
+---
+
+## Dataset Scanner
+
+Discover what's available in `dataset_splits/`:
+
+```python
+from automation.utils.dataset_scanner import get_all_authors, select_files_for_batch
+
+# List all 20 authors
+authors = get_all_authors()
+for name, path in authors.items():
+    print(f"{name}: {path}")
+
+# Select random files for testing
+files = select_files_for_batch("aleju", split="testing", count=5, seed=42)
+for filename, filepath in files:
+    print(filename)
+```
+
+---
 
 ## Viewing Results
 
@@ -291,11 +635,18 @@ print(details['model_results'])
 
 ## Requirements
 
+**Core (all features):**
 - Python 3.8+
-- numpy
-- scipy
-- scikit-learn
+- numpy, scipy, scikit-learn, joblib
 - tensorflow (for neural network model)
-- joblib
+- requests (for Ollama provider)
 
-The system uses saved models from `../saved_models/attribution/`.
+**Optional (API providers):**
+- `anthropic` - for Claude API (`pip install anthropic`)
+- `openai` - for GPT API (`pip install openai`)
+
+**Ollama (default provider):**
+- Ollama installed and running (`ollama serve`)
+- A model pulled (`ollama pull qwen2.5-coder:14b`)
+
+The system uses saved models from `../saved_models/attribution/` and the conda env at `.conda/`.

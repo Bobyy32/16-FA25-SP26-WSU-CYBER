@@ -1,0 +1,73 @@
+{
+  "evolution_id": "evo_restructuring_20260211_3936",
+  "round_number": 15,
+  "timestamp": "2026-02-11T16:30:06.969799",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure using helper functions and generic variable names",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3-vl:8b ",
+  "num_files": 5,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.0,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_average_blur.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_average_blur.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: 400 Client Error: Bad Request for url: http://localhost:11434/api/chat",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_bilateral_blur.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_bilateral_blur.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: 400 Client Error: Bad Request for url: http://localhost:11434/api/chat",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_clouds.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/check_clouds.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: 400 Client Error: Bad Request for url: http://localhost:11434/api/chat",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "opensimplex.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/opensimplex.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: 400 Client Error: Bad Request for url: http://localhost:11434/api/chat",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "validation.py",
+      "original_path": "/home/elang/Adversarial_Stylometry/dataset_splits/aleju/testing/validation.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: 400 Client Error: Bad Request for url: http://localhost:11434/api/chat",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {},
+  "files_tested": [
+    "check_average_blur.py",
+    "check_bilateral_blur.py",
+    "check_clouds.py",
+    "opensimplex.py",
+    "validation.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_be9b",
+  "saved_at": "2026-02-11T16:30:06.979449"
+}

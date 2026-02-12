@@ -1,0 +1,87 @@
+{
+  "evolution_id": "evo_restructuring_20260207_40ae",
+  "status": "max_rounds_reached",
+  "category": "restructuring",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen2.5-coder:14b",
+  "batch_size": 5,
+  "max_rounds": 5,
+  "rounds_completed": 5,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 0,
+  "best_evasion_rate": 0.0,
+  "best_prompt": "Restructure using helper functions and generic variable names",
+  "initial_prompt": "Restructure using helper functions and generic variable names",
+  "all_prompts": [
+    "Restructure using helper functions and generic variable names"
+  ],
+  "files_tested": [
+    "check_bilateral_blur.py",
+    "check_canny.py",
+    "check_rot90.py",
+    "utils.py",
+    "validation.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260207_c383",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 2,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260207_30fa",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 3,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260207_5a7e",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 4,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260207_fe83",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    },
+    {
+      "round": 5,
+      "prompt": "Restructure using helper functions and generic variable names",
+      "batch_id": "batch_restructuring_20260207_86de",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.0,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {}
+    }
+  ],
+  "started_at": "2026-02-07T15:37:15.126754",
+  "finished_at": "2026-02-07T15:37:15.165834",
+  "saved_at": "2026-02-07T15:37:15.165867"
+}

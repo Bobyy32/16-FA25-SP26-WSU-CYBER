@@ -13,6 +13,8 @@ BASE_DIR = Path(__file__).parent.parent
 AUTOMATION_DIR = Path(__file__).parent
 SAVED_MODELS_DIR = BASE_DIR / "saved_models" / "attribution"
 RESULTS_DIR = AUTOMATION_DIR / "results"
+DATASET_DIR = BASE_DIR / "dataset_splits"
+MODIFIED_FILES_DIR = AUTOMATION_DIR / "modified_files"
 
 # Transformation categories
 CATEGORIES = [
@@ -105,6 +107,61 @@ INDEX_COLUMNS = [
     "json_path",
 ]
 
+# Batch testing defaults
+BATCH_DEFAULTS = {
+    "batch_size": 5,
+    "max_batch_size": 20,
+}
+
+# Evolution loop defaults
+EVOLUTION_DEFAULTS = {
+    "max_rounds": 10,
+    "target_evasion_rate": 75.0,
+    "target_stealth_max": 0.5,
+}
+
+# AI provider defaults
+AI_PROVIDER_DEFAULTS = {
+    "ollama": {
+        "model": "qwen3-coder:30b-a3b-q4_K_M",
+        "base_url": "http://localhost:11434",
+    },
+    "google": {
+        "model": "gemini-2.5-pro",
+        # Other free models (change here to switch):
+        #   "gemini-2.5-flash"       - 250 req/day, very good
+        #   "gemini-2.5-flash-lite"  - 1000 req/day, good
+    },
+    "anthropic": {
+        "model": "claude-sonnet-4-20250514",
+        "max_tokens": 8192,
+    },
+    "openai": {
+        "model": "gpt-4o",
+        "max_tokens": 8192,
+    },
+}
+
+# Batch index CSV columns
+BATCH_INDEX_COLUMNS = [
+    "batch_id",
+    "evolution_id",
+    "round_number",
+    "timestamp",
+    "category",
+    "author",
+    "prompt_text",
+    "ai_provider",
+    "ai_model",
+    "num_files",
+    "avg_evasion_rate",
+    "avg_stealth_score",
+    "best_evasion_rate",
+    "worst_evasion_rate",
+    "full_evasion_count",
+    "json_path",
+]
+
 
 def get_all_columns():
     """Generate the complete list of spreadsheet columns including per-model columns."""
@@ -157,6 +214,26 @@ def get_model_dir(model_type: str) -> Path:
     return SAVED_MODELS_DIR / model_type
 
 
+def get_batch_results_dir() -> Path:
+    """Get the batch results directory."""
+    return RESULTS_DIR / "batches"
+
+
+def get_batch_index_path() -> Path:
+    """Get the path to the batch_index.csv file."""
+    return get_batch_results_dir() / "batch_index.csv"
+
+
+def get_batch_json_dir() -> Path:
+    """Get the directory for batch JSON files."""
+    return get_batch_results_dir() / "json"
+
+
+def get_evolution_json_dir() -> Path:
+    """Get the directory for evolution JSON files."""
+    return get_batch_results_dir() / "evolutions" / "json"
+
+
 # Ensure results directories exist
 def ensure_results_dirs():
     """Create results directories if they don't exist."""
@@ -164,3 +241,8 @@ def ensure_results_dirs():
     for category in CATEGORIES:
         get_category_results_dir(category).mkdir(parents=True, exist_ok=True)
         get_category_json_dir(category).mkdir(parents=True, exist_ok=True)
+    # Batch and evolution directories
+    get_batch_results_dir().mkdir(parents=True, exist_ok=True)
+    get_batch_json_dir().mkdir(parents=True, exist_ok=True)
+    get_evolution_json_dir().mkdir(parents=True, exist_ok=True)
+    MODIFIED_FILES_DIR.mkdir(parents=True, exist_ok=True)
