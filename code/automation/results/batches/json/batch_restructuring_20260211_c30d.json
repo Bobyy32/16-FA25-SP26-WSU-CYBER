@@ -1,0 +1,266 @@
+{
+  "evolution_id": "evo_restructuring_20260211_5f1e",
+  "round_number": 11,
+  "timestamp": "2026-02-11T21:11:56.787705",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Modify the provided Python code using a **hybrid obfuscation strategy** that deeply disrupts **TF-IDF token distribution**, **n-gram patterns**, and **stylometric features** while preserving **100% functional equivalence**. The transformations must be **uniformly distributed** across the entire codebase to foil **Random Forest**, **Naive Bayes**, **SGD Classifier**, and **Neural Network** attribution models.\n\n### Specific Requirements:\n\n1. **Identifier Obfuscation**:\n   - Replace all variables, functions, classes, and modules with **randomized 1\u20132 character strings** using a **consistent global mapping**.\n   - Ensure no semantic meaning is retained.\n\n2. **Keyword Substitution**:\n   - Replace core keywords with semantically equivalent alternatives:\n     - `def` \u2192 `proc`\n     - `class` \u2192 `type`\n     - `if` \u2192 `cond`\n     - `for` \u2192 `loop`\n     - `while` \u2192 `repeat`\n     - `return` \u2192 `out`\n     - `import` \u2192 `load`\n   - Apply substitutions **consistently and globally**.\n\n3. **Control Flow Obfuscation**:\n   - Wrap **every function** in **3\u20134 levels** of nested dummy conditional blocks:\n     ```python\n     if True:\n         if False:\n             if random():\n                 ...\n     ```\n   - Flatten nested conditionals into **ternary expressions** (3+ levels deep).\n   - Inject **redundant `while True: break`** loops at **random code locations** within logic blocks.\n\n4. **Assignment and Operator Obfuscation**:\n   - Replace standard assignment (`x = y`) with obfuscated forms:\n     - `x := y`\n     - `assign(x, y)`\n   - Substitute operators with obfuscated equivalents:\n     - `==` \u2192 `is`\n     - `+` \u2192 `add`\n     - `-` \u2192 `sub`\n     - `*` \u2192 `mul`\n     - `and` \u2192 `&&`\n     - `or` \u2192 `||`\n     - `not` \u2192 `!`\n   - Ensure all transformations are **distributed across the entire codebase**.\n\n5. **Stylometric Distortion**:\n   - Randomize **indentation** using a **50/50 mix** of tabs and spaces.\n   - Vary **line lengths** between **10\u201370 characters**.\n   - Apply **mixed comment styles**:\n     - 30% inline\n     - 30% block\n     - 40% standalone\n   - Add **dummy comments** referencing unrelated or placeholder topics:\n     ```python\n     # TODO: Refactor for better performance\n     // This is a placeholder\n     ```\n\n6. **Import and Module Disruption**:\n   - Replace all `import` statements with **randomized aliases**:\n     ```python\n     import numpy as n\n     import os as o\n     ```\n   - Shuffle the **import order** with **50% probability**.\n   - Add **dummy imports** for non-existent modules:\n     ```python\n     import nonexistent_module as x\n     ```\n\n7. **Dummy Element Injection**:\n   - Inject **dummy functions** with identical names but **different signatures**.\n   - Add **dummy variables** in **assignment chains**:\n     ```python\n     a = b; b = c; c = d\n     ```\n   - Insert **dummy exception handling blocks** with no actual exceptions:\n     ```python\n     try:\n         pass\n     except:\n         pass\n     ```\n\n### Output Requirements:\n- **100% functional equivalence** to the original code.\n- **\u226575% evasion rate** against Random Forest, Naive Bayes, SGD Classifier, and Neural Network models.\n- **Stealth score < 0.5**.\n- All transformations **must be distributed uniformly** across the codebase to maximize disruption to feature extraction.\n\nThe goal is to make the code **unrecognizable** to attribution models by altering **token frequency**, **structural patterns**, and **stylistic features**, without altering the program\u2019s behavior.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3-coder:30b",
+  "num_files": 5,
+  "avg_evasion_rate": 6.25,
+  "avg_stealth_score": 0.225351926664361,
+  "best_evasion_rate": 25.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_bb_augmentation.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_bb_augmentation.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_restructuring_20260211_c30d\\modified_check_bb_augmentation.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_9759",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.2588840408669459,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9705481766856141,
+          "modified_pred": "aleju",
+          "modified_conf": 0.851404074695755,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.11914410198985914
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999991331,
+          "modified_pred": "aleju",
+          "modified_conf": 0.999999998883446,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.1156870982631517e-09
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9122925294315819,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8851283910444537,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.027164138387128167
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.999995231628418,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999539852142334,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 4.124641418457031e-05
+        }
+      },
+      "input_tokens": 1483,
+      "output_tokens": 793
+    },
+    {
+      "filename": "check_cartoon.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_cartoon.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_crop_and_pad.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_crop_and_pad.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_restructuring_20260211_c30d\\modified_check_crop_and_pad.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_2fab",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.030777145176892406,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.7965308199873533,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.2034691800126467
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999997934594,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999994164881,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.7697134303016355e-10
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8797493204832324,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8770683597738343,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0026809607093980503
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9996792078018188,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9995338916778564,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00014531612396240234
+        }
+      },
+      "input_tokens": 2358,
+      "output_tokens": 1436
+    },
+    {
+      "filename": "check_impulse_noise.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_impulse_noise.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_restructuring_20260211_c30d\\modified_check_impulse_noise.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_65e1",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.10606113079182239,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9937969043151971,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8797062491693256,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.11409065514587147
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999996893403974,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999982907547645,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.3985856328613266e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8679629811489641,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8616505093536317,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.006312471795332342
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9990142583847046,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9986870884895325,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00032716989517211914
+        }
+      },
+      "input_tokens": 1255,
+      "output_tokens": 491
+    },
+    {
+      "filename": "dtypes.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\dtypes.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_restructuring_20260211_c30d\\modified_dtypes.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260211_cb93",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.5056853898217833,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.8059223805576398,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6824148597732421,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.12350752078439764
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999667125229,
+          "modified_pred": "aleju",
+          "modified_conf": 0.997163722868967,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0028362438435558524
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.81527079461999,
+          "modified_pred": "aleju",
+          "modified_conf": 0.7167762295147942,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.09849456510519572
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9997342228889465,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9587231278419495,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.04101109504699707
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 498
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 25.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_bb_augmentation.py",
+    "check_cartoon.py",
+    "check_crop_and_pad.py",
+    "check_impulse_noise.py",
+    "dtypes.py"
+  ],
+  "batch_id": "batch_restructuring_20260211_c30d",
+  "saved_at": "2026-02-11T21:18:04.033073"
+}

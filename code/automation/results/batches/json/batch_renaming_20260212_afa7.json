@@ -1,0 +1,219 @@
+{
+  "evolution_id": "evo_renaming_20260212_3750",
+  "round_number": 5,
+  "timestamp": "2026-02-12T08:31:33.970701",
+  "category": "renaming",
+  "author": "aleju",
+  "prompt_text": "Transform the Python code using extreme stylistic obfuscation to maximize evasion of all attribution models while maintaining exact functionality:\n\n1. **Complete Identifier Overhaul**:\n   - Replace ALL variable, function, class, and parameter names with meaningless 1-2 character names (a, b, c, x, y, z, tmp, val, num)\n   - Eliminate all naming conventions (camelCase, snake_case, PascalCase)\n   - Introduce inconsistent naming within functions (mix single/multi-character names)\n   - Add dummy variables with no purpose but to increase token diversity\n\n2. **Control Flow Disruption**:\n   - Convert all if/else statements to nested ternary expressions or exception handling\n   - Flatten all nested loops into single while loops with complex conditions\n   - Restructure all function calls into deeply nested expression chains\n   - Add redundant conditional checks that never execute (dead code)\n   - Introduce unnecessary function calls within expressions\n\n3. **Import Pattern Chaos**:\n   - Randomly shuffle import order and groupings\n   - Replace all imports with 'from module import *' and add dummy imports\n   - Add unused aliases and redundant import statements\n   - Mix absolute and relative imports inconsistently\n   - Add import statements after function definitions\n\n4. **Comment Style Sabotage**:\n   - Remove all meaningful comments but add excessive placeholder comments\n   - Randomly change comment styles (single-line, block, inline)\n   - Add comments with random keywords (todo, fixme, hack, note) in inconsistent positions\n   - Insert comments that contradict code logic\n\n5. **Whitespace and Formatting Mayhem**:\n   - Use inconsistent indentation (mix tabs and spaces)\n   - Add random blank lines throughout\n   - Vary line lengths drastically (some very short, some very long)\n   - Change function and class definition spacing inconsistently\n   - Add unnecessary parentheses and brackets\n\n6. **Token Distribution Explosion**:\n   - Add redundant operations (a = a, b = b, pass statements)\n   - Insert meaningless variable assignments and calculations\n   - Change operator usage patterns (+=, -=, *=, /=) inconsistently\n   - Add dummy function calls and unused parameter lists\n   - Create unnecessary nested expressions and chained operations\n\n7. **Function Call Obfuscation**:\n   - Wrap all function calls in lambda expressions\n   - Add dummy parameters to every function call\n   - Change function signatures to include unused arguments\n   - Replace direct function calls with complex expression chains\n\nTarget the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models by aggressively disrupting TF-IDF token distribution and stylometric features while ensuring the transformations are extreme enough to achieve 75%+ evasion rate and stealth score below 0.5.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3-coder:30b",
+  "num_files": 5,
+  "avg_evasion_rate": 25.0,
+  "avg_stealth_score": 0.6476280846651331,
+  "best_evasion_rate": 25.0,
+  "worst_evasion_rate": 25.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "arithmetic.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\arithmetic.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260212_afa7\\modified_arithmetic.py",
+      "transform_success": true,
+      "run_id": "renaming_20260212_b70b",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.6374755896331062,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9802724229338046,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7044280605341845,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.27584436239962007
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9998364142321801,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00016358576781994039
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9121138276902667,
+          "modified_pred": "aleju",
+          "modified_conf": 0.4099344987616413,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.5021793289286254
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.6911527514457703,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.30884724855422974
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 1913
+    },
+    {
+      "filename": "check_cartoon.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_cartoon.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_heatmaps.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_heatmaps.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "convolutional.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\convolutional.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260212_afa7\\modified_convolutional.py",
+      "transform_success": true,
+      "run_id": "renaming_20260212_1026",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.686405517489796,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9950383631713555,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6700839708145668,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.3249543923567887
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999343203001565,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 6.567969984350164e-05
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9058645907134582,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8525598535315655,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.05330473718189266
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9827131032943726,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.01728689670562744
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 602
+    },
+    {
+      "filename": "heatmaps.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\heatmaps.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260212_afa7\\modified_heatmaps.py",
+      "transform_success": true,
+      "run_id": "renaming_20260212_3129",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.619003146872497,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.887718822421459,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7327633816701916,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.15495544075126744
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999991616,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9997014835592023,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00029851643995926214
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.851460053387518,
+          "modified_pred": "aleju",
+          "modified_conf": 0.5847606343972149,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.266699418990303
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.999974250793457,
+          "modified_pred": "aleju",
+          "modified_conf": 0.959521472454071,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.040452778339385986
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 527
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 100.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "arithmetic.py",
+    "check_cartoon.py",
+    "check_heatmaps.py",
+    "convolutional.py",
+    "heatmaps.py"
+  ],
+  "batch_id": "batch_renaming_20260212_afa7",
+  "saved_at": "2026-02-12T08:42:39.836780"
+}

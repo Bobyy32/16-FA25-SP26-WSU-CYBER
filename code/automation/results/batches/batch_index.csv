@@ -134,3 +134,70 @@ batch_restructuring_20260211_e1c1,evo_restructuring_20260211_cb11,3,2026-02-11T1
 
 1. **Token Distribution Overhaul**:
    - Renam...",ollama,qwen3-vl:8b,5,33.3333,0.5142,75.0000,0.0000,0,json/batch_restructuring_20260211_e1c1.json
+batch_restructuring_20260211_f891,,0,2026-02-11T20:03:04.012518,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-coder:30b,1,0.0000,0.5126,0.0000,0.0000,0,json\batch_restructuring_20260211_f891.json
+batch_restructuring_20260211_351e,evo_restructuring_20260211_5f1e,1,2026-02-11T20:08:30.470328,restructuring,aleju,Restructure using helper functions and generic variable names,ollama,qwen3-coder:30b,5,20.0000,0.1788,100.0000,0.0000,1,json\batch_restructuring_20260211_351e.json
+batch_restructuring_20260211_ebb4,evo_restructuring_20260211_5f1e,2,2026-02-11T20:10:07.909849,restructuring,aleju,"Restructure the Python code by implementing aggressive stylistic obfuscation to evade attribution models:
+
+1. **Variable Name Transformation**:
+   - Replace all camelCase and snake_case identifiers...",ollama,qwen3-coder:30b,5,25.0000,0.3933,75.0000,0.0000,0,json\batch_restructuring_20260211_ebb4.json
+batch_restructuring_20260211_d7b4,evo_restructuring_20260211_5f1e,3,2026-02-11T20:11:51.698496,restructuring,aleju,"Restructure the Python code using advanced obfuscation techniques to maximize evasion of the attribution models while maintaining exact functionality:
+
+1. **Core Token Disruption**:
+   - Replace AL...",ollama,qwen3-coder:30b,5,37.5000,0.3619,100.0000,0.0000,1,json\batch_restructuring_20260211_d7b4.json
+batch_restructuring_20260211_7076,evo_restructuring_20260211_5f1e,4,2026-02-11T20:22:28.069472,restructuring,aleju,"Restructure the Python code using targeted obfuscation techniques to maximize evasion of the attribution models while preserving exact functionality:
+
+1. **TF-IDF Token Disruption**:
+   - Replace A...",ollama,qwen3-coder:30b,5,15.0000,0.1734,75.0000,0.0000,0,json\batch_restructuring_20260211_7076.json
+batch_restructuring_20260211_3332,evo_restructuring_20260211_5f1e,5,2026-02-11T20:24:08.598911,restructuring,aleju,"Restructure the Python code using comprehensive obfuscation techniques to maximize evasion of all attribution models while preserving exact functionality:
+
+1. **TF-IDF Token Disruption**:
+   - Repl...",ollama,qwen3-coder:30b,5,18.7500,0.2757,75.0000,0.0000,0,json\batch_restructuring_20260211_3332.json
+batch_restructuring_20260211_c263,evo_restructuring_20260211_5f1e,6,2026-02-11T20:30:42.251465,restructuring,aleju,"Restructure the Python code using aggressive, multi-layered obfuscation to maximize evasion of all attribution models while preserving exact functionality:
+
+1. **Core Identifier Obfuscation**:
+   -...",ollama,qwen3-coder:30b,5,58.3333,0.5249,100.0000,0.0000,1,json\batch_restructuring_20260211_c263.json
+batch_restructuring_20260211_54e1,evo_restructuring_20260211_5f1e,7,2026-02-11T20:46:16.476897,restructuring,aleju,"Restructure the Python code using targeted, subtle obfuscation techniques to maximize evasion of the attribution models while maintaining exact functionality:
+
+1. **TF-IDF Token Disruption**:
+   - ...",ollama,qwen3-coder:30b,5,10.0000,0.1552,50.0000,0.0000,0,json\batch_restructuring_20260211_54e1.json
+batch_restructuring_20260211_4fe2,evo_restructuring_20260211_5f1e,8,2026-02-11T20:47:45.629044,restructuring,aleju,"Restructure the Python code using a combination of highly obfuscated naming conventions, deep control flow nesting, and randomized stylistic elements to maximize evasion of Random Forest, Naive Bay...",ollama,qwen3-coder:30b,5,25.0000,0.4208,50.0000,0.0000,0,json\batch_restructuring_20260211_4fe2.json
+batch_restructuring_20260211_b354,evo_restructuring_20260211_5f1e,9,2026-02-11T20:49:35.326028,restructuring,aleju,Restructure the provided Python code using a hybrid obfuscation strategy that deeply disrupts TF-IDF token distribution and stylometric features while preserving exact functionality. Transform all ...,ollama,qwen3-coder:30b,5,25.0000,0.3298,50.0000,0.0000,0,json\batch_restructuring_20260211_b354.json
+batch_restructuring_20260211_6c26,evo_restructuring_20260211_5f1e,10,2026-02-11T21:05:24.506656,restructuring,aleju,"**New Transformation Prompt:**
+
+Modify the provided Python code using a hybrid obfuscation strategy that deeply disrupts TF-IDF token distribution and stylometric features while preserving exact fu...",ollama,qwen3-coder:30b,5,18.7500,0.2113,75.0000,0.0000,0,json\batch_restructuring_20260211_6c26.json
+batch_restructuring_20260211_c30d,evo_restructuring_20260211_5f1e,11,2026-02-11T21:11:56.787705,restructuring,aleju,"Modify the provided Python code using a **hybrid obfuscation strategy** that deeply disrupts **TF-IDF token distribution**, **n-gram patterns**, and **stylometric features** while preserving **100%...",ollama,qwen3-coder:30b,5,6.2500,0.2254,25.0000,0.0000,0,json\batch_restructuring_20260211_c30d.json
+batch_restructuring_20260211_ade1,evo_restructuring_20260211_5f1e,12,2026-02-11T21:18:24.706382,restructuring,aleju,"Modify the provided Python code using a **hybrid obfuscation strategy** that deeply disrupts **TF-IDF token distribution**, **n-gram patterns**, and **stylometric features** while preserving **100%...",ollama,qwen3-coder:30b,5,18.7500,0.2067,75.0000,0.0000,0,json\batch_restructuring_20260211_ade1.json
+batch_restructuring_20260211_d520,evo_restructuring_20260211_5f1e,13,2026-02-11T21:24:45.146229,restructuring,aleju,"Modify the provided Python code using a **hybrid obfuscation strategy** that aggressively disrupts **TF-IDF token frequency**, **n-gram patterns**, and **stylometric features** to evade **Random Fo...",ollama,qwen3-coder:30b,5,25.0000,0.5358,50.0000,0.0000,0,json\batch_restructuring_20260211_d520.json
+batch_restructuring_20260211_5185,evo_restructuring_20260211_5f1e,14,2026-02-11T21:35:56.114380,restructuring,aleju,"Modify the provided Python code using a **hybrid obfuscation strategy** that aggressively alters **TF-IDF token frequency**, **n-gram patterns**, and **stylometric features** to evade attribution m...",ollama,qwen3-coder:30b,5,25.0000,0.4409,50.0000,0.0000,0,json\batch_restructuring_20260211_5185.json
+batch_restructuring_20260211_739f,evo_restructuring_20260211_5f1e,15,2026-02-11T21:47:07.633063,restructuring,aleju,Modify the provided Python code to maximize evasion of attribution models (especially Naive Bayes and SGD Classifier) while maintaining full functional equivalence. Focus on altering TF-IDF token d...,ollama,qwen3-coder:30b,5,50.0000,0.3356,100.0000,0.0000,1,json\batch_restructuring_20260211_739f.json
+batch_renaming_20260212_6c2d,evo_renaming_20260212_3750,1,2026-02-12T08:15:36.810320,renaming,aleju,"Rename all variables, functions, parameters, and class names to generic, convention-neutral alternatives. Use names like data, result, value, item, process, handle, compute. Replace author-specific...",ollama,qwen3-coder:30b,5,20.0000,0.4798,50.0000,0.0000,0,json\batch_renaming_20260212_6c2d.json
+batch_renaming_20260212_fa56,evo_renaming_20260212_3750,2,2026-02-12T08:21:45.940775,renaming,aleju,"Rename all variables, functions, parameters, and class names to generic, convention-neutral alternatives. Use names like data, result, value, item, process, handle, compute. Replace author-specific...",ollama,qwen3-coder:30b,5,15.0000,0.4677,25.0000,0.0000,0,json\batch_renaming_20260212_fa56.json
+batch_renaming_20260212_5342,evo_renaming_20260212_3750,3,2026-02-12T08:23:29.126341,renaming,aleju,"Transform the Python code by implementing aggressive stylistic obfuscation to evade attribution models:
+
+1. **Complete naming convention overhaul**: Replace ALL identifiers (variables, functions, c...",ollama,qwen3-coder:30b,5,15.0000,0.4791,25.0000,0.0000,0,json\batch_renaming_20260212_5342.json
+batch_renaming_20260212_0c9b,evo_renaming_20260212_3750,4,2026-02-12T08:25:02.734733,renaming,aleju,"Transform the Python code using extreme stylistic obfuscation to maximize evasion of all attribution models:
+
+1. **Aggressive Naming Conventions**:
+   - Replace ALL identifiers with single-characte...",ollama,qwen3-coder:30b,5,18.7500,0.6128,25.0000,0.0000,0,json\batch_renaming_20260212_0c9b.json
+batch_renaming_20260212_afa7,evo_renaming_20260212_3750,5,2026-02-12T08:31:33.970701,renaming,aleju,"Transform the Python code using extreme stylistic obfuscation to maximize evasion of all attribution models while maintaining exact functionality:
+
+1. **Complete Identifier Overhaul**:
+   - Replace...",ollama,qwen3-coder:30b,5,25.0000,0.6476,25.0000,25.0000,0,json\batch_renaming_20260212_afa7.json
+batch_renaming_20260212_0b54,evo_renaming_20260212_3750,6,2026-02-12T08:42:51.685760,renaming,aleju,"Transform the Python code using radical structural and lexical obfuscation to maximize evasion of Naive Bayes, SGD Classifier, and Neural Network models while maintaining exact functionality:
+
+1. *...",ollama,qwen3-coder:30b,5,30.0000,0.4854,75.0000,0.0000,0,json\batch_renaming_20260212_0b54.json
+batch_renaming_20260212_7753,evo_renaming_20260212_3750,7,2026-02-12T08:44:43.707366,renaming,aleju,"Transform the Python code using aggressive, targeted obfuscation to maximize evasion of Naive Bayes, SGD Classifier, and Neural Network models while preserving exact functionality:
+
+1. **TF-IDF Tok...",ollama,qwen3-coder:30b,5,33.3333,0.6693,50.0000,25.0000,0,json\batch_renaming_20260212_7753.json
+batch_renaming_20260212_a47e,evo_renaming_20260212_3750,8,2026-02-12T08:51:10.288652,renaming,aleju,"Transform the Python code using aggressive, targeted obfuscation to maximize evasion of Naive Bayes, SGD Classifier, and Neural Network models while preserving exact functionality:
+
+1. **TF-IDF Tok...",ollama,qwen3-coder:30b,5,15.0000,0.4373,25.0000,0.0000,0,json\batch_renaming_20260212_a47e.json
+batch_renaming_20260212_7437,evo_renaming_20260212_3750,9,2026-02-12T08:53:10.989666,renaming,aleju,"Transform the Python code using extreme, targeted obfuscation to maximize evasion of Naive Bayes, SGD Classifier, and Neural Network models while preserving exact functionality:
+
+1. **Aggressive TF...",ollama,qwen3-coder:30b,5,25.0000,0.5093,50.0000,0.0000,0,json\batch_renaming_20260212_7437.json
+batch_renaming_20260212_9726,evo_renaming_20260212_3750,10,2026-02-12T08:59:25.843850,renaming,aleju,"Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var'...",ollama,qwen3-coder:30b,5,41.6667,0.6362,75.0000,25.0000,0,json\batch_renaming_20260212_9726.json
+batch_renaming_20260212_a045,evo_renaming_20260212_3750,11,2026-02-12T09:10:30.068637,renaming,aleju,"Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var'...",ollama,qwen3-coder:30b,5,31.2500,0.5532,75.0000,0.0000,0,json\batch_renaming_20260212_a045.json
+batch_renaming_20260212_2fed,evo_renaming_20260212_3750,12,2026-02-12T09:20:08.893023,renaming,aleju,"Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var'...",ollama,qwen3-coder:30b,5,41.6667,0.6399,75.0000,25.0000,0,json\batch_renaming_20260212_2fed.json
+batch_renaming_20260212_c9b2,evo_renaming_20260212_3750,13,2026-02-12T09:31:36.834220,renaming,aleju,"Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var'...",ollama,qwen3-coder:30b,5,25.0000,0.6218,50.0000,0.0000,0,json\batch_renaming_20260212_c9b2.json
+batch_renaming_20260212_4775,evo_renaming_20260212_3750,14,2026-02-12T09:38:03.288318,renaming,aleju,"Transform the Python code by introducing extreme lexical obfuscation through complete identifier randomization using 1-4 character pseudorandom strings with no discernible pattern, inserting excess...",ollama,qwen3-coder:30b,5,16.6667,0.6002,25.0000,0.0000,0,json\batch_renaming_20260212_4775.json
+batch_renaming_20260212_1ed6,evo_renaming_20260212_3750,15,2026-02-12T09:49:09.432916,renaming,aleju,Transform the Python code by implementing extreme lexical obfuscation through complete and inconsistent identifier randomization using 1-4 character pseudorandom strings with no discernible pattern...,ollama,qwen3-coder:30b,5,25.0000,0.6216,50.0000,0.0000,0,json\batch_renaming_20260212_1ed6.json
