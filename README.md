@@ -90,11 +90,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## Additional Documentation
 
-- **Sprint Reports:** Located in the [`docs/`](docs/) directory
-  - [Sprint 4 Report](docs/Sprint4_report.md)
-- **Minutes of Meeting (MoM):** Available in the [`docs/`](docs/) directory
+- **Sprint Reports:** Located in the [`docs/Reports`](docs/Reports) directory
+  - [Sprint 4 Report](docs/Reports/07_Sprint_4_Report.md)
+- **Minutes of Meeting (MoM):** Available in the [`docs/MoM`](docs/MoM) directory
 - **Demo Videos:** Unlisted YouTube links provided in each sprint report
-- **Project Board:** [GitHub Projects Kanban](https://github.com/Bobyy32/16-FA25-SP26-WSU-CYBER/projects/1)
+- **Project Board:** [GitHub Projects Kanban](https://github.com/Bobyy32/16-FA25-SP26-WSU-CYBER/projects)
 
 ## License
 
