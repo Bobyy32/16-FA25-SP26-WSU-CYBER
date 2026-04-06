@@ -1,0 +1,125 @@
+{
+  "evolution_id": "evo_renaming_20260301_9ef8",
+  "round_number": 1,
+  "timestamp": "2026-03-01T15:07:35.584236",
+  "category": "renaming",
+  "author": "microsoft",
+  "prompt_text": "Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var', 'dummy = dummy', 'pass' statements) at irregular intervals throughout the code, scattering meaningless mathematical operations like 'x = y + z - z + y' with dummy variables in multiple locations, restructuring all control flow into deeply nested ternary expressions (3+ levels) or infinite while loops with no clear exit conditions, disrupting comment consistency by removing all meaningful comments and replacing them with placeholder text like \"TODO: review later\", \"FIXME: temporary fix\", \"NOTE: workaround\", varying line lengths dramatically (1-200 characters), introducing extreme whitespace inconsistency (mixing tabs/spaces, random blank lines), reordering all import statements randomly and replacing direct imports with 'from module import *', wrapping every function call in lambda expressions with dummy parameters, and adding excessive unused arguments to all function signatures. These transformations must completely destroy consistent TF-IDF token patterns and stylometric features that Naive Bayes, SGD Classifier, and Neural Network models rely on, while preserving exact code functionality, targeting the specific weaknesses of these three models to achieve 75%+ evasion rate and stealth score below 0.5.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3-coder:30b",
+  "num_files": 5,
+  "avg_evasion_rate": 100.0,
+  "avg_stealth_score": 0.7220593735568491,
+  "best_evasion_rate": 100.0,
+  "worst_evasion_rate": 100.0,
+  "full_evasion_count": 1,
+  "individual_results": [
+    {
+      "filename": "benchmark_test.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\benchmark_test.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260301_c018\\modified_benchmark_test.py",
+      "transform_success": true,
+      "run_id": "renaming_20260301_ec0b",
+      "evasion_rate": 100.0,
+      "evasion_count": 4,
+      "stealth_score": 0.7220593735568491,
+      "stealth_category": "low",
+      "result_type": "full_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "microsoft",
+          "original_conf": 0.6869647846535625,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4919319836089815,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.19503280104458098
+        },
+        "naive_bayes": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9999999984216714,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.3399638828493684,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.660036115572303
+        },
+        "sgd_classifier": {
+          "original_pred": "microsoft",
+          "original_conf": 0.8566172868665235,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.23149004966266293,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.6251272372038605
+        },
+        "neural_network": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9998761415481567,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.37192991375923157,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.6279462277889252
+        }
+      },
+      "input_tokens": 1693,
+      "output_tokens": 14200
+    },
+    {
+      "filename": "model2.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\model2.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: Ollama timed out after 3 attempts: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "retrain.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\retrain.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: Ollama timed out after 3 attempts: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "search5.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\search5.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: Ollama timed out after 3 attempts: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "sklearn_test.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\sklearn_test.py",
+      "transform_success": false,
+      "transform_error": "Unexpected error: Ollama timed out after 3 attempts: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=300)",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 100.0,
+    "naive_bayes": 100.0,
+    "sgd_classifier": 100.0,
+    "neural_network": 100.0
+  },
+  "files_tested": [
+    "benchmark_test.py",
+    "model2.py",
+    "retrain.py",
+    "search5.py",
+    "sklearn_test.py"
+  ],
+  "batch_id": "batch_renaming_20260301_c018",
+  "saved_at": "2026-03-01T16:11:22.090477"
+}

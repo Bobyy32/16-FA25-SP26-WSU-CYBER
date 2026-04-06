@@ -1,0 +1,292 @@
+{
+  "evolution_id": "evo_renaming_20260302_bfa8",
+  "status": "max_rounds_reached",
+  "category": "renaming",
+  "author": "huggingface",
+  "provider": "ollama",
+  "model": "qwen3-coder:30b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 6,
+  "best_evasion_rate": 40.0,
+  "best_prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus high-impact changes on the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models, ensuring 75%+ evasion rate with stealth score below 0.5. Use realistic variable names and avoid dummy code or excessive whitespace. Prioritize targeted modifications that affect feature vectors most heavily weighted by the unevaded models.",
+  "resumed_from": {
+    "prompt": "Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var', 'dummy = dummy', 'pass' statements) at irregular intervals throughout the code, scattering meaningless mathematical operations like 'x = y + z - z + y' with dummy variables in multiple locations, restructuring all control flow into deeply nested ternary expressions (3+ levels) or infinite while loops with no clear exit conditions, disrupting comment consistency by removing all meaningful comments and replacing them with placeholder text like \"TODO: review later\", \"FIXME: temporary fix\", \"NOTE: workaround\", varying line lengths dramatically (1-200 characters), introducing extreme whitespace inconsistency (mixing tabs/spaces, random blank lines), reordering all import statements randomly and replacing direct imports with 'from module import *', wrapping every function call in lambda expressions with dummy parameters, and adding excessive unused arguments to all function signatures. These transformations must completely destroy consistent TF-IDF token patterns and stylometric features that Naive Bayes, SGD Classifier, and Neural Network models rely on, while preserving exact code functionality, targeting the specific weaknesses of these three models to achieve 75%+ evasion rate and stealth score below 0.5.",
+    "evasion_rate": 100.0,
+    "evolution_id": "evo_renaming_20260301_9ef8",
+    "round": 1
+  },
+  "initial_prompt": "Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var', 'dummy = dummy', 'pass' statements) at irregular intervals throughout the code, scattering meaningless mathematical operations like 'x = y + z - z + y' with dummy variables in multiple locations, restructuring all control flow into deeply nested ternary expressions (3+ levels) or infinite while loops with no clear exit conditions, disrupting comment consistency by removing all meaningful comments and replacing them with placeholder text like \"TODO: review later\", \"FIXME: temporary fix\", \"NOTE: workaround\", varying line lengths dramatically (1-200 characters), introducing extreme whitespace inconsistency (mixing tabs/spaces, random blank lines), reordering all import statements randomly and replacing direct imports with 'from module import *', wrapping every function call in lambda expressions with dummy parameters, and adding excessive unused arguments to all function signatures. These transformations must completely destroy consistent TF-IDF token patterns and stylometric features that Naive Bayes, SGD Classifier, and Neural Network models rely on, while preserving exact code functionality, targeting the specific weaknesses of these three models to achieve 75%+ evasion rate and stealth score below 0.5.",
+  "all_prompts": [
+    "Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var', 'dummy = dummy', 'pass' statements) at irregular intervals throughout the code, scattering meaningless mathematical operations like 'x = y + z - z + y' with dummy variables in multiple locations, restructuring all control flow into deeply nested ternary expressions (3+ levels) or infinite while loops with no clear exit conditions, disrupting comment consistency by removing all meaningful comments and replacing them with placeholder text like \"TODO: review later\", \"FIXME: temporary fix\", \"NOTE: workaround\", varying line lengths dramatically (1-200 characters), introducing extreme whitespace inconsistency (mixing tabs/spaces, random blank lines), reordering all import statements randomly and replacing direct imports with 'from module import *', wrapping every function call in lambda expressions with dummy parameters, and adding excessive unused arguments to all function signatures. These transformations must completely destroy consistent TF-IDF token patterns and stylometric features that Naive Bayes, SGD Classifier, and Neural Network models rely on, while preserving exact code functionality, targeting the specific weaknesses of these three models to achieve 75%+ evasion rate and stealth score below 0.5.",
+    "Transform the Python code by selectively renaming variables and functions to obscure TF-IDF patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Ensure all transformations target the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models, achieving 75%+ evasion rate with stealth score below 0.5. Focus on high-impact, low-noise changes.",
+    "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while maintaining functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus on high-impact changes targeting Naive Bayes, SGD Classifier, and Neural Network model weaknesses, ensuring 75%+ evasion rate with stealth score below 0.5.",
+    "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus on high-impact changes targeting the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models, ensuring 75%+ evasion rate with stealth score below 0.5. Use realistic variable names and avoid dummy code or excessive whitespace.",
+    "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus high-impact changes on Naive Bayes, SGD Classifier, and Neural Network model weaknesses, ensuring 75%+ evasion rate with stealth score below 0.5. Use realistic variable names and avoid dummy code or excessive whitespace.",
+    "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus high-impact changes on the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models, ensuring 75%+ evasion rate with stealth score below 0.5. Use realistic variable names and avoid dummy code or excessive whitespace. Prioritize targeted modifications that affect feature vectors most heavily weighted by the unevaded models.",
+    "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Focus high-impact changes on Naive Bayes and SGD Classifier model weaknesses, using realistic variable names and avoiding dummy code. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Ensure 75%+ evasion rate with stealth score below 0.5 by targeting the specific features each unevaded model relies on most.",
+    "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Focus high-impact changes on Naive Bayes and SGD Classifier model weaknesses, using realistic variable names and avoiding dummy code. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Ensure 75%+ evasion rate with stealth score below 0.5 by targeting the specific features each unevaded model relies on most.",
+    "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Focus on high-impact changes to stylometric features most weighted by Naive Bayes, SGD Classifier, and Neural Network models: rename variables to break camelCase/snake_case patterns, modify comment styles (inline vs block), and adjust whitespace usage. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Maintain realistic variable names and avoid dummy code or excessive whitespace. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes while maximizing model confusion.",
+    "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes.",
+    "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+    "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+    "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+    "Transform the Python code by selectively renaming variables to disrupt camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to evade Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+    "Transform the Python code by selectively renaming variables to disrupt camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to evade Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage. Use natural, readable names instead of random strings."
+  ],
+  "files_tested": [
+    "download_wmt.py",
+    "modeling_my_new_model2.py",
+    "old_test_fsmt_bleu_score.py",
+    "run_instance_segmentation.py",
+    "run_plm.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Transform the Python code by completely randomizing all identifier names using 1-4 character pseudorandom strings with no discernible pattern, inserting excessive redundant assignments ('var = var', 'dummy = dummy', 'pass' statements) at irregular intervals throughout the code, scattering meaningless mathematical operations like 'x = y + z - z + y' with dummy variables in multiple locations, restructuring all control flow into deeply nested ternary expressions (3+ levels) or infinite while loops with no clear exit conditions, disrupting comment consistency by removing all meaningful comments and replacing them with placeholder text like \"TODO: review later\", \"FIXME: temporary fix\", \"NOTE: workaround\", varying line lengths dramatically (1-200 characters), introducing extreme whitespace inconsistency (mixing tabs/spaces, random blank lines), reordering all import statements randomly and replacing direct imports with 'from module import *', wrapping every function call in lambda expressions with dummy parameters, and adding excessive unused arguments to all function signatures. These transformations must completely destroy consistent TF-IDF token patterns and stylometric features that Naive Bayes, SGD Classifier, and Neural Network models rely on, while preserving exact code functionality, targeting the specific weaknesses of these three models to achieve 75%+ evasion rate and stealth score below 0.5.",
+      "batch_id": "batch_renaming_20260302_1aee",
+      "avg_evasion_rate": 33.333333333333336,
+      "avg_stealth_score": 0.4378230121726747,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 25.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 100.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to obscure TF-IDF patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Ensure all transformations target the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models, achieving 75%+ evasion rate with stealth score below 0.5. Focus on high-impact, low-noise changes.",
+      "batch_id": "batch_renaming_20260302_45f1",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.45308279144602126,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while maintaining functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus on high-impact changes targeting Naive Bayes, SGD Classifier, and Neural Network model weaknesses, ensuring 75%+ evasion rate with stealth score below 0.5.",
+      "batch_id": "batch_renaming_20260302_9b89",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.3794289730795712,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus on high-impact changes targeting the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models, ensuring 75%+ evasion rate with stealth score below 0.5. Use realistic variable names and avoid dummy code or excessive whitespace.",
+      "batch_id": "batch_renaming_20260302_f3ff",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.3984499018395601,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus high-impact changes on Naive Bayes, SGD Classifier, and Neural Network model weaknesses, ensuring 75%+ evasion rate with stealth score below 0.5. Use realistic variable names and avoid dummy code or excessive whitespace.",
+      "batch_id": "batch_renaming_20260302_ecfc",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.39616224929908633,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Focus high-impact changes on the specific weaknesses of Naive Bayes, SGD Classifier, and Neural Network models, ensuring 75%+ evasion rate with stealth score below 0.5. Use realistic variable names and avoid dummy code or excessive whitespace. Prioritize targeted modifications that affect feature vectors most heavily weighted by the unevaded models.",
+      "batch_id": "batch_renaming_20260302_6e81",
+      "avg_evasion_rate": 40.0,
+      "avg_stealth_score": 0.39915435634463625,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Focus high-impact changes on Naive Bayes and SGD Classifier model weaknesses, using realistic variable names and avoiding dummy code. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Ensure 75%+ evasion rate with stealth score below 0.5 by targeting the specific features each unevaded model relies on most.",
+      "batch_id": "batch_renaming_20260302_39a7",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.39243348877829315,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Focus high-impact changes on Naive Bayes and SGD Classifier model weaknesses, using realistic variable names and avoiding dummy code. Replace control flow structures with equivalent but less detectable forms (e.g., list comprehensions instead of loops). Introduce minimal, contextually relevant comment changes to disrupt stylometric features without altering meaning. Ensure 75%+ evasion rate with stealth score below 0.5 by targeting the specific features each unevaded model relies on most.",
+      "batch_id": "batch_renaming_20260302_bb90",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.3849000649397668,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Transform the Python code by selectively renaming variables and functions to disrupt TF-IDF token patterns while preserving functionality. Focus on high-impact changes to stylometric features most weighted by Naive Bayes, SGD Classifier, and Neural Network models: rename variables to break camelCase/snake_case patterns, modify comment styles (inline vs block), and adjust whitespace usage. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Maintain realistic variable names and avoid dummy code or excessive whitespace. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes while maximizing model confusion.",
+      "batch_id": "batch_renaming_20260302_edb3",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.3957481970786193,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes.",
+      "batch_id": "batch_renaming_20260302_8ab8",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.38820917014031037,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+      "batch_id": "batch_renaming_20260302_bf54",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.4078209760929436,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+      "batch_id": "batch_renaming_20260302_41e6",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.38333471996302493,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Transform the Python code by selectively renaming variables to break camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to disrupt Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+      "batch_id": "batch_renaming_20260302_6edf",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.392659379064381,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Transform the Python code by selectively renaming variables to disrupt camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to evade Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage.",
+      "batch_id": "batch_renaming_20260302_1e91",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.39375399824123064,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Transform the Python code by selectively renaming variables to disrupt camelCase/snake_case patterns, modifying comment styles (inline vs block), and adjusting whitespace usage to evade Naive Bayes and SGD Classifier models. Replace loops with list comprehensions and use equivalent but less detectable control flow structures. Focus on high-impact stylometric features while preserving functionality and using realistic variable names. Target 75%+ evasion rate with stealth score below 0.5 by minimizing feature vector changes. Prioritize changes to features most weighted by unevaded models: variable naming, comment styles, and whitespace usage. Use natural, readable names instead of random strings.",
+      "batch_id": "batch_renaming_20260302_ffc3",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.3886634181999006,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    }
+  ],
+  "started_at": "2026-03-02T16:36:28.686573",
+  "finished_at": "2026-03-02T17:31:34.201382",
+  "saved_at": "2026-03-02T17:31:34.201382"
+}

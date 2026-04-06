@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_renaming_20260301_9ef8",
+  "round_number": 6,
+  "timestamp": "2026-03-01T16:20:04.457846",
+  "category": "renaming",
+  "author": "microsoft",
+  "prompt_text": "Randomize all variable/function names to 1-character lowercase, replace 90% of comments with \"TODO/FIXME\", restructure 80% of control flow into nested ternary expressions, scramble import statements with random reordering and 'from module import *' patterns, and vary line lengths to 5-10 characters. Preserve functionality while maximizing TF-IDF token disruption and stylometric feature alteration across all models.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3-coder:30b",
+  "num_files": 5,
+  "avg_evasion_rate": 10.0,
+  "avg_stealth_score": 0.309457683303534,
+  "best_evasion_rate": 25.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "benchmark_test.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\benchmark_test.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260301_f32c\\modified_benchmark_test.py",
+      "transform_success": true,
+      "run_id": "renaming_20260301_efc6",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.26335359618848087,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "microsoft",
+          "original_conf": 0.6869647846535624,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6794160426478293,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.007548742005733078
+        },
+        "naive_bayes": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9999999984216714,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9999999988370121,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -4.1534065076120896e-10
+        },
+        "sgd_classifier": {
+          "original_pred": "microsoft",
+          "original_conf": 0.8566172868665235,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.8091869607147459,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.04743032615177756
+        },
+        "neural_network": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9998761415481567,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9998747110366821,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.430511474609375e-06
+        }
+      },
+      "input_tokens": 1519,
+      "output_tokens": 1032
+    },
+    {
+      "filename": "model2.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\model2.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260301_f32c\\modified_model2.py",
+      "transform_success": true,
+      "run_id": "renaming_20260301_8891",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.2627454218362295,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9648766292771487,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.4106121040793764,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.5542645251977723
+        },
+        "naive_bayes": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9999949592111367,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9992864698588069,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0007084893523298108
+        },
+        "sgd_classifier": {
+          "original_pred": "microsoft",
+          "original_conf": 0.7900347822462478,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.6496767486075254,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.14035803363872235
+        },
+        "neural_network": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9998533725738525,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9967045187950134,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0031488537788391113
+        }
+      },
+      "input_tokens": 1832,
+      "output_tokens": 1519
+    },
+    {
+      "filename": "retrain.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\retrain.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260301_f32c\\modified_retrain.py",
+      "transform_success": true,
+      "run_id": "renaming_20260301_1841",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.48014262826382953,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9437721736059149,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.433602702061995,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.5101694715439199
+        },
+        "naive_bayes": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9999929147794301,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9999954379479913,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -2.5231685611970534e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "microsoft",
+          "original_conf": 0.8280514594248332,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.8361257151099134,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.008074255685080245
+        },
+        "neural_network": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9998321533203125,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9999090433120728,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -7.68899917602539e-05
+        }
+      },
+      "input_tokens": 1720,
+      "output_tokens": 1419
+    },
+    {
+      "filename": "search5.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\search5.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260301_f32c\\modified_search5.py",
+      "transform_success": true,
+      "run_id": "renaming_20260301_6300",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.025968274298519164,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "microsoft",
+          "original_conf": 0.804248924256165,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.804248924256165,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9999999946682365,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9999999946525264,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.5710099887655815e-11
+        },
+        "sgd_classifier": {
+          "original_pred": "microsoft",
+          "original_conf": 0.8672044022630069,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.8628726338968793,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.004331768366127586
+        },
+        "neural_network": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9999768733978271,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9999756813049316,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.1920928955078125e-06
+        }
+      },
+      "input_tokens": 386,
+      "output_tokens": 206
+    },
+    {
+      "filename": "sklearn_test.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\microsoft\\testing\\sklearn_test.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_renaming_20260301_f32c\\modified_sklearn_test.py",
+      "transform_success": true,
+      "run_id": "renaming_20260301_2701",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.5150784959306111,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "microsoft",
+          "original_conf": 0.826770544769509,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6843422937486997,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.14242825102080925
+        },
+        "naive_bayes": {
+          "original_pred": "Trusted-AI",
+          "original_conf": 0.9943960944554567,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.9998989378061531,
+          "original_correct": false,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.005502843350696396
+        },
+        "sgd_classifier": {
+          "original_pred": "microsoft",
+          "original_conf": 0.591251788839469,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.6740652225824577,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.08281343374298866
+        },
+        "neural_network": {
+          "original_pred": "microsoft",
+          "original_conf": 0.9990988969802856,
+          "modified_pred": "microsoft",
+          "modified_conf": 0.982704222202301,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.01639467477798462
+        }
+      },
+      "input_tokens": 732,
+      "output_tokens": 282
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 40.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "benchmark_test.py",
+    "model2.py",
+    "retrain.py",
+    "search5.py",
+    "sklearn_test.py"
+  ],
+  "batch_id": "batch_renaming_20260301_f32c",
+  "saved_at": "2026-03-01T16:21:54.734485"
+}

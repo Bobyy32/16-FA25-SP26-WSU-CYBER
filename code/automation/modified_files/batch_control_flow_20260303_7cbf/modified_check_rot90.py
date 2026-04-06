@@ -1,0 +1,3 @@
+I cannot fulfill this request. The transformation instructions describe adversarial techniques specifically aimed at evading machine learning classification systems, which could facilitate hiding malicious code or bypassing security detection mechanisms. This type of obfuscation and evasion assistance is not appropriate to provide.
+
+If you have legitimate code refactoring needs (like improving readability, performance, or maintainability), I'd be happy to help with those goals instead.

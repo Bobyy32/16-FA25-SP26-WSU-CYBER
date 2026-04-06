@@ -1,0 +1,292 @@
+{
+  "evolution_id": "evo_formatting_20260302_ba70",
+  "status": "max_rounds_reached",
+  "category": "formatting",
+  "author": "huggingface",
+  "provider": "ollama",
+  "model": "qwen3.5:9b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 1,
+  "best_evasion_rate": 40.0,
+  "best_prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using random camelCase/snake_case (targeting TF-IDF and stylometric features). 2) Restructuring 90% of control flow with swapped condition orders and altered loop logic (targeting Random Forest and Naive Bayes). 3) Swapping import styles and normalizing comment formats (targeting feature vector shifts). 4) Minimizing cosine distance by preserving core logic while changing token-level patterns. Focus on high-impact model-specific features with stealthy transformations.",
+  "resumed_from": {
+    "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using random camelCase/snake_case (targeting TF-IDF and stylometric features). 2) Restructuring 90% of control flow with swapped condition orders and altered loop logic (targeting Random Forest and Naive Bayes). 3) Swapping import styles and normalizing comment formats (targeting feature vector shifts). 4) Minimizing cosine distance by preserving core logic while changing token-level patterns. Focus on high-impact model-specific features with stealthy transformations.",
+    "evasion_rate": 10.0,
+    "evolution_id": "evo_formatting_20260302_a881",
+    "round": 13
+  },
+  "initial_prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using random camelCase/snake_case (targeting TF-IDF and stylometric features). 2) Restructuring 90% of control flow with swapped condition orders and altered loop logic (targeting Random Forest and Naive Bayes). 3) Swapping import styles and normalizing comment formats (targeting feature vector shifts). 4) Minimizing cosine distance by preserving core logic while changing token-level patterns. Focus on high-impact model-specific features with stealthy transformations.",
+  "all_prompts": [
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using random camelCase/snake_case (targeting TF-IDF and stylometric features). 2) Restructuring 90% of control flow with swapped condition orders and altered loop logic (targeting Random Forest and Naive Bayes). 3) Swapping import styles and normalizing comment formats (targeting feature vector shifts). 4) Minimizing cosine distance by preserving core logic while changing token-level patterns. Focus on high-impact model-specific features with stealthy transformations.",
+    "Transform Python code to evade authorship attribution systems (RF, NB, SGD, NN) while maintaining stealth < 0.5. Prioritize targeted manipulation over mass rewrites:\n1. Rename only high-frequency identifiers (TF-IDF targets) using semantic synonyms; avoid random strings that inflate divergence costs.\n2. Modify comment content subtly to shift `inline_comments` distributions without removing comments or adding dead code.\n3. Adjust spacing/indentation incrementally rather than swapping tabs/spaces globally.\n4. Selectively adjust import order/aliasing to minimize `import_style` changes.\nPreserve original logic and structure strictly. Limit significant feature changes to <20% of stylometric features (`features_changed_pct`) to balance evasion against stealth. Avoid over-transformation which penalizes stealth without improving evasion rates. Ensure modifications remain syntactically valid.",
+    "Evade RF, NB, SGD, NN attribution systems with stealth < 0.5. Strategy: Aggressive feature shifting without logic change. 1) Rename 70% of high-frequency identifiers using semantically valid synonyms to maximize TF-IDF token divergence and evasion gain while maintaining cosine distance cost. 2) Rewrite inline and function comments to shift `inline_comments` distributions semantically, avoiding dead code or syntax errors. 3) Selectively adjust non-critical whitespace patterns to subtly alter `use_of_spaces` and `line_length` metrics without structural impact. 4) Modify import aliasing/order where safe to influence `import_style` vectors. Strictly preserve code logic, semantics, and runtime behavior. Avoid random identifiers or dead code that inflate stealth scores. Prioritize n-gram token shifts over broad structural rewrites.",
+    "Improve evasion against Random Forest (currently 0%) while maintaining stealth < 0.5. Prioritize targeted token perturbations over global rewrites. 1) Rename high-frequency variables using precise semantic synonyms to shift TF-IDF n-grams without inflating feature change percentages. 2) Subtly modify inline comments within functions and loops to alter `inline_comments` distributions sensitive to RF decision boundaries. 3) Adjust import aliasing and spacing incrementally to perturb vectors while keeping cosine distance low. Preserve all logic and syntax strictly; avoid dead code or random whitespace that inflates stealth costs without aiding evasion. Focus specific transformations on features driving Random Forest misclassification.",
+    "Evade RF, NB, SGD, and NN attribution systems while maintaining stealth < 0.5. Shift token distributions aggressively without altering logic. 1) Rename high-frequency variables using semantic synonyms (not random strings) for identifiers used >3 times to maximize TF-IDF divergence. 2) Rewrite all inline and block comments with semantically equivalent but textually distinct content to alter `inline_comments` feature vectors. 3) Adjust local whitespace patterns (tabs/spaces mix) where safe to perturb n-gram distributions without syntax errors. 4) Alter import aliases or ordering if compatible with dependencies. Strictly avoid dead code, pass statements, or structural rewrites that inflate feature change percentage >20%. Prioritize targeted token perturbations over global structure to maximize evasion gain against models relying on token frequency and comment statistics while keeping cosine distance low.",
+    "Prioritize structural refactoring to disrupt attribution features without logic loss: \n1) Refactor control flow: Swap equivalent `for` loops with `while` or list comprehensions to alter token sequences and `line_length`. \n2) Manipulate imports: Consolidate or split statements (relative vs absolute) to shift `import_style` vectors. \n3) Reallocate comments: Move inline comments to function docstrings or block sections to invert `inline_comments` vs `block_comments` counts. \n4) Variable Declaration Consolidation: Group related assignments into single statements to alter whitespace density metrics. \nMaintain strict semantic equivalence for all logic changes. Do not introduce dead code, pass statements, or excessive padding that inflates stealth scores without aiding evasion. Focus on high-impact structural shifts maximizing feature vector divergence while keeping cosine distance low. Target specific decision boundary features used by Random Forest and Naive Bayes models to improve evasion rates significantly while staying below the 0.5 stealth threshold.",
+    "Target evasion against all models while maintaining stealth < 0.5 by prioritizing text-based perturbations over structural refactoring.\n1) Rename high-frequency variables (>3 occurrences) using precise semantic synonyms to maximize TF-IDF divergence for RF and NB without altering control flow.\n2) Overwrite all function docstrings and inline comments with semantically equivalent phrasing to aggressively shift n-gram distributions critical for Naive Bayes and Neural Network evasion.\n3) Adjust whitespace density (tabs/spaces mix) incrementally in specific scopes to perturb feature vectors naturally, avoiding dead code or inflated `features_changed_pct`.\n4) Consolidate imports locally where possible to subtly alter `import_style` vectors without breaking dependencies.\nStrictly preserve original logic and functionality. Focus on shifting the most discriminative features for RF/NB decision boundaries while keeping cosine distance low. Avoid unnecessary restructuring that diminishes evasion returns per stealth cost.",
+    "Target RF, NB, and NN evasion by inducing controlled style mismatches within valid logic blocks. 1) Invert naming conventions (snake_case to camelCase or vice versa) in isolated functions to disrupt n-gram clusters without affecting functionality. 2) Shuffle import order and mix relative/absolute imports to shift `import_style` vectors significantly. 3) Consolidate inline comments into function docstrings to invert comment density features, breaking sequence patterns for NB/NN. 4) Restructure specific loops (for vs list comprehension) only where performance impact is negligible to alter `line_length` and whitespace metrics. Strictly preserve semantic equivalence; prohibit dead code or padding. Maximize TF-IDF divergence on high-frequency tokens to cross decision boundaries while keeping stealth score below 0.5. Prioritize high-impact feature perturbations specifically for Random Forest and Naive Bayes models.",
+    "Aggressively rename high-frequency variables and functions to semantically valid but lexically distinct equivalents to maximize TF-IDF divergence for Random Forest and Naive Bayes. Consolidate imports into single blocks or switch fully from relative to absolute to drastically shift `import_style` vectors. Reorder independent code blocks (e.g., separate import or function definitions) to disrupt sequential n-gram patterns for Neural Networks without affecting logic. Move inline comments entirely to function docstrings to invert comment density features significantly. Strictly preserve functionality and semantic meaning; prohibit dead code, padding, or logic changes that inflate `features_changed_pct`. Maintain stealth below 0.5 while targeting models currently achieving 0% evasion.",
+    "Target evasion for RF/NB/NN while maintaining stealth < 0.5. Prohibit dead code or padding. 1) Rewrite all docstrings and inline comments using semantically identical but lexically distinct phrasing to disrupt NB/RF n-gram vectors. 2) Invert naming conventions (snake_case <-> camelCase) on high-frequency functions specifically to shift TF-IDF distributions without altering control flow. 3) Reorder independent code blocks (imports, definitions) safely to alter sequence-dependent features for Neural Networks. 4) Modify string literals in logs or constants to subtly change token frequencies. Focus strictly on discriminative features driving RF/NB decisions rather than blanket refactoring. Ensure all changes preserve original logic and semantic meaning to prevent `features_changed_pct` inflation from breaking stealth thresholds.",
+    "Target evasion for RF, NB, and NN by utilizing stealth margin (current 0.26) to increase feature divergence. 1) Systematically invert naming conventions (snake_case \u2194 camelCase) specifically in helper functions to shift lexical counts without breaking logic. 2) Toggle whitespace style (`spaces` \u2194 `tabs`) in safe blocks to directly manipulate `use_of_tabs` and whitespace metric vectors. 3) Replace common boolean checks (`is None`, `==`) with equivalent idioms (`!=`, `not`) to alter high-frequency token distributions for NB/RF n-gram models. Maintain strict semantic equivalence; prohibit dead code or padding. Focus perturbations on discriminative features driving classification, not blanket refactoring, ensuring evasion crosses thresholds before stealth reaches 0.5.",
+    "To break 0% evasion, prioritize structural feature divergence over superficial naming changes. 1) Refactor logic flow: Merge sequential `if` statements into compound boolean expressions and convert `for` loops to list comprehensions where logic is identical, altering n-gram patterns significantly. 2) Stylometric shift: Enforce uniform casing (all snake_case or camelCase) per function block to drastically change `camel_case`/`snake_case` counts without breaking links. 3) Comment architecture: Move all inline comments to function docstrings and rewrite them semantically but lexically distinct, maximizing `js_divergence`. 4) Import handling: Switch between relative/absolute imports unpredictably within valid boundaries to alter `import_style`. Strictly preserve input/output behavior; prohibit padding or dead code. Focus changes on features driving RF/NB classification. Maintain stealth < 0.5 by ensuring total feature change percentage remains low despite token distribution shifts.",
+    "Prioritize lexical divergence over structural refactoring to maximize n-gram distance for Random Forest and Naive Bayes models. 1) Rename variables and functions with semantically identical but lexically distinct identifiers (e.g., `data` -> `payload`) to spike TF-IDF vectors while preserving logic. 2) Alternate whitespace style (tabs vs spaces) within specific class blocks to manipulate `use_of_tabs/spaces` metrics. 3) Rewrite docstrings and comments with semantically equivalent phrasing to lower cosine similarity. 4) Shuffle import groupings or switch absolute/relative imports to alter `import_style` features. Limit total significant feature changes to maintain stealth under 0.5. Focus modifications strictly on high-weight token patterns rather than control flow logic, as lexical shifts offer higher evasion returns per stealth cost increment. Preserve code functionality; prohibit dead code.",
+    "Elevate evasion for Random Forest and Naive Bayes by targeting high-weight feature vectors directly. 1) Idiom Refactoring: Convert explicit `for` loops to list comprehensions in data processing blocks to drastically alter n-gram token distributions while preserving logic. 2) Control Flow Logic: Merge sequential conditional checks into compound expressions (`if a and b`) to reduce keyword frequency patterns compared to the baseline. 3) Import Structuring: Randomly switch between absolute and relative imports per function block, maximizing `import_style` divergence without increasing feature count percentage significantly. 4) Token Injection: Introduce unique variable prefixes (e.g., `_res_`, `_data_`) exclusively for intermediate temporary variables in this specific file to boost TF-IDF cosine distance. Maintain strict stealth < 0.5 by avoiding global refactoring; focus perturbations on discriminative features driving classification boundaries. Prohibit dead code or padding.",
+    "Execute deep structural obfuscation to evade all models while maintaining stealth < 0.5:\n\n1) Import Aliasing: Rename all standard imports with unique, descriptive aliases (`os` -> `_op_sys`, `numpy` -> `_num_arr`) to drastically shift TF-IDF token distributions without violating import style metrics significantly.\n2) Function Partitioning: Decompose large functions into 2-3 private helper functions (`_fetch_val`, `_process_stream`) with semantically distinct names to increase n-gram entropy and alter line counts naturally.\n3) Comment Migration: Convert all inline comments to module-level docstrings, rewriting content uniquely per block to maximize JS divergence without increasing feature change percentage significantly.\n4) Stylistic Block Swapping: Force uniform casing shifts (snake_case <-> camelCase) within specific logical sections to manipulate `camel_case`/`snake_case` counts disproportionately.\n\nMaintain strict code functionality; prohibit dead code, padding, or logic alteration."
+  ],
+  "files_tested": [
+    "3D_parallel.py",
+    "download_wmt.py",
+    "modular_my_new_model2.py",
+    "preprocess.py",
+    "run_plm.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using random camelCase/snake_case (targeting TF-IDF and stylometric features). 2) Restructuring 90% of control flow with swapped condition orders and altered loop logic (targeting Random Forest and Naive Bayes). 3) Swapping import styles and normalizing comment formats (targeting feature vector shifts). 4) Minimizing cosine distance by preserving core logic while changing token-level patterns. Focus on high-impact model-specific features with stealthy transformations.",
+      "batch_id": "batch_formatting_20260302_a59b",
+      "avg_evasion_rate": 40.0,
+      "avg_stealth_score": 0.4853865059822736,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 40.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Transform Python code to evade authorship attribution systems (RF, NB, SGD, NN) while maintaining stealth < 0.5. Prioritize targeted manipulation over mass rewrites:\n1. Rename only high-frequency identifiers (TF-IDF targets) using semantic synonyms; avoid random strings that inflate divergence costs.\n2. Modify comment content subtly to shift `inline_comments` distributions without removing comments or adding dead code.\n3. Adjust spacing/indentation incrementally rather than swapping tabs/spaces globally.\n4. Selectively adjust import order/aliasing to minimize `import_style` changes.\nPreserve original logic and structure strictly. Limit significant feature changes to <20% of stylometric features (`features_changed_pct`) to balance evasion against stealth. Avoid over-transformation which penalizes stealth without improving evasion rates. Ensure modifications remain syntactically valid.",
+      "batch_id": "batch_formatting_20260302_9d3c",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.19673078406416436,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Evade RF, NB, SGD, NN attribution systems with stealth < 0.5. Strategy: Aggressive feature shifting without logic change. 1) Rename 70% of high-frequency identifiers using semantically valid synonyms to maximize TF-IDF token divergence and evasion gain while maintaining cosine distance cost. 2) Rewrite inline and function comments to shift `inline_comments` distributions semantically, avoiding dead code or syntax errors. 3) Selectively adjust non-critical whitespace patterns to subtly alter `use_of_spaces` and `line_length` metrics without structural impact. 4) Modify import aliasing/order where safe to influence `import_style` vectors. Strictly preserve code logic, semantics, and runtime behavior. Avoid random identifiers or dead code that inflate stealth scores. Prioritize n-gram token shifts over broad structural rewrites.",
+      "batch_id": "batch_formatting_20260302_f511",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.2620159225187474,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 40.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Improve evasion against Random Forest (currently 0%) while maintaining stealth < 0.5. Prioritize targeted token perturbations over global rewrites. 1) Rename high-frequency variables using precise semantic synonyms to shift TF-IDF n-grams without inflating feature change percentages. 2) Subtly modify inline comments within functions and loops to alter `inline_comments` distributions sensitive to RF decision boundaries. 3) Adjust import aliasing and spacing incrementally to perturb vectors while keeping cosine distance low. Preserve all logic and syntax strictly; avoid dead code or random whitespace that inflates stealth costs without aiding evasion. Focus specific transformations on features driving Random Forest misclassification.",
+      "batch_id": "batch_formatting_20260302_219c",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.1593987970807282,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Evade RF, NB, SGD, and NN attribution systems while maintaining stealth < 0.5. Shift token distributions aggressively without altering logic. 1) Rename high-frequency variables using semantic synonyms (not random strings) for identifiers used >3 times to maximize TF-IDF divergence. 2) Rewrite all inline and block comments with semantically equivalent but textually distinct content to alter `inline_comments` feature vectors. 3) Adjust local whitespace patterns (tabs/spaces mix) where safe to perturb n-gram distributions without syntax errors. 4) Alter import aliases or ordering if compatible with dependencies. Strictly avoid dead code, pass statements, or structural rewrites that inflate feature change percentage >20%. Prioritize targeted token perturbations over global structure to maximize evasion gain against models relying on token frequency and comment statistics while keeping cosine distance low.",
+      "batch_id": "batch_formatting_20260302_3369",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.2598465655715585,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Prioritize structural refactoring to disrupt attribution features without logic loss: \n1) Refactor control flow: Swap equivalent `for` loops with `while` or list comprehensions to alter token sequences and `line_length`. \n2) Manipulate imports: Consolidate or split statements (relative vs absolute) to shift `import_style` vectors. \n3) Reallocate comments: Move inline comments to function docstrings or block sections to invert `inline_comments` vs `block_comments` counts. \n4) Variable Declaration Consolidation: Group related assignments into single statements to alter whitespace density metrics. \nMaintain strict semantic equivalence for all logic changes. Do not introduce dead code, pass statements, or excessive padding that inflates stealth scores without aiding evasion. Focus on high-impact structural shifts maximizing feature vector divergence while keeping cosine distance low. Target specific decision boundary features used by Random Forest and Naive Bayes models to improve evasion rates significantly while staying below the 0.5 stealth threshold.",
+      "batch_id": "batch_formatting_20260302_d195",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.2153850382303279,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Target evasion against all models while maintaining stealth < 0.5 by prioritizing text-based perturbations over structural refactoring.\n1) Rename high-frequency variables (>3 occurrences) using precise semantic synonyms to maximize TF-IDF divergence for RF and NB without altering control flow.\n2) Overwrite all function docstrings and inline comments with semantically equivalent phrasing to aggressively shift n-gram distributions critical for Naive Bayes and Neural Network evasion.\n3) Adjust whitespace density (tabs/spaces mix) incrementally in specific scopes to perturb feature vectors naturally, avoiding dead code or inflated `features_changed_pct`.\n4) Consolidate imports locally where possible to subtly alter `import_style` vectors without breaking dependencies.\nStrictly preserve original logic and functionality. Focus on shifting the most discriminative features for RF/NB decision boundaries while keeping cosine distance low. Avoid unnecessary restructuring that diminishes evasion returns per stealth cost.",
+      "batch_id": "batch_formatting_20260302_8954",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.28040131319282596,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Target RF, NB, and NN evasion by inducing controlled style mismatches within valid logic blocks. 1) Invert naming conventions (snake_case to camelCase or vice versa) in isolated functions to disrupt n-gram clusters without affecting functionality. 2) Shuffle import order and mix relative/absolute imports to shift `import_style` vectors significantly. 3) Consolidate inline comments into function docstrings to invert comment density features, breaking sequence patterns for NB/NN. 4) Restructure specific loops (for vs list comprehension) only where performance impact is negligible to alter `line_length` and whitespace metrics. Strictly preserve semantic equivalence; prohibit dead code or padding. Maximize TF-IDF divergence on high-frequency tokens to cross decision boundaries while keeping stealth score below 0.5. Prioritize high-impact feature perturbations specifically for Random Forest and Naive Bayes models.",
+      "batch_id": "batch_formatting_20260302_44a8",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.07968869056956118,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Aggressively rename high-frequency variables and functions to semantically valid but lexically distinct equivalents to maximize TF-IDF divergence for Random Forest and Naive Bayes. Consolidate imports into single blocks or switch fully from relative to absolute to drastically shift `import_style` vectors. Reorder independent code blocks (e.g., separate import or function definitions) to disrupt sequential n-gram patterns for Neural Networks without affecting logic. Move inline comments entirely to function docstrings to invert comment density features significantly. Strictly preserve functionality and semantic meaning; prohibit dead code, padding, or logic changes that inflate `features_changed_pct`. Maintain stealth below 0.5 while targeting models currently achieving 0% evasion.",
+      "batch_id": "batch_formatting_20260302_ad83",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.21338556018969487,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Target evasion for RF/NB/NN while maintaining stealth < 0.5. Prohibit dead code or padding. 1) Rewrite all docstrings and inline comments using semantically identical but lexically distinct phrasing to disrupt NB/RF n-gram vectors. 2) Invert naming conventions (snake_case <-> camelCase) on high-frequency functions specifically to shift TF-IDF distributions without altering control flow. 3) Reorder independent code blocks (imports, definitions) safely to alter sequence-dependent features for Neural Networks. 4) Modify string literals in logs or constants to subtly change token frequencies. Focus strictly on discriminative features driving RF/NB decisions rather than blanket refactoring. Ensure all changes preserve original logic and semantic meaning to prevent `features_changed_pct` inflation from breaking stealth thresholds.",
+      "batch_id": "batch_formatting_20260302_fe36",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.264890163989058,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Target evasion for RF, NB, and NN by utilizing stealth margin (current 0.26) to increase feature divergence. 1) Systematically invert naming conventions (snake_case \u2194 camelCase) specifically in helper functions to shift lexical counts without breaking logic. 2) Toggle whitespace style (`spaces` \u2194 `tabs`) in safe blocks to directly manipulate `use_of_tabs` and whitespace metric vectors. 3) Replace common boolean checks (`is None`, `==`) with equivalent idioms (`!=`, `not`) to alter high-frequency token distributions for NB/RF n-gram models. Maintain strict semantic equivalence; prohibit dead code or padding. Focus perturbations on discriminative features driving classification, not blanket refactoring, ensuring evasion crosses thresholds before stealth reaches 0.5.",
+      "batch_id": "batch_formatting_20260302_6373",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.06969399558631786,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "To break 0% evasion, prioritize structural feature divergence over superficial naming changes. 1) Refactor logic flow: Merge sequential `if` statements into compound boolean expressions and convert `for` loops to list comprehensions where logic is identical, altering n-gram patterns significantly. 2) Stylometric shift: Enforce uniform casing (all snake_case or camelCase) per function block to drastically change `camel_case`/`snake_case` counts without breaking links. 3) Comment architecture: Move all inline comments to function docstrings and rewrite them semantically but lexically distinct, maximizing `js_divergence`. 4) Import handling: Switch between relative/absolute imports unpredictably within valid boundaries to alter `import_style`. Strictly preserve input/output behavior; prohibit padding or dead code. Focus changes on features driving RF/NB classification. Maintain stealth < 0.5 by ensuring total feature change percentage remains low despite token distribution shifts.",
+      "batch_id": "batch_formatting_20260302_63dd",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.2181161620383798,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Prioritize lexical divergence over structural refactoring to maximize n-gram distance for Random Forest and Naive Bayes models. 1) Rename variables and functions with semantically identical but lexically distinct identifiers (e.g., `data` -> `payload`) to spike TF-IDF vectors while preserving logic. 2) Alternate whitespace style (tabs vs spaces) within specific class blocks to manipulate `use_of_tabs/spaces` metrics. 3) Rewrite docstrings and comments with semantically equivalent phrasing to lower cosine similarity. 4) Shuffle import groupings or switch absolute/relative imports to alter `import_style` features. Limit total significant feature changes to maintain stealth under 0.5. Focus modifications strictly on high-weight token patterns rather than control flow logic, as lexical shifts offer higher evasion returns per stealth cost increment. Preserve code functionality; prohibit dead code.",
+      "batch_id": "batch_formatting_20260302_30e1",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.20140147576558548,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Elevate evasion for Random Forest and Naive Bayes by targeting high-weight feature vectors directly. 1) Idiom Refactoring: Convert explicit `for` loops to list comprehensions in data processing blocks to drastically alter n-gram token distributions while preserving logic. 2) Control Flow Logic: Merge sequential conditional checks into compound expressions (`if a and b`) to reduce keyword frequency patterns compared to the baseline. 3) Import Structuring: Randomly switch between absolute and relative imports per function block, maximizing `import_style` divergence without increasing feature count percentage significantly. 4) Token Injection: Introduce unique variable prefixes (e.g., `_res_`, `_data_`) exclusively for intermediate temporary variables in this specific file to boost TF-IDF cosine distance. Maintain strict stealth < 0.5 by avoiding global refactoring; focus perturbations on discriminative features driving classification boundaries. Prohibit dead code or padding.",
+      "batch_id": "batch_formatting_20260302_b71d",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.12281654164393345,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Execute deep structural obfuscation to evade all models while maintaining stealth < 0.5:\n\n1) Import Aliasing: Rename all standard imports with unique, descriptive aliases (`os` -> `_op_sys`, `numpy` -> `_num_arr`) to drastically shift TF-IDF token distributions without violating import style metrics significantly.\n2) Function Partitioning: Decompose large functions into 2-3 private helper functions (`_fetch_val`, `_process_stream`) with semantically distinct names to increase n-gram entropy and alter line counts naturally.\n3) Comment Migration: Convert all inline comments to module-level docstrings, rewriting content uniquely per block to maximize JS divergence without increasing feature change percentage significantly.\n4) Stylistic Block Swapping: Force uniform casing shifts (snake_case <-> camelCase) within specific logical sections to manipulate `camel_case`/`snake_case` counts disproportionately.\n\nMaintain strict code functionality; prohibit dead code, padding, or logic alteration.",
+      "batch_id": "batch_formatting_20260302_681d",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.17080393766807928,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    }
+  ],
+  "started_at": "2026-03-02T22:14:30.011737",
+  "finished_at": "2026-03-02T23:11:48.936717",
+  "saved_at": "2026-03-02T23:11:48.936717"
+}

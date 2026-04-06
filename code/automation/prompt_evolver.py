@@ -20,29 +20,72 @@ Each model analyzes code using:
 
 1. TF-IDF n-grams: Token-level patterns in the source code (variable names, keywords, operators, whitespace patterns)
 2. 12 stylometric features:
-   - inline_comments: Count of inline comments (# after code)
-   - block_comments: Count of block/multiline comments
-   - single_line_comments: Count of standalone comment lines
-   - function_comments: Count of docstrings in functions
-   - camel_case: Count of camelCase identifiers
-   - snake_case: Count of snake_case identifiers
-   - variable_name_length: Average variable name length
-   - function_name_length: Average function name length
-   - use_of_tabs: Whether tabs are used for indentation
-   - use_of_spaces: Whether spaces are used for indentation
-   - line_length: Average line length
-   - import_style: Import style pattern (from...import vs import)
+   - inline_comments, block_comments, single_line_comments, function_comments
+   - camel_case count, snake_case count
+   - variable_name_length (avg), function_name_length (avg)
+   - use_of_tabs, use_of_spaces
+   - line_length (avg), import_style
 
-The models are sensitive to changes in naming conventions, comment styles, code structure patterns,
-and whitespace usage. Changes that alter the TF-IDF token distribution (like renaming variables,
-restructuring control flow, or changing import patterns) are most effective at evading detection.
+STEALTH SCORING (how "stealthy" the changes are — lower = better, target < 0.5):
+  stealth_score = 0.3 * cosine_distance + 0.3 * relative_l2 + 0.2 * js_divergence + 0.2 * features_changed_pct
+  - cosine_distance: measures angle between original and modified feature vectors (0 = identical direction)
+  - relative_l2: euclidean distance normalized by original magnitude
+  - js_divergence: statistical divergence between token distributions
+  - features_changed_pct: percentage of features that changed significantly
+
+KEY INSIGHT: To stay stealthy while evading, focus on TARGETED changes to the features each model
+relies on most, rather than rewriting everything. Change the RIGHT features, not ALL features.
+Renaming variables changes TF-IDF tokens (high evasion impact) with low cosine distance cost.
+Massive rewrites change many features at once (high stealth cost) for diminishing evasion returns.
 """
+
+
+CATEGORY_CONSTRAINTS = {
+    "restructuring": (
+        "CATEGORY CONSTRAINT — RESTRUCTURING ONLY:\n"
+        "You may ONLY use these techniques: reorder statements, extract/inline helper functions,\n"
+        "split/merge functions, change class hierarchy, move code between modules.\n"
+        "You MUST NOT rename variables/functions, change comments, change formatting/whitespace,\n"
+        "or change import styles. Those belong to other categories."
+    ),
+    "renaming": (
+        "CATEGORY CONSTRAINT — RENAMING ONLY:\n"
+        "You may ONLY use these techniques: rename variables, rename functions, rename parameters,\n"
+        "rename classes, change naming conventions (snake_case/camelCase).\n"
+        "You MUST NOT restructure control flow, change comments, change formatting/whitespace,\n"
+        "or change import styles. Those belong to other categories."
+    ),
+    "formatting": (
+        "CATEGORY CONSTRAINT — FORMATTING ONLY:\n"
+        "You may ONLY use these techniques: change indentation style, change line lengths,\n"
+        "change whitespace around operators, change blank line usage, change bracket placement.\n"
+        "You MUST NOT rename variables/functions, restructure control flow, change comments,\n"
+        "or change import styles. Those belong to other categories."
+    ),
+    "comments": (
+        "CATEGORY CONSTRAINT — COMMENTS ONLY:\n"
+        "You may ONLY use these techniques: add/remove/rewrite inline comments, add/remove/rewrite\n"
+        "block comments, add/remove/rewrite docstrings, change comment style (# vs triple-quote).\n"
+        "You MUST NOT rename variables/functions, restructure control flow, change formatting,\n"
+        "or change import styles. Those belong to other categories."
+    ),
+    "control_flow": (
+        "CATEGORY CONSTRAINT — CONTROL FLOW ONLY:\n"
+        "You may ONLY use these techniques: convert for loops to comprehensions or vice versa,\n"
+        "replace if/elif with dict dispatch or match/case, swap ternary vs full if/else,\n"
+        "convert early returns to nested conditionals, invert boolean conditions,\n"
+        "swap while/for loops, merge/split conditionals.\n"
+        "You MUST NOT rename variables/functions, change comments, change formatting/whitespace,\n"
+        "or change import styles. Those belong to other categories."
+    ),
+}
 
 
 def build_analysis_context(
     batch_results: Dict[str, Any],
     previous_prompts: List[str],
     round_number: int,
+    category: str = "",
 ) -> str:
     """
     Build the analysis context string that will be sent to the AI
@@ -85,14 +128,27 @@ def build_analysis_context(
 
     file_summary = "\n".join(file_lines) if file_lines else "  No files processed"
 
-    # Build prompt history
+    # Build prompt history — only include last 3 to keep context manageable
+    recent_prompts = previous_prompts[-3:]
+    start_idx = len(previous_prompts) - len(recent_prompts) + 1
     prompt_history_lines = []
-    for i, p in enumerate(previous_prompts, 1):
+    for i, p in enumerate(recent_prompts, start_idx):
         prompt_history_lines.append(f"  Round {i}: {p}")
+    if len(previous_prompts) > 3:
+        prompt_history_lines.insert(0, f"  (showing last 3 of {len(previous_prompts)} prompts)")
     prompt_history = "\n".join(prompt_history_lines)
 
     # Detect trends
     trend_notes = _analyze_trends(batch_results, round_number)
+
+    # Category constraint
+    category_upper = category.upper().replace("_", " ")
+    category_constraint = CATEGORY_CONSTRAINTS.get(
+        category,
+        f"CATEGORY CONSTRAINT — {category_upper}:\n"
+        f"Only use techniques that belong to the '{category}' transformation category.\n"
+        "Do NOT mix in techniques from other categories (renaming, restructuring, formatting, comments, etc.)."
+    )
 
     context = f"""
 {FEATURE_DESCRIPTION}
@@ -116,16 +172,29 @@ Per-file results:
 === ANALYSIS NOTES ===
 {trend_notes}
 
-=== TASK ===
-Based on the above results and the attribution system's features, generate an improved
-transformation prompt. The prompt should instruct an AI to modify Python code in a way that:
-1. Maximizes evasion of the attribution models (target: 75%+ evasion rate)
-2. Keeps changes stealthy (stealth score < 0.5)
-3. Preserves code functionality
-4. Specifically targets the models that were NOT evaded
+=== CATEGORY: {category_upper} ===
+{category_constraint}
 
-Focus on changes that alter the TF-IDF token distribution and stylometric features
-without breaking the code. Be specific and actionable.
+=== TASK ===
+Generate an improved transformation prompt based on the results above.
+The prompt MUST only use techniques allowed by the category constraint above.
+
+RULES:
+1. STAY IN YOUR LANE. Only use techniques from the {category_upper} category.
+   Do NOT add renaming, restructuring, comment changes, or other techniques
+   that belong to different categories, even if they might help evasion.
+2. ITERATE, don't restart. If the last prompt had good evasion, keep its core strategy
+   and refine it. Only change what isn't working.
+3. If evasion was high but stealth was poor: keep the same transformations but make them
+   more surgical and natural.
+4. If evasion was low: try a different strategy WITHIN THIS CATEGORY targeting the
+   specific un-evaded models.
+5. Keep the prompt CONCISE — under 150 words. Focus on 3-4 high-impact changes.
+6. Preserve code functionality.
+7. DO NOT add dummy/dead code, random whitespace, or pass statements — these inflate
+   stealth scores without helping evasion.
+
+The prompt should instruct an AI to modify Python source code. Be specific and actionable.
 
 Return ONLY the new transformation prompt, nothing else.
 """
@@ -138,6 +207,7 @@ def evolve_prompt(
     round_number: int,
     provider: str = "ollama",
     model: Optional[str] = None,
+    category: str = "",
 ) -> str:
     """
     Generate an evolved prompt based on batch test results.
@@ -148,13 +218,14 @@ def evolve_prompt(
         round_number: Current round number.
         provider: AI provider to use for prompt generation.
         model: Override model for the provider.
+        category: Transformation category to constrain the evolver.
 
     Returns:
         The new evolved prompt string.
     """
     ai = get_provider(provider, model=model)
 
-    context = build_analysis_context(batch_results, previous_prompts, round_number)
+    context = build_analysis_context(batch_results, previous_prompts, round_number, category)
 
     print(f"  Generating evolved prompt with {ai.name}...", end=" ")
     new_prompt = ai.generate_evolved_prompt(context)
@@ -187,23 +258,33 @@ def _analyze_trends(batch_results: Dict[str, Any], round_number: int) -> str:
             "Focus transformations on features these models rely on most."
         )
 
-    # Stealth-evasion tradeoff
-    if avg_evasion > 50 and avg_stealth > 0.5:
+    # Stealth-evasion tradeoff — give specific, actionable guidance
+    if avg_evasion >= 75 and avg_stealth > 0.5:
         notes.append(
-            "Evasion is moderate but stealth is poor. Make changes more subtle - "
-            "smaller, distributed modifications rather than large rewrites."
+            "Evasion is GOOD but stealth is too high. DO NOT reduce the scope of changes. "
+            "Instead, make the SAME types of changes but more surgically: rename variables "
+            "to realistic alternatives (not random gibberish), use natural-looking comments, "
+            "and avoid adding dead code or dummy statements that inflate feature distances."
+        )
+    elif avg_evasion > 40 and avg_stealth > 0.5:
+        notes.append(
+            "Evasion is promising but stealth is too high. Keep the evasion strategy but "
+            "reduce unnecessary bulk: avoid dummy variables, dead code, and random whitespace. "
+            "Focus on renaming identifiers to common alternatives and subtle comment changes."
         )
     elif avg_evasion < 25:
         notes.append(
-            "Evasion is very low. Try more aggressive transformations: "
-            "change naming conventions, restructure control flow, alter import patterns."
+            "Evasion is very low. Try more aggressive transformations WITHIN the allowed "
+            "category. Push harder on the permitted techniques — be bolder with the scope "
+            "and intensity of changes, but stay within the category constraint."
         )
 
-    # Plateauing detection (only meaningful after round 1)
-    if round_number > 1 and avg_evasion < 30:
+    # Plateauing detection
+    if round_number > 3 and avg_evasion < 30:
         notes.append(
-            "Results remain low after multiple rounds. Consider a fundamentally "
-            "different approach: change the type of transformation entirely."
+            "Results remain low after multiple rounds. Try a fundamentally different "
+            "approach WITHIN the allowed category — vary the intensity, target different "
+            "code patterns, or apply changes more/less aggressively."
         )
 
     if not notes:

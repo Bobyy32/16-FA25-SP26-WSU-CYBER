@@ -17,6 +17,12 @@ from .results_tracker import ResultsTracker, generate_run_id
 from .dataset_scanner import get_all_authors, select_files_for_batch, resolve_author_from_path
 from .batch_tracker import BatchTracker, generate_batch_id, generate_evolution_id
 
+
+def get_best_prompt(category: str):
+    """Convenience wrapper: find the best prompt across all evolutions for a category."""
+    return BatchTracker().get_best_prompt(category)
+
+
 __all__ = [
     "load_all_models",
     "load_model_components",
@@ -34,4 +40,5 @@ __all__ = [
     "BatchTracker",
     "generate_batch_id",
     "generate_evolution_id",
+    "get_best_prompt",
 ]

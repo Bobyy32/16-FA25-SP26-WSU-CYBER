@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_control_flow_20260303_d797",
+  "round_number": 12,
+  "timestamp": "2026-03-03T10:23:44.152931",
+  "category": "control_flow",
+  "author": "huggingface",
+  "prompt_text": "Adopt varied Control Flow manipulation granularities across functions to evade model expectations without inflating stealth. Alternate between coarse block restructuring and micro-logic inversions within tight scopes. Convert `for` loops to comprehensions selectively in nested contexts, reserving them for blocks where token adjacency naturally shifts. Replace sequential `if/elif` chains with dictionary dispatch only when it increases local token variance. Invert boolean operators (`and` <-> `or`) deep within branches to disrupt n-gram signatures while preserving top-level feature vectors. Merge fragmented conditionals into compound statements to shift line-length distributions subtly, avoiding excessive change percentages. Ensure exact functionality preservation and eliminate empty lines that inflate stealth scores. Focus on disrupting specific Control Flow n-gram patterns in un-evaded files by varying transformation complexity per function.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 20.0,
+  "avg_stealth_score": 0.20890851453413264,
+  "best_evasion_rate": 100.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 1,
+  "individual_results": [
+    {
+      "filename": "benchmarks_entrypoint.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\huggingface\\testing\\benchmarks_entrypoint.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_control_flow_20260303_03cd\\modified_benchmarks_entrypoint.py",
+      "transform_success": true,
+      "run_id": "control_flow_20260303_b823",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.08302003663413911,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "huggingface",
+          "original_conf": 0.98,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.98,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9999998100539396,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.9999997648073836,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 4.5246555946398814e-08
+        },
+        "sgd_classifier": {
+          "original_pred": "huggingface",
+          "original_conf": 0.752704896629934,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.7427933141882257,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.009911582441708311
+        },
+        "neural_network": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9999374151229858,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.9999375343322754,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -1.1920928955078125e-07
+        }
+      },
+      "input_tokens": 4566,
+      "output_tokens": 4711
+    },
+    {
+      "filename": "modeling_my_new_model2.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\huggingface\\testing\\modeling_my_new_model2.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_control_flow_20260303_03cd\\modified_modeling_my_new_model2.py",
+      "transform_success": true,
+      "run_id": "control_flow_20260303_5680",
+      "evasion_rate": 100.0,
+      "evasion_count": 4,
+      "stealth_score": 0.7439535894855566,
+      "stealth_category": "low",
+      "result_type": "full_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9022054497630506,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7507183948424735,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.15148705492057712
+        },
+        "naive_bayes": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9999999999957794,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.680340315976209,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.31965968401957034
+        },
+        "sgd_classifier": {
+          "original_pred": "huggingface",
+          "original_conf": 0.8718629663635031,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.29270015587728704,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5791628104862161
+        },
+        "neural_network": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9999916553497314,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.2689814269542694,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.731010228395462
+        }
+      },
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    {
+      "filename": "preprocess.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\huggingface\\testing\\preprocess.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_control_flow_20260303_03cd\\modified_preprocess.py",
+      "transform_success": true,
+      "run_id": "control_flow_20260303_acaf",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.1222599835327864,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "UNKNOWN",
+          "original_conf": 0.6847123044397325,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6832670512660118,
+          "original_correct": false,
+          "modified_correct": false,
+          "evasion": false,
+          "confidence_drop": 0.0014452531737206842
+        },
+        "naive_bayes": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9994809974262767,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.9996396312982465,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.00015863387196979328
+        },
+        "sgd_classifier": {
+          "original_pred": "huggingface",
+          "original_conf": 0.7350547462800581,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.7627040043163894,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.027649258036331337
+        },
+        "neural_network": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9964650869369507,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.9963636994361877,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00010138750076293945
+        }
+      },
+      "input_tokens": 500,
+      "output_tokens": 1475
+    },
+    {
+      "filename": "run_mlm.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\huggingface\\testing\\run_mlm.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_control_flow_20260303_03cd\\modified_run_mlm.py",
+      "transform_success": true,
+      "run_id": "control_flow_20260303_b838",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.008011476404835028,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "huggingface",
+          "original_conf": 1.0,
+          "modified_pred": "huggingface",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "huggingface",
+          "original_conf": 1.0,
+          "modified_pred": "huggingface",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "sgd_classifier": {
+          "original_pred": "huggingface",
+          "original_conf": 0.8953943411186289,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.8957097796260783,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.00031543850744941704
+        },
+        "neural_network": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9999991655349731,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.9999991655349731,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        }
+      },
+      "input_tokens": 6649,
+      "output_tokens": 12750
+    },
+    {
+      "filename": "run_mlm_no_trainer.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\huggingface\\testing\\run_mlm_no_trainer.py",
+      "modified_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_control_flow_20260303_03cd\\modified_run_mlm_no_trainer.py",
+      "transform_success": true,
+      "run_id": "control_flow_20260303_953b",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.08729748661334613,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "huggingface",
+          "original_conf": 1.0,
+          "modified_pred": "huggingface",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9999999999999716,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.9999999999998579,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.1368683772161603e-13
+        },
+        "sgd_classifier": {
+          "original_pred": "huggingface",
+          "original_conf": 0.878461536839801,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.86522118927784,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.013240347561961019
+        },
+        "neural_network": {
+          "original_pred": "huggingface",
+          "original_conf": 0.9999973773956299,
+          "modified_pred": "huggingface",
+          "modified_conf": 0.9999939203262329,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.4570693969726562e-06
+        }
+      },
+      "input_tokens": 7625,
+      "output_tokens": 6315
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 20.0,
+    "naive_bayes": 20.0,
+    "sgd_classifier": 20.0,
+    "neural_network": 20.0
+  },
+  "files_tested": [
+    "benchmarks_entrypoint.py",
+    "modeling_my_new_model2.py",
+    "preprocess.py",
+    "run_mlm.py",
+    "run_mlm_no_trainer.py"
+  ],
+  "batch_id": "batch_control_flow_20260303_03cd",
+  "saved_at": "2026-03-03T10:28:59.233433"
+}

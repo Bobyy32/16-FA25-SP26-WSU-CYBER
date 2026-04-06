@@ -60,8 +60,12 @@ class OllamaProvider(AIProvider):
                 f"Pull it with: ollama pull {self.model}"
             )
 
-    def _chat(self, system_prompt: str, user_message: str) -> dict:
-        """Send a chat request to Ollama and return the response."""
+    def _chat(self, system_prompt: str, user_message: str, retries: int = 2) -> dict:
+        """Send a chat request to Ollama and return the response.
+
+        Retries on timeout to handle long-running generations from
+        complex prompts or large files.
+        """
         payload = {
             "model": self.model,
             "messages": [
@@ -70,13 +74,23 @@ class OllamaProvider(AIProvider):
             ],
             "stream": False,
         }
-        resp = requests.post(
-            f"{self.base_url}/api/chat",
-            json=payload,
-            timeout=300,  # 5 min timeout for large files
+        last_err = None
+        for attempt in range(1, retries + 2):
+            try:
+                resp = requests.post(
+                    f"{self.base_url}/api/chat",
+                    json=payload,
+                    timeout=300,  # 5 min timeout
+                )
+                resp.raise_for_status()
+                return resp.json()
+            except requests.exceptions.ReadTimeout as e:
+                last_err = e
+                if attempt <= retries:
+                    print(f"  Ollama timeout (attempt {attempt}/{retries + 1}), retrying...")
+        raise requests.exceptions.ReadTimeout(
+            f"Ollama timed out after {retries + 1} attempts: {last_err}"
         )
-        resp.raise_for_status()
-        return resp.json()
 
     def transform_code(self, original_code: str, prompt: str) -> TransformationResult:
         """Transform code using Ollama local inference."""

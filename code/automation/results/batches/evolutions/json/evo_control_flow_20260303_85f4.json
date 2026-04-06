@@ -1,0 +1,287 @@
+{
+  "evolution_id": "evo_control_flow_20260303_85f4",
+  "status": "max_rounds_reached",
+  "category": "control_flow",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:9b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 5,
+  "best_evasion_rate": 25.0,
+  "best_prompt": "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+  "resumed_from": null,
+  "initial_prompt": "Rewrite the control flow of this Python code to disguise the author's style. Convert for loops to list comprehensions or vice versa. Replace if/elif chains with dictionary dispatch or match/case. Swap ternary expressions for full if/else blocks. Convert early returns to nested conditionals or vice versa. Replace while loops with for loops where possible. Do NOT change variable names, comments, formatting, or add dead code. Preserve all functionality exactly.",
+  "all_prompts": [
+    "Rewrite the control flow of this Python code to disguise the author's style. Convert for loops to list comprehensions or vice versa. Replace if/elif chains with dictionary dispatch or match/case. Swap ternary expressions for full if/else blocks. Convert early returns to nested conditionals or vice versa. Replace while loops with for loops where possible. Do NOT change variable names, comments, formatting, or add dead code. Preserve all functionality exactly.",
+    "Target Naive Bayes and SGD Classifier evasion by manipulating TF-IDF token distributions. Apply:\n1. Control flow restructuring (loops \u2194 comprehensions, if-elif \u2194 dict dispatch).\n2. Semantic variable renaming to shift unigram frequencies while preserving logic.\n3. Selective casing changes (snake_case/camelCase) in identifiers.\n4. Adjusting comment styles (inline vs block) to shift feature counts.\nAvoid mass rewrites that spike the stealth score. Preserve all functionality exactly. Do not add dead code or pass statements. Prioritize high-evasion gain per altered feature, targeting token-level patterns favored by NB/SGD models. Ensure transformations remain localized to maintain cosine distance stability.",
+    "Transform Python code to evade Random Forest, Naive Bayes, SGD, and Neural Network classifiers while maintaining functionality and stealth (score <0.5).\n\n1. **Aggressive Token Shifting:** Rename generic identifiers (`data`, `i`) to semantic synonyms (`dataset`, `index`). Prioritize high-frequency terms for NB/SGD TF-IDF impact without logic changes.\n2. **Stylometric Balancing:** Toggle comment styles (inline vs block) and casing (snake_case/camelCase) to normalize unigram frequencies against RF/NN embeddings while altering feature counts.\n3. **Import Styling:** Adjust absolute vs relative imports to influence `import_style` divergence.\n\nDo not add dead code or whitespace inflation. Ensure semantic equivalence is exact. Prioritize variable renaming and comment style changes over pure control flow restructuring for higher evasion efficiency against all models. Localize changes to minimize stealth score penalty while maximizing cosine distance shifts across all token distributions used by the classifiers.",
+    "Evade all classifiers while maintaining stealth score <0.5 by surgically shifting feature distributions.\n1. High-Frequency Token Shift: Rename only high-frequency public identifiers (arguments, function names) within critical paths to alter NB/SGD TF-IDF without mass renaming that spikes `features_changed_pct`.\n2. Structural Refactor for RF/NN: Convert specific nested conditionals or loop styles locally to change structural embeddings, avoiding full file restructuring that increases relative_l2 divergence.\n3. Comment/Casing Balance: Selectively toggle comment styles and casing (snake/camel) in high-weight segments to normalize feature counts against the stealth threshold.\n4. Import Pattern Diversification: Switch absolute/relative imports strategically to impact `import_style` features without logic changes.\nPreserve exact functionality. Minimize added whitespace. Prioritize evasion gain per altered feature to cross decision boundaries for RF, NB, SGD, and Neural Network simultaneously.",
+    "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+    "Prioritize semantic synonym replacement for high-frequency identifiers (functions, args) strictly within critical code paths to shift NB/SGD TF-IDF vectors. Target only top 5 most influential TF-IDF tokens per file using contextually consistent synonyms to minimize `features_changed_pct`. Maintain exact logic structure and whitespace for RF/NN embeddings. Adjust import styles selectively where they occur naturally. Ensure semantic equivalence and zero dead code to prevent stealth inflation. Cross classification boundaries by maximizing token distance on key identifiers while minimizing feature count changes. Focus evasion gain per altered feature against un-evaded models (NB, SGD, NN). Preserve line length distributions where possible to avoid relative_l2 divergence.",
+    "Prioritize evasion for Naive Bayes and SGD by renaming ALL frequent identifiers with semantic synonyms to shift unigram distributions. For Random Forest and Neural Networks, refactor structural elements: convert for loops to comprehensions, invert boolean conditions locally, or group assignments differently without altering logic flow. Maintain exact input/output behavior and whitespace density to control relative_l2 divergence. Distribute casing changes (snake/camel) strategically to normalize feature counts without violating stealth thresholds on average. Do not add dead code or dummy whitespace; strictly preserve line length distributions. Focus on breaking decision boundaries for the currently un-evaded models by altering token frequencies significantly in critical paths. Ensure consistency: apply these variations systematically across the whole file rather than localized patches to prevent feature isolation detection while maintaining natural readability.",
+    "Prioritize evasion across all four models (RF, NB, SGD, NN) by targeting the highest-frequency identifiers in critical execution paths. Rename only top TF-IDF tokens (functions, arguments) using contextually consistent semantic synonyms to shift unigram distributions without inflating `features_changed_pct`. Preserve exact line lengths, whitespace density, and comment styles to minimize relative_l2 and cosine distance divergence. Refactor structural elements (loops to comprehensions, boolean inversions) only where logic allows, ensuring semantic equivalence and zero dead code. Balance import patterns naturally to maintain JS divergence within stealth thresholds. Focus on breaking decision boundaries for RF/NN control-flow embeddings while simultaneously shifting NB/SGD token vectors. Ensure all modifications remain semantically identical to avoid functionality flags.",
+    "Pivot to aggressive structural changes: Rename high-frequency identifiers using distinct name lengths and casing patterns (e.g., `val` to `identifier`) to drastically shift TF-IDF distributions for NB/SGD without synonym overlap. Refactor control flow by inverting nested conditions or swapping loops for comprehensions to disrupt RF/NN embeddings. Alter import styles naturally (mix single vs multi-line) to adjust token frequencies. Preserve exact input/output logic; introduce no dead code. Target only the top 5 influential tokens per file to maximize evasion gain against all models while minimizing `features_changed_pct`. Maintain line length distributions to control relative_l2 scores and keep stealth <0.5 where feasible.",
+    "Shift strategy from superficial renaming to deep logical refactoring. Reorder independent statement blocks within functions where safe to disrupt RF/NN sequence embeddings. Rename top-frequency identifiers in critical paths using semantic synonyms with varying lengths to shift NB/SGD token distributions significantly. Consolidate consecutive assignments into tuple unpacking or dictionary comprehensions to alter TF-IDF patterns naturally. Maintain strict semantic equivalence; strictly preserve line lengths and whitespace to avoid inflating relative_l2 divergence above 0.5 threshold. Do not add dead code or dummy comments. Apply these variations globally across the entire file rather than localized patches. Prioritize files with 0% evasion by applying commutative property refactoring alongside identifier changes. Balance aggression with stealth: if a change spikes feature divergence, reduce structural impact but keep token frequency shifts active to maximize evasion gain while maintaining input/output correctness.",
+    "Target unevaded models (NB, SGD, NN) by aggressively shifting token distributions without inflating feature divergence counts. Prioritize changing TF-IDF weights via syntactic equivalents: convert loops to comprehensions or vice versa locally, swap variable casing patterns in arguments. Alter comment structures only in non-critical sections to adjust inline/block percentages while maintaining original file style consistency. Restructure function logic using equivalent mathematical operations to change operator token frequencies for RF/NN embeddings. Do not modify whitespace density or line lengths; strictly preserve these to minimize relative_l2. Use distinct identifier naming contexts to break NB/SGD unigram clusters while ensuring semantic equivalence via static analysis verification. Apply changes globally where possible to normalize divergence metrics across files. Cap feature change percentage in critical paths to ensure stealth score remains below 0.5.",
+    "Drastically alter structural patterns to disrupt TF-IDF n-grams and sequence embeddings simultaneously. Convert standard `for` loops to list comprehensions or generators where valid, swapping token frequencies for NB/SGD models without logic change. Invert conditional logic (e.g., `if a < b` vs `if b > a`) paired with indentation shifts to vary line-length features for RF/NN. Replace common library calls and import aliases (e.g., `import os.path` -> `from pathlib import Path`) to shift token distributions. Adjust block commenting density naturally in non-critical areas to tweak comment ratios. Strictly preserve input/output equivalence and original code density. Do not introduce dead code or synthetic whitespace. Target all 4 models by balancing structural refactoring against stylistic preservation to keep stealth scores below 0.5.",
+    "Prioritize files with 0% evasion first. Rewrite imports using aliases or split statements to shift token distributions aggressively for NB/SGD. Apply consistent semantic variable renaming (e.g., `x` -> `node_x`) across all functions to alter TF-IDF without logic changes. Refactor control flow by inverting conditionals (`if a < b` -> `if b > a`) and reordering commutative operations safely to disrupt RF/NN embeddings. Adjust inline comment placement in non-critical sections to nudge feature vectors, targeting stealth scores below 0.5. Preserve original code density; strictly forbid dead code or synthetic whitespace that inflates divergence. Use mathematical equivalences (e.g., `a+b` vs `b+a`) to normalize structure while maximizing semantic distance from the original fingerprint. Maintain input/output correctness throughout.",
+    "Focus evasion on un-evaded models (NB, SGD). Shift NB detection by altering comment styles (`#` vs block) and variable casing in non-critical areas to change feature counts without logic errors. For SGD/NN, rename variables using semantic synonyms (`data` -> `buffer`) to alter TF-IDF n-grams while preserving whitespace density and line length strictly to minimize relative_l2 divergence. Do not introduce dead code or synthetic whitespace. Apply changes distributively: modify one function per file rather than global rewriting to keep feature change percentage low. Use import aliases (`import x as y`) instead of module rewrites. Ensure exact input/output equivalence remains valid. Target stealth score below 0.5. Prioritize files currently at 0% evasion first. Validate all semantic equivalence before submission.",
+    "Prioritize evading Naive Bayes (NB) and Neural Network (NN), currently at 0%. Avoid global refactoring that spikes stealth scores above 0.5. Execute targeted micro-transformations:\n\n1. Semantic Token Replacement: Rename high-frequency variables (`data` -> `payload`) across all functions to shift TF-IDF n-grams without altering whitespace, indentation, or line length.\n2. Import Pattern Shift: Convert `import module` to `from module import function` where logic permits to alter token distributions for NB/SGD.\n3. Comment Ratio Tuning: Add/remove concise semantic comments in non-critical functions to adjust inline/block comment ratios specifically for NB detection without changing code density.\n4. Conditional Logic Swap: Invert commutative conditionals (`x < y` vs `y > x`) and reorder safe operations to disrupt RF/NN embeddings.\n\nMaintain exact input/output equivalence. Strictly preserve whitespace patterns, line lengths, and indentation. Do not introduce dead code or synthetic padding. Target stealth score below 0.5 on all files while maximizing evasion for previously un-evaded models."
+  ],
+  "files_tested": [
+    "check_bb_augmentation.py",
+    "check_impulse_noise.py",
+    "check_polygons_stay_valid_during_augmentation.py",
+    "check_rot90.py",
+    "geometric.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Rewrite the control flow of this Python code to disguise the author's style. Convert for loops to list comprehensions or vice versa. Replace if/elif chains with dictionary dispatch or match/case. Swap ternary expressions for full if/else blocks. Convert early returns to nested conditionals or vice versa. Replace while loops with for loops where possible. Do NOT change variable names, comments, formatting, or add dead code. Preserve all functionality exactly.",
+      "batch_id": "batch_control_flow_20260303_a596",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.15918677426098105,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Target Naive Bayes and SGD Classifier evasion by manipulating TF-IDF token distributions. Apply:\n1. Control flow restructuring (loops \u2194 comprehensions, if-elif \u2194 dict dispatch).\n2. Semantic variable renaming to shift unigram frequencies while preserving logic.\n3. Selective casing changes (snake_case/camelCase) in identifiers.\n4. Adjusting comment styles (inline vs block) to shift feature counts.\nAvoid mass rewrites that spike the stealth score. Preserve all functionality exactly. Do not add dead code or pass statements. Prioritize high-evasion gain per altered feature, targeting token-level patterns favored by NB/SGD models. Ensure transformations remain localized to maintain cosine distance stability.",
+      "batch_id": "batch_control_flow_20260303_6a9a",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.34044178322500446,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Transform Python code to evade Random Forest, Naive Bayes, SGD, and Neural Network classifiers while maintaining functionality and stealth (score <0.5).\n\n1. **Aggressive Token Shifting:** Rename generic identifiers (`data`, `i`) to semantic synonyms (`dataset`, `index`). Prioritize high-frequency terms for NB/SGD TF-IDF impact without logic changes.\n2. **Stylometric Balancing:** Toggle comment styles (inline vs block) and casing (snake_case/camelCase) to normalize unigram frequencies against RF/NN embeddings while altering feature counts.\n3. **Import Styling:** Adjust absolute vs relative imports to influence `import_style` divergence.\n\nDo not add dead code or whitespace inflation. Ensure semantic equivalence is exact. Prioritize variable renaming and comment style changes over pure control flow restructuring for higher evasion efficiency against all models. Localize changes to minimize stealth score penalty while maximizing cosine distance shifts across all token distributions used by the classifiers.",
+      "batch_id": "batch_control_flow_20260303_71e2",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.39178389010738074,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Evade all classifiers while maintaining stealth score <0.5 by surgically shifting feature distributions.\n1. High-Frequency Token Shift: Rename only high-frequency public identifiers (arguments, function names) within critical paths to alter NB/SGD TF-IDF without mass renaming that spikes `features_changed_pct`.\n2. Structural Refactor for RF/NN: Convert specific nested conditionals or loop styles locally to change structural embeddings, avoiding full file restructuring that increases relative_l2 divergence.\n3. Comment/Casing Balance: Selectively toggle comment styles and casing (snake/camel) in high-weight segments to normalize feature counts against the stealth threshold.\n4. Import Pattern Diversification: Switch absolute/relative imports strategically to impact `import_style` features without logic changes.\nPreserve exact functionality. Minimize added whitespace. Prioritize evasion gain per altered feature to cross decision boundaries for RF, NB, SGD, and Neural Network simultaneously.",
+      "batch_id": "batch_control_flow_20260303_aa69",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.34026891998877434,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+      "batch_id": "batch_control_flow_20260303_7cbf",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.5140819008255653,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Prioritize semantic synonym replacement for high-frequency identifiers (functions, args) strictly within critical code paths to shift NB/SGD TF-IDF vectors. Target only top 5 most influential TF-IDF tokens per file using contextually consistent synonyms to minimize `features_changed_pct`. Maintain exact logic structure and whitespace for RF/NN embeddings. Adjust import styles selectively where they occur naturally. Ensure semantic equivalence and zero dead code to prevent stealth inflation. Cross classification boundaries by maximizing token distance on key identifiers while minimizing feature count changes. Focus evasion gain per altered feature against un-evaded models (NB, SGD, NN). Preserve line length distributions where possible to avoid relative_l2 divergence.",
+      "batch_id": "batch_control_flow_20260303_69a9",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.425445953940865,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Prioritize evasion for Naive Bayes and SGD by renaming ALL frequent identifiers with semantic synonyms to shift unigram distributions. For Random Forest and Neural Networks, refactor structural elements: convert for loops to comprehensions, invert boolean conditions locally, or group assignments differently without altering logic flow. Maintain exact input/output behavior and whitespace density to control relative_l2 divergence. Distribute casing changes (snake/camel) strategically to normalize feature counts without violating stealth thresholds on average. Do not add dead code or dummy whitespace; strictly preserve line length distributions. Focus on breaking decision boundaries for the currently un-evaded models by altering token frequencies significantly in critical paths. Ensure consistency: apply these variations systematically across the whole file rather than localized patches to prevent feature isolation detection while maintaining natural readability.",
+      "batch_id": "batch_control_flow_20260303_0588",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.4158434342448728,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Prioritize evasion across all four models (RF, NB, SGD, NN) by targeting the highest-frequency identifiers in critical execution paths. Rename only top TF-IDF tokens (functions, arguments) using contextually consistent semantic synonyms to shift unigram distributions without inflating `features_changed_pct`. Preserve exact line lengths, whitespace density, and comment styles to minimize relative_l2 and cosine distance divergence. Refactor structural elements (loops to comprehensions, boolean inversions) only where logic allows, ensuring semantic equivalence and zero dead code. Balance import patterns naturally to maintain JS divergence within stealth thresholds. Focus on breaking decision boundaries for RF/NN control-flow embeddings while simultaneously shifting NB/SGD token vectors. Ensure all modifications remain semantically identical to avoid functionality flags.",
+      "batch_id": "batch_control_flow_20260303_391e",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.331761868931435,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Pivot to aggressive structural changes: Rename high-frequency identifiers using distinct name lengths and casing patterns (e.g., `val` to `identifier`) to drastically shift TF-IDF distributions for NB/SGD without synonym overlap. Refactor control flow by inverting nested conditions or swapping loops for comprehensions to disrupt RF/NN embeddings. Alter import styles naturally (mix single vs multi-line) to adjust token frequencies. Preserve exact input/output logic; introduce no dead code. Target only the top 5 influential tokens per file to maximize evasion gain against all models while minimizing `features_changed_pct`. Maintain line length distributions to control relative_l2 scores and keep stealth <0.5 where feasible.",
+      "batch_id": "batch_control_flow_20260303_8304",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.40863256649095997,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Shift strategy from superficial renaming to deep logical refactoring. Reorder independent statement blocks within functions where safe to disrupt RF/NN sequence embeddings. Rename top-frequency identifiers in critical paths using semantic synonyms with varying lengths to shift NB/SGD token distributions significantly. Consolidate consecutive assignments into tuple unpacking or dictionary comprehensions to alter TF-IDF patterns naturally. Maintain strict semantic equivalence; strictly preserve line lengths and whitespace to avoid inflating relative_l2 divergence above 0.5 threshold. Do not add dead code or dummy comments. Apply these variations globally across the entire file rather than localized patches. Prioritize files with 0% evasion by applying commutative property refactoring alongside identifier changes. Balance aggression with stealth: if a change spikes feature divergence, reduce structural impact but keep token frequency shifts active to maximize evasion gain while maintaining input/output correctness.",
+      "batch_id": "batch_control_flow_20260303_bdae",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.3775541759884301,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Target unevaded models (NB, SGD, NN) by aggressively shifting token distributions without inflating feature divergence counts. Prioritize changing TF-IDF weights via syntactic equivalents: convert loops to comprehensions or vice versa locally, swap variable casing patterns in arguments. Alter comment structures only in non-critical sections to adjust inline/block percentages while maintaining original file style consistency. Restructure function logic using equivalent mathematical operations to change operator token frequencies for RF/NN embeddings. Do not modify whitespace density or line lengths; strictly preserve these to minimize relative_l2. Use distinct identifier naming contexts to break NB/SGD unigram clusters while ensuring semantic equivalence via static analysis verification. Apply changes globally where possible to normalize divergence metrics across files. Cap feature change percentage in critical paths to ensure stealth score remains below 0.5.",
+      "batch_id": "batch_control_flow_20260303_62dc",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.26107065917341116,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Drastically alter structural patterns to disrupt TF-IDF n-grams and sequence embeddings simultaneously. Convert standard `for` loops to list comprehensions or generators where valid, swapping token frequencies for NB/SGD models without logic change. Invert conditional logic (e.g., `if a < b` vs `if b > a`) paired with indentation shifts to vary line-length features for RF/NN. Replace common library calls and import aliases (e.g., `import os.path` -> `from pathlib import Path`) to shift token distributions. Adjust block commenting density naturally in non-critical areas to tweak comment ratios. Strictly preserve input/output equivalence and original code density. Do not introduce dead code or synthetic whitespace. Target all 4 models by balancing structural refactoring against stylistic preservation to keep stealth scores below 0.5.",
+      "batch_id": "batch_control_flow_20260303_04b5",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.19756006749668034,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Prioritize files with 0% evasion first. Rewrite imports using aliases or split statements to shift token distributions aggressively for NB/SGD. Apply consistent semantic variable renaming (e.g., `x` -> `node_x`) across all functions to alter TF-IDF without logic changes. Refactor control flow by inverting conditionals (`if a < b` -> `if b > a`) and reordering commutative operations safely to disrupt RF/NN embeddings. Adjust inline comment placement in non-critical sections to nudge feature vectors, targeting stealth scores below 0.5. Preserve original code density; strictly forbid dead code or synthetic whitespace that inflates divergence. Use mathematical equivalences (e.g., `a+b` vs `b+a`) to normalize structure while maximizing semantic distance from the original fingerprint. Maintain input/output correctness throughout.",
+      "batch_id": "batch_control_flow_20260303_60d1",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.41333318010519937,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Focus evasion on un-evaded models (NB, SGD). Shift NB detection by altering comment styles (`#` vs block) and variable casing in non-critical areas to change feature counts without logic errors. For SGD/NN, rename variables using semantic synonyms (`data` -> `buffer`) to alter TF-IDF n-grams while preserving whitespace density and line length strictly to minimize relative_l2 divergence. Do not introduce dead code or synthetic whitespace. Apply changes distributively: modify one function per file rather than global rewriting to keep feature change percentage low. Use import aliases (`import x as y`) instead of module rewrites. Ensure exact input/output equivalence remains valid. Target stealth score below 0.5. Prioritize files currently at 0% evasion first. Validate all semantic equivalence before submission.",
+      "batch_id": "batch_control_flow_20260303_8e2d",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.3854174803205279,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Prioritize evading Naive Bayes (NB) and Neural Network (NN), currently at 0%. Avoid global refactoring that spikes stealth scores above 0.5. Execute targeted micro-transformations:\n\n1. Semantic Token Replacement: Rename high-frequency variables (`data` -> `payload`) across all functions to shift TF-IDF n-grams without altering whitespace, indentation, or line length.\n2. Import Pattern Shift: Convert `import module` to `from module import function` where logic permits to alter token distributions for NB/SGD.\n3. Comment Ratio Tuning: Add/remove concise semantic comments in non-critical functions to adjust inline/block comment ratios specifically for NB detection without changing code density.\n4. Conditional Logic Swap: Invert commutative conditionals (`x < y` vs `y > x`) and reorder safe operations to disrupt RF/NN embeddings.\n\nMaintain exact input/output equivalence. Strictly preserve whitespace patterns, line lengths, and indentation. Do not introduce dead code or synthetic padding. Target stealth score below 0.5 on all files while maximizing evasion for previously un-evaded models.",
+      "batch_id": "batch_control_flow_20260303_eb1d",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.24322580247248063,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    }
+  ],
+  "started_at": "2026-03-03T08:19:52.735324",
+  "finished_at": "2026-03-03T09:01:21.252800",
+  "saved_at": "2026-03-03T09:01:21.252800"
+}

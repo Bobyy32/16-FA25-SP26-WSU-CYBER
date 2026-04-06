@@ -1,0 +1,292 @@
+{
+  "evolution_id": "evo_control_flow_20260303_d797",
+  "status": "max_rounds_reached",
+  "category": "control_flow",
+  "author": "huggingface",
+  "provider": "ollama",
+  "model": "qwen3.5:9b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 1,
+  "best_evasion_rate": 25.0,
+  "best_prompt": "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+  "resumed_from": {
+    "prompt": "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+    "evasion_rate": 25.0,
+    "evolution_id": "evo_control_flow_20260303_85f4",
+    "round": 5
+  },
+  "initial_prompt": "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+  "all_prompts": [
+    "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+    "Modify Python code using EXCLUSIVELY Control Flow techniques to evade RF, NB, SGD, and NN classifiers. Prioritize surgical structural shifts: convert loops to comprehensions or vice versa, replace `if/elif` chains with `match/case` or dict dispatch, swap ternary operators for nested conditionals, and invert boolean logic locally. Avoid renaming variables, comments, imports, or formatting changes. Focus on diversifying control flow paths within critical blocks to shift structural embeddings without inflating feature counts excessively. Ensure all transformations preserve exact functionality. Maximize evasion by creating distinct structural patterns per block rather than massive rewrites that increase stealth scores. Target 50%+ evasion while maintaining a stealth score below 0.5.",
+    "Apply aggressive structural control flow variations preserving functionality. Swap `for` loops with comprehensions, invert iterator direction, and replace linear `if/elif` chains with `match/case` or dictionary dispatch. Convert early returns into deeply nested conditional blocks to alter execution paths significantly. Swap `while` loops for equivalent `for` constructs where logic permits. Invert boolean operators (`and`/`or`, `not`) within branches to shift token embeddings. Merge fragmented conditionals into compound statements or split monolithic ones. Do NOT rename variables, modify comments, add whitespace, or include dead code; every change must alter structure strictly. Target simultaneous evasion across all models via diverse control path restructuring. Maintain stealth < 0.5 through surgical logic restructuring only. Prioritize high-impact structural shifts over minor tweaks to cross classification boundaries while maximizing evasion intensity within allowed control flow techniques without violating category constraints.",
+    "Apply aggressive, multi-point structural shifts using ONLY Control Flow techniques per function block: convert `for` loops to list comprehensions or vice versa, replace `if/elif` chains with `match/case` or dictionary dispatch, swap ternary operators for nested `if/else`, and convert early returns into deeply nested conditional logic. Invert boolean conditions (`and`/`not`) within branches to alter execution paths significantly without changing variable tokens. Merge fragmented conditionals into compound statements where safe. Do NOT rename variables, modify comments, whitespace, or imports. Execute multiple transformations simultaneously within each function to maximize structural distance vectors and cross classification boundaries for all models. Preserve exact functionality. Target 50% evasion while maintaining stealth < 0.5 by ensuring changes are natural and surgical within constraints. Avoid empty lines, pass statements, or formatting inflation that inflates stealth scores without aiding evasion.",
+    "Apply dense, multi-point structural variations within critical function blocks to evade all models. Prioritize replacing linear `if/elif` chains with dictionary dispatch or `match/case` statements. Convert standard `for` loops to list comprehensions or while loops to shift syntax patterns aggressively. Swap ternary operators for deeply nested conditional blocks to alter execution paths significantly. Invert boolean logic (`and`/`or`, `not`) within branches locally. Combine at least two distinct transformations per target block simultaneously. Do NOT rename variables, modify comments, or change whitespace/formatting. Ensure changes do not inflate feature counts excessively to maintain stealth < 0.5. Avoid empty lines or pass statements that inflate stealth scores without aiding evasion. Execute bold structural restructuring strictly within the Control Flow category constraints to maximize divergence.",
+    "Apply maximal structural divergence using ONLY Control Flow techniques. Replace sequential `if/elif` chains with dictionary dispatch or `match/case` blocks to drastically alter token order and density without renaming variables. Convert explicit loops into generator expressions or comprehension syntax where logic permits to shift n-gram patterns. Invert boolean operators (`and`/`or`) deep within nested branches rather than top-level to change execution paths locally. Merge fragmented conditionals into complex compound statements to modify line-length distributions safely. Avoid adding whitespace, empty lines, or pass statements that inflate stealth. Ensure exact functionality preservation. Prioritize high-impact syntax topology changes over minor tweaks. Balance structural aggression with naturalness to maintain stealth < 0.5 while maximizing evasion against all models by focusing on code structure density rather than simple feature toggles.",
+    "Apply targeted control flow obfuscation to evade all models. Convert `for` loops to generator expressions or comprehensions only where logic permits, shifting token order. Replace sequential `if/elif` chains with dictionary dispatch or `match/case`, then invert boolean conditions (`and` <-> `or`) deep within every branch simultaneously to disrupt execution paths. Merge fragmented conditionals into compound statements where safe. Ensure at least two distinct transformations per critical function block occur. Do not rename variables, comments, or whitespace. Maintain functionality. Avoid empty lines to keep stealth < 0.5. Focus on execution path divergence over syntax swaps. Vary intensity: apply deep nesting and boolean inversion specifically in files with 0% evasion like `preprocess.py`. Prioritize disrupting token density to evade Random Forest and Neural Network detection while maintaining low feature change percentage. Balance structural aggression with naturalness within CONTROL FLOW constraints only.",
+    "Aggressively mix Control Flow patterns to boost evasion while maintaining stealth < 0.5. Convert `for` loops to comprehensions and simultaneously invert boolean conditions (`and` <-> `or`) within nested branches to maximize token permutation. Replace sequential `if/elif` chains with `match/case` or dictionary dispatch logic exclusively where safe, altering syntax density. Merge fragmented conditionals into compound statements to shift line-length distributions naturally. Ensure every critical function undergoes at least two distinct flow transformations simultaneously (e.g., loop swap + conditional restructuring). Focus deep nesting strategies on files stuck at 0% evasion to disrupt n-gram patterns while preserving logic. Maintain low feature change percentage by focusing on structural topology rather than expanding code size. Prioritize execution path divergence over simple syntax swaps to evade Random Forest and Neural Network detection effectively. Strictly adhere to Control Flow constraints: no variable renaming, comment edits, or whitespace modifications.",
+    "Focus on files with 0% evasion. Apply aggressive Control Flow restructuring without renaming variables or changing whitespace. Convert `for` loops to nested list comprehensions or generator expressions simultaneously in critical blocks to maximize token permutation. Replace sequential `if/elif` chains exclusively with structured `match/case` or dictionary dispatch logic where safe, altering syntax density. Invert boolean operators (`and` <-> `or`) deep within nested branches rather than top-level to disrupt execution paths locally. Merge fragmented conditionals into complex ternary expressions or compound statements to shift line-length distributions naturally. Ensure every critical function undergoes at least two distinct flow transformations (e.g., loop swap + conditional restructuring). Avoid empty lines or pass statements that inflate stealth. Maintain exact functionality. Focus on disrupting n-gram patterns through structural topology changes rather than feature toggles. Prioritize high-intensity syntax divergence to evade all models while keeping feature change percentage low.",
+    "Target un-evaded files immediately. Maintain strict CONTROL FLOW constraints: NO variable renaming, comments, or whitespace changes. Maximize token permutation via allowed techniques only. 1) Deeply invert boolean operators (`and` <-> `or`) within nested branches to shift n-gram signatures without logic loss. 2) Reorder independent conditional checks inside the same scope to shuffle token sequences while keeping semantics identical. 3) Convert sequential `if/elif` chains to nested `if`s or dictionary dispatch only when altering line/token density. Avoid merging conditionals into compound ternary statements if it reduces token variation. Apply maximum intensity to structural topology changes within permitted techniques. Eliminate empty lines to keep stealth < 0.5. Ensure exact functionality preservation. Prioritize disrupting n-gram patterns in stuck files using boolean logic and conditional structure manipulation exclusively.",
+    "Prioritize structural topology changes to maximize token permutation while maintaining original whitespace and indentation. Convert every eligible `for` loop to a list comprehension or generator expression, and swap available `while` loops for `for` with iterator ranges. Replace standard `if/elif` chains exclusively with nested conditionals or dictionary dispatch logic. Invert boolean operators (`and` <-> `or`) deep within branches to shuffle token sequences while preserving execution paths. Merge independent fragments into compound statements to shift line-length distributions naturally. Apply at least two distinct flow transformations per critical function simultaneously (e.g., loop conversion + conditional restructuring). Focus on disrupting n-gram signatures through structural variance rather than stylistic edits. Ensure exact functionality preservation. Target stuck files by applying maximum intensity to these structural changes within the Control Flow category only.",
+    "Adopt varied Control Flow manipulation granularities across functions to evade model expectations without inflating stealth. Alternate between coarse block restructuring and micro-logic inversions within tight scopes. Convert `for` loops to comprehensions selectively in nested contexts, reserving them for blocks where token adjacency naturally shifts. Replace sequential `if/elif` chains with dictionary dispatch only when it increases local token variance. Invert boolean operators (`and` <-> `or`) deep within branches to disrupt n-gram signatures while preserving top-level feature vectors. Merge fragmented conditionals into compound statements to shift line-length distributions subtly, avoiding excessive change percentages. Ensure exact functionality preservation and eliminate empty lines that inflate stealth scores. Focus on disrupting specific Control Flow n-gram patterns in un-evaded files by varying transformation complexity per function.",
+    "Aggressively disrupt TF-IDF n-grams via maximum Control Flow variation within constraints. 1) Convert every eligible `for` loop to list comprehensions or generators immediately to alter token sequences without semantic change. 2) Replace sequential `if/elif` chains with dictionary dispatch logic (`dict.get` patterns) to scramble conditional token ordering significantly. 3) Invert boolean operators deep within nested branches (flip `and` <-> `or`) to shift operator signatures while keeping execution paths identical. 4) Merge fragmented conditionals into single compound statements to alter line-length distributions naturally. Maintain strict original whitespace and indentation exactly; do not add/remove lines or comments. Ensure exact functionality preservation without dummy code. Prioritize disrupting specific stuck file n-grams using these structural topologies exclusively.",
+    "Prioritize selective Control Flow mutations to balance evasion and stealth. 1) Invert deep nested boolean operators (`and` \u2194 `or`) to disrupt n-grams without expanding feature vectors. 2) Merge fragmented conditionals into compound statements or use dictionary dispatch for sequential blocks where token adjacency shifts significantly. 3) Convert specific `for` loops to comprehensions only when surrounding operator sequences change, preserving standard loops elsewhere to minimize `features_changed_pct`. 4) Split monolithic conditionals to shift line-length distributions naturally. Ensure exact functionality preservation and maintain original indentation exactly. Target stuck file patterns by varying transformation intensity per function rather than blanket application. Avoid renaming variables or changing comments to stay within category limits.",
+    "Apply STRICT CONTROL FLOW transformations to evade detection while preserving functionality, variables, comments, and whitespace exactly. No renaming, formatting, or import style changes allowed. Since stealth scores are optimal, maximize evasion intensity: convert all eligible `for` loops to comprehensions immediately, replacing sequential `if/elif` chains with `dict.get` dispatch logic to scramble token ordering, and inverting boolean operators in nested branches to disrupt n-gram signatures. Merge fragmented conditionals into compounds to shift line-length distributions naturally. Aggressively swap loop types where semantics allow and invert conditions deep within functions. Prioritize significant topology shifts over minor tweaks to target all models. Ensure exact functionality; do not add dead code or whitespace that inflates stealth."
+  ],
+  "files_tested": [
+    "benchmarks_entrypoint.py",
+    "modeling_my_new_model2.py",
+    "preprocess.py",
+    "run_mlm.py",
+    "run_mlm_no_trainer.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Transform Python code to evade RF, NB, SGD, and NN classifiers with stealth score <0.5. Preserve exact functionality strictly. 1. Localized Structural Refactors: Convert `for` loops to comprehensions or reverse boolean logic order locally to shift control-flow embeddings for RF/NN without full file restructuring. 2. Token Distribution Shift: Rename high-frequency public identifiers (args, function names) to semantic synonyms with selective casing changes (snake/camel) to manipulate unigram frequencies while minimizing `features_changed_pct`. 3. Stylometric Balancing: Toggle comment styles (inline vs block) in specific blocks and diversify import patterns (absolute/relative) strategically to normalize feature counts. 4. Optimization: Prioritize evasion gain per altered feature; avoid dead code, whitespace inflation, or mass renaming. Ensure transformations cross classification decision boundaries for all models simultaneously by targeting TF-IDF tokens and structural patterns favored by each model's underlying embedding space.",
+      "batch_id": "batch_control_flow_20260303_abc3",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.30145745901971344,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Modify Python code using EXCLUSIVELY Control Flow techniques to evade RF, NB, SGD, and NN classifiers. Prioritize surgical structural shifts: convert loops to comprehensions or vice versa, replace `if/elif` chains with `match/case` or dict dispatch, swap ternary operators for nested conditionals, and invert boolean logic locally. Avoid renaming variables, comments, imports, or formatting changes. Focus on diversifying control flow paths within critical blocks to shift structural embeddings without inflating feature counts excessively. Ensure all transformations preserve exact functionality. Maximize evasion by creating distinct structural patterns per block rather than massive rewrites that increase stealth scores. Target 50%+ evasion while maintaining a stealth score below 0.5.",
+      "batch_id": "batch_control_flow_20260303_856a",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.2343408213687881,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Apply aggressive structural control flow variations preserving functionality. Swap `for` loops with comprehensions, invert iterator direction, and replace linear `if/elif` chains with `match/case` or dictionary dispatch. Convert early returns into deeply nested conditional blocks to alter execution paths significantly. Swap `while` loops for equivalent `for` constructs where logic permits. Invert boolean operators (`and`/`or`, `not`) within branches to shift token embeddings. Merge fragmented conditionals into compound statements or split monolithic ones. Do NOT rename variables, modify comments, add whitespace, or include dead code; every change must alter structure strictly. Target simultaneous evasion across all models via diverse control path restructuring. Maintain stealth < 0.5 through surgical logic restructuring only. Prioritize high-impact structural shifts over minor tweaks to cross classification boundaries while maximizing evasion intensity within allowed control flow techniques without violating category constraints.",
+      "batch_id": "batch_control_flow_20260303_30a7",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.18120327234390282,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Apply aggressive, multi-point structural shifts using ONLY Control Flow techniques per function block: convert `for` loops to list comprehensions or vice versa, replace `if/elif` chains with `match/case` or dictionary dispatch, swap ternary operators for nested `if/else`, and convert early returns into deeply nested conditional logic. Invert boolean conditions (`and`/`not`) within branches to alter execution paths significantly without changing variable tokens. Merge fragmented conditionals into compound statements where safe. Do NOT rename variables, modify comments, whitespace, or imports. Execute multiple transformations simultaneously within each function to maximize structural distance vectors and cross classification boundaries for all models. Preserve exact functionality. Target 50% evasion while maintaining stealth < 0.5 by ensuring changes are natural and surgical within constraints. Avoid empty lines, pass statements, or formatting inflation that inflates stealth scores without aiding evasion.",
+      "batch_id": "batch_control_flow_20260303_f470",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.21018711151791142,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Apply dense, multi-point structural variations within critical function blocks to evade all models. Prioritize replacing linear `if/elif` chains with dictionary dispatch or `match/case` statements. Convert standard `for` loops to list comprehensions or while loops to shift syntax patterns aggressively. Swap ternary operators for deeply nested conditional blocks to alter execution paths significantly. Invert boolean logic (`and`/`or`, `not`) within branches locally. Combine at least two distinct transformations per target block simultaneously. Do NOT rename variables, modify comments, or change whitespace/formatting. Ensure changes do not inflate feature counts excessively to maintain stealth < 0.5. Avoid empty lines or pass statements that inflate stealth scores without aiding evasion. Execute bold structural restructuring strictly within the Control Flow category constraints to maximize divergence.",
+      "batch_id": "batch_control_flow_20260303_cc8c",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.1821560238630548,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Apply maximal structural divergence using ONLY Control Flow techniques. Replace sequential `if/elif` chains with dictionary dispatch or `match/case` blocks to drastically alter token order and density without renaming variables. Convert explicit loops into generator expressions or comprehension syntax where logic permits to shift n-gram patterns. Invert boolean operators (`and`/`or`) deep within nested branches rather than top-level to change execution paths locally. Merge fragmented conditionals into complex compound statements to modify line-length distributions safely. Avoid adding whitespace, empty lines, or pass statements that inflate stealth. Ensure exact functionality preservation. Prioritize high-impact syntax topology changes over minor tweaks. Balance structural aggression with naturalness to maintain stealth < 0.5 while maximizing evasion against all models by focusing on code structure density rather than simple feature toggles.",
+      "batch_id": "batch_control_flow_20260303_1a73",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.245549533960024,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Apply targeted control flow obfuscation to evade all models. Convert `for` loops to generator expressions or comprehensions only where logic permits, shifting token order. Replace sequential `if/elif` chains with dictionary dispatch or `match/case`, then invert boolean conditions (`and` <-> `or`) deep within every branch simultaneously to disrupt execution paths. Merge fragmented conditionals into compound statements where safe. Ensure at least two distinct transformations per critical function block occur. Do not rename variables, comments, or whitespace. Maintain functionality. Avoid empty lines to keep stealth < 0.5. Focus on execution path divergence over syntax swaps. Vary intensity: apply deep nesting and boolean inversion specifically in files with 0% evasion like `preprocess.py`. Prioritize disrupting token density to evade Random Forest and Neural Network detection while maintaining low feature change percentage. Balance structural aggression with naturalness within CONTROL FLOW constraints only.",
+      "batch_id": "batch_control_flow_20260303_e1ff",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.1710575308904541,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Aggressively mix Control Flow patterns to boost evasion while maintaining stealth < 0.5. Convert `for` loops to comprehensions and simultaneously invert boolean conditions (`and` <-> `or`) within nested branches to maximize token permutation. Replace sequential `if/elif` chains with `match/case` or dictionary dispatch logic exclusively where safe, altering syntax density. Merge fragmented conditionals into compound statements to shift line-length distributions naturally. Ensure every critical function undergoes at least two distinct flow transformations simultaneously (e.g., loop swap + conditional restructuring). Focus deep nesting strategies on files stuck at 0% evasion to disrupt n-gram patterns while preserving logic. Maintain low feature change percentage by focusing on structural topology rather than expanding code size. Prioritize execution path divergence over simple syntax swaps to evade Random Forest and Neural Network detection effectively. Strictly adhere to Control Flow constraints: no variable renaming, comment edits, or whitespace modifications.",
+      "batch_id": "batch_control_flow_20260303_96a4",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.20636701968358526,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Focus on files with 0% evasion. Apply aggressive Control Flow restructuring without renaming variables or changing whitespace. Convert `for` loops to nested list comprehensions or generator expressions simultaneously in critical blocks to maximize token permutation. Replace sequential `if/elif` chains exclusively with structured `match/case` or dictionary dispatch logic where safe, altering syntax density. Invert boolean operators (`and` <-> `or`) deep within nested branches rather than top-level to disrupt execution paths locally. Merge fragmented conditionals into complex ternary expressions or compound statements to shift line-length distributions naturally. Ensure every critical function undergoes at least two distinct flow transformations (e.g., loop swap + conditional restructuring). Avoid empty lines or pass statements that inflate stealth. Maintain exact functionality. Focus on disrupting n-gram patterns through structural topology changes rather than feature toggles. Prioritize high-intensity syntax divergence to evade all models while keeping feature change percentage low.",
+      "batch_id": "batch_control_flow_20260303_168d",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.30378224275557725,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Target un-evaded files immediately. Maintain strict CONTROL FLOW constraints: NO variable renaming, comments, or whitespace changes. Maximize token permutation via allowed techniques only. 1) Deeply invert boolean operators (`and` <-> `or`) within nested branches to shift n-gram signatures without logic loss. 2) Reorder independent conditional checks inside the same scope to shuffle token sequences while keeping semantics identical. 3) Convert sequential `if/elif` chains to nested `if`s or dictionary dispatch only when altering line/token density. Avoid merging conditionals into compound ternary statements if it reduces token variation. Apply maximum intensity to structural topology changes within permitted techniques. Eliminate empty lines to keep stealth < 0.5. Ensure exact functionality preservation. Prioritize disrupting n-gram patterns in stuck files using boolean logic and conditional structure manipulation exclusively.",
+      "batch_id": "batch_control_flow_20260303_4e18",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.15644320880351942,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Prioritize structural topology changes to maximize token permutation while maintaining original whitespace and indentation. Convert every eligible `for` loop to a list comprehension or generator expression, and swap available `while` loops for `for` with iterator ranges. Replace standard `if/elif` chains exclusively with nested conditionals or dictionary dispatch logic. Invert boolean operators (`and` <-> `or`) deep within branches to shuffle token sequences while preserving execution paths. Merge independent fragments into compound statements to shift line-length distributions naturally. Apply at least two distinct flow transformations per critical function simultaneously (e.g., loop conversion + conditional restructuring). Focus on disrupting n-gram signatures through structural variance rather than stylistic edits. Ensure exact functionality preservation. Target stuck files by applying maximum intensity to these structural changes within the Control Flow category only.",
+      "batch_id": "batch_control_flow_20260303_d327",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.21588995018209398,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Adopt varied Control Flow manipulation granularities across functions to evade model expectations without inflating stealth. Alternate between coarse block restructuring and micro-logic inversions within tight scopes. Convert `for` loops to comprehensions selectively in nested contexts, reserving them for blocks where token adjacency naturally shifts. Replace sequential `if/elif` chains with dictionary dispatch only when it increases local token variance. Invert boolean operators (`and` <-> `or`) deep within branches to disrupt n-gram signatures while preserving top-level feature vectors. Merge fragmented conditionals into compound statements to shift line-length distributions subtly, avoiding excessive change percentages. Ensure exact functionality preservation and eliminate empty lines that inflate stealth scores. Focus on disrupting specific Control Flow n-gram patterns in un-evaded files by varying transformation complexity per function.",
+      "batch_id": "batch_control_flow_20260303_03cd",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.20890851453413264,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Aggressively disrupt TF-IDF n-grams via maximum Control Flow variation within constraints. 1) Convert every eligible `for` loop to list comprehensions or generators immediately to alter token sequences without semantic change. 2) Replace sequential `if/elif` chains with dictionary dispatch logic (`dict.get` patterns) to scramble conditional token ordering significantly. 3) Invert boolean operators deep within nested branches (flip `and` <-> `or`) to shift operator signatures while keeping execution paths identical. 4) Merge fragmented conditionals into single compound statements to alter line-length distributions naturally. Maintain strict original whitespace and indentation exactly; do not add/remove lines or comments. Ensure exact functionality preservation without dummy code. Prioritize disrupting specific stuck file n-grams using these structural topologies exclusively.",
+      "batch_id": "batch_control_flow_20260303_d610",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.18294028780710825,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Prioritize selective Control Flow mutations to balance evasion and stealth. 1) Invert deep nested boolean operators (`and` \u2194 `or`) to disrupt n-grams without expanding feature vectors. 2) Merge fragmented conditionals into compound statements or use dictionary dispatch for sequential blocks where token adjacency shifts significantly. 3) Convert specific `for` loops to comprehensions only when surrounding operator sequences change, preserving standard loops elsewhere to minimize `features_changed_pct`. 4) Split monolithic conditionals to shift line-length distributions naturally. Ensure exact functionality preservation and maintain original indentation exactly. Target stuck file patterns by varying transformation intensity per function rather than blanket application. Avoid renaming variables or changing comments to stay within category limits.",
+      "batch_id": "batch_control_flow_20260303_5cd1",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.16181723809027143,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Apply STRICT CONTROL FLOW transformations to evade detection while preserving functionality, variables, comments, and whitespace exactly. No renaming, formatting, or import style changes allowed. Since stealth scores are optimal, maximize evasion intensity: convert all eligible `for` loops to comprehensions immediately, replacing sequential `if/elif` chains with `dict.get` dispatch logic to scramble token ordering, and inverting boolean operators in nested branches to disrupt n-gram signatures. Merge fragmented conditionals into compounds to shift line-length distributions naturally. Aggressively swap loop types where semantics allow and invert conditions deep within functions. Prioritize significant topology shifts over minor tweaks to target all models. Ensure exact functionality; do not add dead code or whitespace that inflates stealth.",
+      "batch_id": "batch_control_flow_20260303_81d0",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.18099815375070413,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    }
+  ],
+  "started_at": "2026-03-03T09:20:50.216784",
+  "finished_at": "2026-03-03T10:45:39.449681",
+  "saved_at": "2026-03-03T10:45:39.449681"
+}

@@ -149,6 +149,43 @@ class BatchTracker:
         with open(json_path, "r", encoding="utf-8") as f:
             return json.load(f)
 
+    def get_best_prompt(self, category: str) -> Optional[Dict[str, Any]]:
+        """Find the best prompt across all evolutions for a category.
+
+        Scans all evolution JSON files matching evo_{category}_*.json and
+        returns the one with the highest best_evasion_rate.
+
+        Returns:
+            Dict with prompt, evasion_rate, evolution_id, round — or None
+            if no evolutions exist for this category.
+        """
+        evo_dir = get_evolution_json_dir()
+        if not evo_dir.exists():
+            return None
+
+        best = None
+        for json_path in evo_dir.glob(f"evo_{category}_*.json"):
+            try:
+                with open(json_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            except (json.JSONDecodeError, OSError):
+                continue
+
+            evasion = data.get("best_evasion_rate")
+            if evasion is None:
+                continue
+
+            evasion = float(evasion)
+            if best is None or evasion > best["evasion_rate"]:
+                best = {
+                    "prompt": data.get("best_prompt", ""),
+                    "evasion_rate": evasion,
+                    "evolution_id": data.get("evolution_id", json_path.stem),
+                    "round": data.get("best_round", 0),
+                }
+
+        return best
+
     def list_batches(
         self,
         category: Optional[str] = None,

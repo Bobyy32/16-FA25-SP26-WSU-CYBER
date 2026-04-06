@@ -29,6 +29,7 @@ def run_evolution(
     target_evasion_rate: float = EVOLUTION_DEFAULTS["target_evasion_rate"],
     target_stealth_max: float = EVOLUTION_DEFAULTS["target_stealth_max"],
     seed: Optional[int] = None,
+    auto_resume: bool = True,
 ) -> Dict[str, Any]:
     """
     Run a multi-round prompt evolution loop.
@@ -47,6 +48,8 @@ def run_evolution(
         target_evasion_rate: Stop when avg evasion >= this (percentage).
         target_stealth_max: Stop when avg stealth <= this.
         seed: Random seed for file selection.
+        auto_resume: If True (default), automatically resume from the best
+            prompt found in previous evolutions for this category.
 
     Returns:
         Dictionary with evolution_id, status, best_prompt, best results,
@@ -54,6 +57,20 @@ def run_evolution(
     """
     if author is None:
         raise ValueError("'author' is required for evolution runs.")
+
+    tracker = BatchTracker()
+
+    # Auto-resume from the best prompt found in previous evolutions
+    resumed_from = None
+    if auto_resume:
+        prev_best = tracker.get_best_prompt(category)
+        if prev_best and prev_best["prompt"]:
+            resumed_from = prev_best
+            initial_prompt = prev_best["prompt"]
+            print(f"\n>>> AUTO-RESUME: Using best prompt from previous evolution")
+            print(f"    Source: {prev_best['evolution_id']} (round {prev_best['round']})")
+            print(f"    Previous evasion rate: {prev_best['evasion_rate']:.1f}%")
+            print()
 
     timestamp = datetime.now()
     evolution_id = generate_evolution_id(category, timestamp)
@@ -68,6 +85,8 @@ def run_evolution(
     print(f"Max rounds: {max_rounds}")
     print(f"Target evasion: {target_evasion_rate}%")
     print(f"Target stealth: <= {target_stealth_max}")
+    if resumed_from:
+        print(f"Resumed from: {resumed_from['evolution_id']} ({resumed_from['evasion_rate']:.1f}% evasion)")
     print(f"Initial prompt: {initial_prompt[:80]}{'...' if len(initial_prompt) > 80 else ''}")
     print()
 
@@ -89,8 +108,6 @@ def run_evolution(
     best_evasion = 0.0
     best_prompt = initial_prompt
     status = "max_rounds_reached"
-
-    tracker = BatchTracker()
 
     for round_num in range(1, max_rounds + 1):
         print(f"\n{'='*60}")
@@ -160,6 +177,7 @@ def run_evolution(
                 round_number=round_num,
                 provider=provider,
                 model=model,
+                category=category,
             )
             current_prompt = new_prompt
             prompts_used.append(new_prompt)
@@ -184,6 +202,7 @@ def run_evolution(
         "best_round": best_round,
         "best_evasion_rate": best_evasion,
         "best_prompt": best_prompt,
+        "resumed_from": resumed_from,
         "initial_prompt": initial_prompt,
         "all_prompts": prompts_used,
         "files_tested": [f[0] for f in selected_files],

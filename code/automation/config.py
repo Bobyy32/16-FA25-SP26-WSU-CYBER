@@ -22,6 +22,7 @@ CATEGORIES = [
     "renaming",
     "formatting",
     "comments",
+    "control_flow",
 ]
 
 # Model types and their configurations

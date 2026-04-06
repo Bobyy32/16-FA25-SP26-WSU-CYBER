@@ -1,0 +1,287 @@
+{
+  "evolution_id": "evo_formatting_20260301_3c75",
+  "status": "max_rounds_reached",
+  "category": "formatting",
+  "author": "microsoft",
+  "provider": "ollama",
+  "model": "qwen3-coder:30b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 2,
+  "best_evasion_rate": 6.25,
+  "best_prompt": "Reformat code to evade authorship attribution by: 1) Renaming 60% of variables and functions using camelCase/snake_case alternation (targeting TF-IDF features). 2) Restructuring 30% of control flow blocks with reorganized if/else and loop logic (targeting stylometric patterns). 3) Swapping import styles and normalizing string literals (targeting feature vector changes). 4) Adjusting line lengths and comment styles to reduce cosine distance while maintaining functionality.",
+  "resumed_from": null,
+  "initial_prompt": "Reformat the Python code to disrupt stylometric fingerprints while keeping it natural: 1) Convert all indentation from spaces to tabs (or vice versa). 2) Normalize line lengths to 80-100 chars by breaking long lines or joining short ones. 3) Switch import style: change 'import X' to 'from X import *' and vice versa. 4) Standardize all string literals to double quotes. Preserve all functionality and logic exactly.",
+  "all_prompts": [
+    "Reformat the Python code to disrupt stylometric fingerprints while keeping it natural: 1) Convert all indentation from spaces to tabs (or vice versa). 2) Normalize line lengths to 80-100 chars by breaking long lines or joining short ones. 3) Switch import style: change 'import X' to 'from X import *' and vice versa. 4) Standardize all string literals to double quotes. Preserve all functionality and logic exactly.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 60% of variables and functions using camelCase/snake_case alternation (targeting TF-IDF features). 2) Restructuring 30% of control flow blocks with reorganized if/else and loop logic (targeting stylometric patterns). 3) Swapping import styles and normalizing string literals (targeting feature vector changes). 4) Adjusting line lengths and comment styles to reduce cosine distance while maintaining functionality.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 80% of variables/functions with contextual camelCase/snake_case alternation (targeting TF-IDF and stylometric features). 2) Restructuring 50% of control flow blocks with reorganized loops and conditionals (targeting model decision boundaries). 3) Swapping import styles and normalizing string literals (targeting feature vector changes). 4) Adjusting line lengths and comment styles to reduce cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation (targeting TF-IDF and stylometric features). 2) Restructuring 70% of control flow blocks with reorganized loops and conditionals (targeting model decision boundaries). 3) Swapping import styles and normalizing string literals (targeting feature vector changes). 4) Adjusting line lengths and comment styles to reduce cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions using contextual camelCase/snake_case alternation to maximize TF-IDF feature disruption. 2) Restructuring 80% of control flow blocks with loop unrolling and conditional reordering to target model decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to maximize TF-IDF disruption. 2) Restructuring 90% of control flow blocks with loop unrolling and conditional reordering to target Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering to target Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 90% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 85% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering to target Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 85% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+    "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 80% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost."
+  ],
+  "files_tested": [
+    "conf.py",
+    "hello_nas.py",
+    "imagenet.py",
+    "retrain3.py",
+    "sklearn_test.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Reformat the Python code to disrupt stylometric fingerprints while keeping it natural: 1) Convert all indentation from spaces to tabs (or vice versa). 2) Normalize line lengths to 80-100 chars by breaking long lines or joining short ones. 3) Switch import style: change 'import X' to 'from X import *' and vice versa. 4) Standardize all string literals to double quotes. Preserve all functionality and logic exactly.",
+      "batch_id": "batch_formatting_20260301_3c08",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.11449334609870813,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 60% of variables and functions using camelCase/snake_case alternation (targeting TF-IDF features). 2) Restructuring 30% of control flow blocks with reorganized if/else and loop logic (targeting stylometric patterns). 3) Swapping import styles and normalizing string literals (targeting feature vector changes). 4) Adjusting line lengths and comment styles to reduce cosine distance while maintaining functionality.",
+      "batch_id": "batch_formatting_20260301_bf41",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.19286667088968154,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 80% of variables/functions with contextual camelCase/snake_case alternation (targeting TF-IDF and stylometric features). 2) Restructuring 50% of control flow blocks with reorganized loops and conditionals (targeting model decision boundaries). 3) Swapping import styles and normalizing string literals (targeting feature vector changes). 4) Adjusting line lengths and comment styles to reduce cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_7252",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.21394544813153912,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation (targeting TF-IDF and stylometric features). 2) Restructuring 70% of control flow blocks with reorganized loops and conditionals (targeting model decision boundaries). 3) Swapping import styles and normalizing string literals (targeting feature vector changes). 4) Adjusting line lengths and comment styles to reduce cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_5f81",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.196544059090703,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions using contextual camelCase/snake_case alternation to maximize TF-IDF feature disruption. 2) Restructuring 80% of control flow blocks with loop unrolling and conditional reordering to target model decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_9b23",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.22698957164551103,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to maximize TF-IDF disruption. 2) Restructuring 90% of control flow blocks with loop unrolling and conditional reordering to target Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_233e",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.24781912002502438,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering to target Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_6d18",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.26089019731200036,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 90% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_62e0",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.2083397015739315,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 85% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_c72c",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.278167054928426,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering to target Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_923d",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.21570045268276877,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_3294",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.17630016470984824,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 85% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_cffd",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.2488971499304051,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_adc2",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.27990012174566886,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 95% of variables/functions using contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 95% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_d03c",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.2074721591840775,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Reformat code to evade authorship attribution by: 1) Renaming 90% of variables/functions with contextual camelCase/snake_case alternation to disrupt TF-IDF features. 2) Restructuring 80% of control flow blocks with loop unrolling and conditional reordering targeting Random Forest and SGD Classifier decision boundaries. 3) Swapping import styles and normalizing string literals to reduce feature vector divergence. 4) Adjusting line lengths and comment styles to minimize cosine distance while preserving functionality. Focus on high-impact transformations that lower evasion detection without increasing stealth cost.",
+      "batch_id": "batch_formatting_20260301_48ef",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.26274383281260705,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    }
+  ],
+  "started_at": "2026-03-01T17:03:34.034631",
+  "finished_at": "2026-03-01T18:15:36.693947",
+  "saved_at": "2026-03-01T18:15:36.693947"
+}
