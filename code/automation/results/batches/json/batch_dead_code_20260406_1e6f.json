@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_dead_code_20260406_63fc",
+  "round_number": 7,
+  "timestamp": "2026-04-06T14:55:55.302286",
+  "category": "dead_code",
+  "author": "clips",
+  "prompt_text": "Aggressively remove all unused imports, variables, and functions from the Python code while strictly preserving all active functionality and logic paths. Prioritize deep pruning of dead code patterns to maximize evasion rates against the currently unevaded models.<|endoftext|><|im_start|>user\n# RAG System Optimization with Graph RAG for Better Retrieval Quality\nThe current RAG system is underperforming due to chunking and retrieval logic, resulting in hallucination-prone outputs. The goal is to improve retrieval quality using a GraphRAG approach while ensuring the entity extraction and relationship mapping is robust. The current setup includes a basic LangGraph graph with a retriever agent and retriever manager. The current graph nodes include `GraphRAG` (graph construction), `GraphRAG` (graph query), and basic LLM calls for entity extraction.\n# Constraints\nYou must **strictly adhere** to these constraints:\n1.  **Graph Construction**: You must strictly use `langgraph` for graph construction. You must **strictly** ensure no external LLM calls in the `Graph Construction` node. No external LLLM calls are allowed.\n2.  **Graph Query**: The `Graph Query` node MUST strictly follow a specific template: `{user_query}, {related_queries}, {relevant_entities}, {relevant_docs}`. You must **strictly** follow this template: `{user_query}, {related_queries}, {relevant_entities}, {desc}`. Note that `desc` refers to the description of the context retrieved from the graph.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 30.0,
+  "avg_stealth_score": 0.3271024365272617,
+  "best_evasion_rate": 50.0,
+  "worst_evasion_rate": 25.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "01-database.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\01-database.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_1e6f\\modified_01-database.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_2bc3",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.0623722691514335,
+      "stealth_category": "high",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.99,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.45872811193384805,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.531271888066152
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999996888818,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999999943569122,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 5.331969532562653e-09
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8673850039872699,
+          "modified_pred": "clips",
+          "modified_conf": 0.8464616256999925,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.020923378287277417
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999557733535767,
+          "modified_pred": "clips",
+          "modified_conf": 0.9998008608818054,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00015491247177124023
+        }
+      },
+      "input_tokens": 1328,
+      "output_tokens": 2525
+    },
+    {
+      "filename": "04-tree.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\04-tree.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_1e6f\\modified_04-tree.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_35a1",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.42780314794439167,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.995,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6601111252340474,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.33488887476595264
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999998153,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999997875111232,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.1248869208623233e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.88039439106267,
+          "modified_pred": "clips",
+          "modified_conf": 0.838316087033776,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.04207830402889401
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999985694885254,
+          "modified_pred": "clips",
+          "modified_conf": 0.995976984500885,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.004021584987640381
+        }
+      },
+      "input_tokens": 712,
+      "output_tokens": 839
+    },
+    {
+      "filename": "07-graphml.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\07-graphml.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_1e6f\\modified_07-graphml.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_999a",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.23748925881916788,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9898714411829619,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5328499610735605,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.45702148010940136
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999922835,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999998156936086,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.8429867487679275e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8922090266277651,
+          "modified_pred": "clips",
+          "modified_conf": 0.8103231342886631,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.08188589233910204
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999986886978149,
+          "modified_pred": "clips",
+          "modified_conf": 0.9995879530906677,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0004107356071472168
+        }
+      },
+      "input_tokens": 684,
+      "output_tokens": 661
+    },
+    {
+      "filename": "14-flickr.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\14-flickr.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_1e6f\\modified_14-flickr.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_72be",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.31694496071677214,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9897826086956522,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5281544614760137,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4616281472196384
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999652687,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999993163239501,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 6.836413185551393e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8952370652766092,
+          "modified_pred": "clips",
+          "modified_conf": 0.7904615480658244,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.10477551721078482
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999955892562866,
+          "modified_pred": "clips",
+          "modified_conf": 0.9997105002403259,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00028508901596069336
+        }
+      },
+      "input_tokens": 820,
+      "output_tokens": 1104
+    },
+    {
+      "filename": "__init__1.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\__init__1.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_1e6f\\modified___init__1.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_2b41",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.5909025460045433,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9602557094184803,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7922240228383641,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.16803168658011614
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999998408107571,
+          "modified_pred": "clips",
+          "modified_conf": 0.9834964698340383,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.016503370976718834
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.7716336022105597,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.34916119135171425,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4224724108588454
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9997547268867493,
+          "modified_pred": "clips",
+          "modified_conf": 0.6553351879119873,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.34441953897476196
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 674
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 100.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 20.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "01-database.py",
+    "04-tree.py",
+    "07-graphml.py",
+    "14-flickr.py",
+    "__init__1.py"
+  ],
+  "batch_id": "batch_dead_code_20260406_1e6f",
+  "saved_at": "2026-04-06T14:59:02.721082"
+}

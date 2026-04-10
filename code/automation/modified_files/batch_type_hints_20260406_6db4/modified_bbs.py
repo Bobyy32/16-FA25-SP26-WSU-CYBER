@@ -1,0 +1,1 @@
+valid_boxes = [bb for bb in boxes if bb.x2 < boxes.shape[1]]

@@ -1,0 +1,219 @@
+{
+  "evolution_id": "evo_dead_code_20260406_63fc",
+  "round_number": 3,
+  "timestamp": "2026-04-06T14:31:25.462943",
+  "category": "dead_code",
+  "author": "clips",
+  "prompt_text": "You are a code quality analysis expert. Your task is to generate a precise, self-contained `JSON` prompt that will enable an LLM to identify and remove unused imports in Python code.\n\n## Objective:\nThe goal is to create a prompt that instructs an LLM to detect and remove any imports that are not used in the source code, ensuring that the code is free of dead code, especially those flagged as \"unused imports\".\n\n## Constraints:\n1.  **Language**: Python.\n2.  **Output Format**: Valid `JSON`.\n3.  **Target Category**: `DEAD CODE`.\n4.  **Specific Issue**: `best-practices: Unused Imports`.\n5.  **Input**: The LLM will receive a Python file.\n6.  **Output**: A JSON object containing only the lines that contain unused imports, excluding the standard `__future__` module and the `sys` module if they are used for debugging (e.g., `print(sys.path)`).\n7.  **Exclusions**:\n    *   `__future__`\n    *   `sys` (when used for debugging)\n8.  **JSON Structure**:\n    *   `line_number`: Integer.\n    *   `original_line`: String.\n    *   `reason`: String (brief explanation of why it's unused).\n    *   `action`: String (e.g., \"Remove this import\").\n\n## Task:\nGenerate a `JSON` prompt that instructs an LLM to perform the following analysis on the provided Python file:\n1.  **Identify**: Find all unused imports in the file.\n2.  **Exclude**: Ignore `__future__` and `sys` unless they are used for debugging.\n3.  **Report**: Return a list of unused imports with their line numbers, original lines, and reasons.\n\n## Input Example:\nThe user will provide the following Python file:\n```python\nimport os\nimport sys\nfrom datetime import datetime\nimport requests\nimport json\n\ndef unused_import():\n    # This function does not use any imports\n    return None\n\ndef used_import():\n    # This function uses some imports\n    from datetime import datetime\n    current_time = datetime.now()\n    print(current_time)\n```\n\n## Output Example:\nThe LLM should return a JSON object like this:\n```json\n{\n  \"unused_imports\": [\n    {\n      \"line_number\": 1,\n      \"original_line\": \"import os\",\n      \"reason\": \"The 'os' module is not used anywhere in the code.\",\n      \"action\": \"Remove this import\"\n    },\n    {\n      \"line_number\": 2,\n      \"original_line\": \"import sys\",\n      \"reason\": \"The 'sys' module is not used for debugging or other purposes.\",\n      \"action\": \"Remove this import\"\n    },\n    {\n      \"line_number\": 5,\n      \"original_line\": \"import requests\",\n      \"reason\": \"The 'requests' module is not used anywhere in the code.\",\n      \"action\": \"Remove this import\"\n    }\n  ]\n}\n```\n\n## Prompt to Generate:\nConstruct a `JSON` prompt that instructs an LLM to perform the above analysis on the provided Python file, ensuring that the output adheres to the specified JSON structure.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 33.333333333333336,
+  "avg_stealth_score": 0.5728144643001585,
+  "best_evasion_rate": 50.0,
+  "worst_evasion_rate": 25.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "01-database.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\01-database.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_d47a\\modified_01-database.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_8ae1",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.6215360622080931,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.99,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4195196096947979,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.570480390305202
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999996888818,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999984059631529,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.5937257288323181e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8673850039872699,
+          "modified_pred": "clips",
+          "modified_conf": 0.7651419668474769,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.10224303713979299
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999557733535767,
+          "modified_pred": "clips",
+          "modified_conf": 0.9997091889381409,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.000246584415435791
+        }
+      },
+      "input_tokens": 1742,
+      "output_tokens": 1907
+    },
+    {
+      "filename": "04-tree.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\04-tree.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "07-graphml.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\07-graphml.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_d47a\\modified_07-graphml.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_b7b3",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.5874440737313718,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9898714411829619,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4458183872326677,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5440530539502941
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999922835,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999949868807965,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 5.0131114870399784e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8922090266277651,
+          "modified_pred": "clips",
+          "modified_conf": 0.7795534597147868,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.11265556691297829
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999986886978149,
+          "modified_pred": "clips",
+          "modified_conf": 0.9997181296348572,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00028055906295776367
+        }
+      },
+      "input_tokens": 1098,
+      "output_tokens": 1018
+    },
+    {
+      "filename": "14-flickr.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\14-flickr.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "__init__1.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\__init__1.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_d47a\\modified___init__1.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_6297",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.5094632569610105,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9602557094184803,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7668085140261609,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.19344719539231936
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999998408107571,
+          "modified_pred": "clips",
+          "modified_conf": 0.9947092577451931,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0052905830655639585
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.7716336022105597,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5375711241173099,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.23406247809324976
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9997547268867493,
+          "modified_pred": "clips",
+          "modified_conf": 0.9245010018348694,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.07525372505187988
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 2211
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 100.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 33.33333333333333,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "01-database.py",
+    "04-tree.py",
+    "07-graphml.py",
+    "14-flickr.py",
+    "__init__1.py"
+  ],
+  "batch_id": "batch_dead_code_20260406_d47a",
+  "saved_at": "2026-04-06T14:39:19.681058"
+}

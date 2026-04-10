@@ -1,0 +1,43 @@
+from __future__ import print_function
+from __future__ import unicode_literals
+
+from typing import List, Dict, Any, Optional
+
+from builtins import str, bytes, dict, int
+
+import os
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+
+from pattern.search import search, match
+from pattern.en import parsetree
+
+# This example demonstrates an interesting search pattern that mines for comparisons.
+# Notice the use of the constraint "be".
+# If the output from the parser includes word lemmas (e.g., "doing" => "do")
+# these will also be matched. Using "be" then matches "is", "being", "are", ...
+# and if underspecification is used "could be", "will be", "definitely was", ...
+
+p: str = "NP be ADJP|ADVP than NP"
+
+sentences: List[str] = (
+  "the turtle was faster than the hare",
+  "Arnold Schwarzenegger is more dangerous than Dolph Lundgren")
+
+for s in sentences:
+    t: Any = parsetree(s, lemmata=True)  # parse lemmas
+    m: Any = search(p, t)
+    if m is not None:
+        # Constituents for the given constraint indices:
+        # 0 = NP, 2 = ADJP|ADVP, 4 = NP
+        print(m[0].constituents(constraint=[0, 2, 4]))
+        print("")
+
+
+p: str = "NP be ADJP|ADVP than NP"
+t: Any = parsetree("the turtle was faster than the hare", lemmata=True)
+m: Any = match(p, t)
+print(t)
+print("")
+for w in m.words:
+    print("%s\t=> %s" % (w, m.constraint(w)))

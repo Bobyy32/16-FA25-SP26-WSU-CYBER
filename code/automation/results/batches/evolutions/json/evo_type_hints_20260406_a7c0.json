@@ -1,0 +1,280 @@
+{
+  "evolution_id": "evo_type_hints_20260406_a7c0",
+  "status": "max_rounds_reached",
+  "category": "type_hints",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.5,
+  "best_round": 10,
+  "best_evasion_rate": 58.333333333333336,
+  "best_prompt": "<|user_query|>\n<|model_response|>\n<|user_query|>\n<|model_response|>\n<|user_query|>\n<|model_response|>",
+  "resumed_from": null,
+  "initial_prompt": "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+  "all_prompts": [
+    "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+    "Apply exhaustive type annotations to all function parameters, return types, and local variables, ensuring concrete types like `List[int]` are used to maximize token diversity. Do not change import styles, but add necessary typing imports to ensure full coverage of the typing signature.",
+    "Replace all broad type annotations with specific complex generics to increase token variance, ensuring every function parameter, return value, and local variable is explicitly typed. Prioritize Union types where they create additional token diversity to increase feature entropy without modifying control flow or structure.",
+    "Apply highly specific, heterogeneous type annotations to every function parameter, return value, and local variable to maximize token divergence for Naive Bayes. Focus on replacing broad types with distinct complex generics where possible while ensuring imports remain consistent with the original structure.",
+    "<|user_query|>\n<|model_response|>\n<|user_query|>\n<|model_response|>\n<|user_query|>\n<|model_response|>",
+    "Apply specific complex generics only to return types and function parameters originally using broad types, utilizing Union and List to introduce token variance that targets Naive Bayes evasion. Limit modifications to existing annotations to ensure low feature changes percentage and minimal cosine distance deviation from the original structure.",
+    "Prioritize adding diverse type annotations to every function parameter and return type, utilizing a mix of `List`, `Tuple`, and `Optional` to diversify signature tokens specifically for Naive Bayes. Ensure corresponding imports are updated to match these annotations, avoiding generic `Any` types to maintain token distinguishability while maximizing signature variance.",
+    "Focus on replacing broad `Any` type annotations with specific generics like `List`, `Tuple`, or `Dict` within function signatures to increase token variance, while minimizing new imports to keep feature change percentage low and maintain stealth score. Target specific function pairs to maximize token distribution shifts for Naive Bayes evasion."
+  ],
+  "files_tested": [
+    "bbs.py",
+    "check_average_blur.py",
+    "check_cartoon.py",
+    "geometric.py",
+    "poly_point_isect_py2py3.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+      "batch_id": "batch_type_hints_20260406_6db4",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.3855635417106128,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+      "batch_id": "batch_type_hints_20260406_ced3",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.4304952184653358,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Apply exhaustive type annotations to all function parameters, return types, and local variables, ensuring concrete types like `List[int]` are used to maximize token diversity. Do not change import styles, but add necessary typing imports to ensure full coverage of the typing signature.",
+      "batch_id": "batch_type_hints_20260406_4056",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.4575939581583957,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Apply exhaustive type annotations to all function parameters, return types, and local variables, ensuring concrete types like `List[int]` are used to maximize token diversity. Do not change import styles, but add necessary typing imports to ensure full coverage of the typing signature.",
+      "batch_id": "batch_type_hints_20260406_0439",
+      "avg_evasion_rate": 18.75,
+      "avg_stealth_score": 0.521599067789848,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Replace all broad type annotations with specific complex generics to increase token variance, ensuring every function parameter, return value, and local variable is explicitly typed. Prioritize Union types where they create additional token diversity to increase feature entropy without modifying control flow or structure.",
+      "batch_id": "batch_type_hints_20260406_55b4",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.43090954203743453,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Replace all broad type annotations with specific complex generics to increase token variance, ensuring every function parameter, return value, and local variable is explicitly typed. Prioritize Union types where they create additional token diversity to increase feature entropy without modifying control flow or structure.",
+      "batch_id": "batch_type_hints_20260406_6770",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.5236979223276064,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Replace all broad type annotations with specific complex generics to increase token variance, ensuring every function parameter, return value, and local variable is explicitly typed. Prioritize Union types where they create additional token diversity to increase feature entropy without modifying control flow or structure.",
+      "batch_id": "batch_type_hints_20260406_001f",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.4718630857805012,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Replace all broad type annotations with specific complex generics to increase token variance, ensuring every function parameter, return value, and local variable is explicitly typed. Prioritize Union types where they create additional token diversity to increase feature entropy without modifying control flow or structure.",
+      "batch_id": "batch_type_hints_20260406_9154",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.41818010633506153,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Apply highly specific, heterogeneous type annotations to every function parameter, return value, and local variable to maximize token divergence for Naive Bayes. Focus on replacing broad types with distinct complex generics where possible while ensuring imports remain consistent with the original structure.",
+      "batch_id": "batch_type_hints_20260406_1b7a",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.4642459571158972,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "<|user_query|>\n<|model_response|>\n<|user_query|>\n<|model_response|>\n<|user_query|>\n<|model_response|>",
+      "batch_id": "batch_type_hints_20260406_3fa6",
+      "avg_evasion_rate": 58.333333333333336,
+      "avg_stealth_score": 0.6190540114014632,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 66.66666666666666,
+        "naive_bayes": 33.33333333333333,
+        "sgd_classifier": 66.66666666666666,
+        "neural_network": 66.66666666666666
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Apply specific complex generics only to return types and function parameters originally using broad types, utilizing Union and List to introduce token variance that targets Naive Bayes evasion. Limit modifications to existing annotations to ensure low feature changes percentage and minimal cosine distance deviation from the original structure.",
+      "batch_id": "batch_type_hints_20260406_b842",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.36348145481756106,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Apply specific complex generics only to return types and function parameters originally using broad types, utilizing Union and List to introduce token variance that targets Naive Bayes evasion. Limit modifications to existing annotations to ensure low feature changes percentage and minimal cosine distance deviation from the original structure.",
+      "batch_id": "batch_type_hints_20260406_53a4",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.40779566008898793,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Apply specific complex generics only to return types and function parameters originally using broad types, utilizing Union and List to introduce token variance that targets Naive Bayes evasion. Limit modifications to existing annotations to ensure low feature changes percentage and minimal cosine distance deviation from the original structure.",
+      "batch_id": "batch_type_hints_20260406_dcc0",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.40566946511087254,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Prioritize adding diverse type annotations to every function parameter and return type, utilizing a mix of `List`, `Tuple`, and `Optional` to diversify signature tokens specifically for Naive Bayes. Ensure corresponding imports are updated to match these annotations, avoiding generic `Any` types to maintain token distinguishability while maximizing signature variance.",
+      "batch_id": "batch_type_hints_20260406_3d04",
+      "avg_evasion_rate": 18.75,
+      "avg_stealth_score": 0.6060650297482644,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Focus on replacing broad `Any` type annotations with specific generics like `List`, `Tuple`, or `Dict` within function signatures to increase token variance, while minimizing new imports to keep feature change percentage low and maintain stealth score. Target specific function pairs to maximize token distribution shifts for Naive Bayes evasion.",
+      "batch_id": "batch_type_hints_20260406_747a",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.3852669520735143,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    }
+  ],
+  "started_at": "2026-04-06T16:21:21.186386",
+  "finished_at": "2026-04-06T18:06:36.311677",
+  "saved_at": "2026-04-06T18:06:36.312694"
+}

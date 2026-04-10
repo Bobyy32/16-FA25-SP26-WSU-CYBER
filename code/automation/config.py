@@ -23,6 +23,8 @@ CATEGORIES = [
     "formatting",
     "comments",
     "control_flow",
+    "dead_code",
+    "type_hints",
 ]
 
 # Model types and their configurations

@@ -1,0 +1,266 @@
+{
+  "evolution_id": "evo_dead_code_20260406_3132",
+  "round_number": 5,
+  "timestamp": "2026-04-06T12:09:25.124440",
+  "category": "dead_code",
+  "author": "aleju",
+  "prompt_text": "Integrate unused imports at the module level to increase feature distance. Add unused local variable assignments using standard internal names (`x`, `y`, `temp`) initialized with constants near high-entropy lines. Insert unreachable blocks by wrapping existing logic in `if False:` or appending to function ends after `return`. Use `None` or existing values for these variables. Do not add comments, dummy statements, or whitespace altering structure. Preserve functionality. Do not rename existing variables. Keep modifications surgical to limit feature count increases while pushing evasion above 50% without inflating stealth. Target high-entropy lines for maximum impact.<|endoftext|><|im_start|>user\nYouThinking Process:\n\n1.  **Analyze the Request:**\n    *   **Input:** A series of \"Analysis Notes\" and constraints indicating a failure to meet stealth requirements while maintaining evasion. The previous attempt likely added too much \"noise\" or \"dead code\" that increased stealth (feature distance) or used unnatural variable names/comments.\n    *   **Constraint:** The prompt *must* only use techniques from the `DEAD CODE` category (unused variable assignments, unreachable blocks, unused imports). No renaming (unless it's internal variables like `x`, `y` without changing logic), no restructuring, no formatting, no obvious dummy code (like `pass`), no random gibberish.\n    *   **Goal:** Increase Evasion > 50% while keeping Stealth < 0.3.\n    *   **Current State:** Previous evasion was 30%, stealth 0.27. Target: Evasion > 50%, Stealth < 0.3.\n    *   **Problem:** Previous attempts likely added too much structure or code that increased stealth. The analysis notes say \"DO NOT reduce the scope of changes. Instead, make the SAME types of changes but more surgically: rename variables to realistic alternatives (not random gibberish), use natural-looking comments, and avoid adding dead code or dummy statements that inflate feature distances.\" However, the explicit `CATEGORY CONSTRAINT` says \"Only use techniques that belong to the 'dead_code' transformation category. Do NOT mix in techniques from other categories (renaming, restructuring, formatting, comments, etc.).\"\n    *   **Conflict Resolution:** The analysis notes suggest renaming variables is a different category (likely `RENAME`), but the user instruction says \"Only use techniques from the DEAD CODE category\". However, the analysis notes explicitly say \"rename variables to realistic alternatives (not random gibberish)\". This is a tricky conflict. Strict adherence to \"DEAD CODE\" means I can only add unused imports, unused vars, unreachable blocks. But simply adding unused imports might not reach 50% evasion easily without stealth penalty. The prompt needs to instruct the AI to insert *actual* dead code elements (unused imports, unused vars, unreachable blocks) without making them obvious.\n    *   **Correction:** Wait, the analysis note says \"DO NOT reduce the scope of changes. Instead, make the SAME types of changes but more surgically: rename variables to realistic alternatives (not random gibberish), use natural-looking comments, and avoid adding dead code or dummy statements that inflate feature distances.\" However, the *User Instruction* at the very end says \"RULES: 1. STAY IN YOUR LANE. Only use techniques from the DEAD CODE category. Do NOT mix in techniques from other categories (renaming, restructuring, formatting, comments, etc.).\"\n    *   **Re-evaluating:** If I strictly follow \"Only use techniques from the DEAD CODE category\", I cannot rename variables (that's `RENAME` or `VARIABLE_OPS`). I can only add unused imports, unused vars, unreachable blocks.\n    *   **Challenge:** How to get >50% Evasion with *only* dead code additions while keeping stealth low? Usually, dead code increases feature distance (evasion) but also code structure distance (stealth). To keep stealth low, the dead code must be subtle.\n    *   **Strategy:** Instruct the AI to insert unused imports at the top of files, define unused variables with standard names (`x`, `y`, `temp`) and assign them to constants (e.g., `None`, `True`, `False`) near complex logic (high-entropy lines) to \"blend in\". Also, add unreachable blocks (`if False:`) in places that might seem natural (e.g., after `return` or inside a branch that is known to be false). This avoids adding new logic structures (which would increase stealth) and just adds \"dead\" elements that don't affect functionality.\n    *   **Word Count:** Must be ~120 words.\n    *   **Final Constraint:** ONLY `DEAD CODE`. No renaming, no comments.\n    *   **Action:** Create a transformation prompt that instructs to insert unused imports, unused local variables, and unreachable blocks in subtle ways to boost evasion without triggering stealth alarms. Do not mention renaming or restructuring. Focus on *adding* dead code only.\n</think>\n\nIntegrate unused imports at the module level to increase feature distance. Add unused local variable assignments using standard internal names (`x`, `y`, `temp`) initialized with constants near high-entropy lines. Insert unreachable blocks by wrapping existing logic in `if False:` or appending to function ends after `return`. Use `None` or existing values for these variables. Do not add comments, dummy statements, or whitespace altering structure. Preserve functionality. Do not rename existing variables. Keep modifications surgical to limit feature count increases while pushing evasion above 50% without inflating stealth. Target high-entropy lines for maximum impact.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 6.25,
+  "avg_stealth_score": 0.11628502071068281,
+  "best_evasion_rate": 25.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_heatmaps.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_heatmaps.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_e09a\\modified_check_heatmaps.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_2154",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.08595869623467566,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9939139344262296,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9498401528343612,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.044073781591868366
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999573319,
+          "modified_pred": "aleju",
+          "modified_conf": 0.999999999871001,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 8.633094239485217e-11
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8645833484489851,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8654978735546037,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.0009145251056186243
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9998760223388672,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9998449087142944,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.1113624572753906e-05
+        }
+      },
+      "input_tokens": 3106,
+      "output_tokens": 3067
+    },
+    {
+      "filename": "check_impulse_noise.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_impulse_noise.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_e09a\\modified_check_impulse_noise.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_a96f",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.015679402875017533,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9937969043151971,
+          "modified_pred": "aleju",
+          "modified_conf": 0.983953154315197,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00984375000000004
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999996893403974,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999996453661406,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 4.397425679147915e-08
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8679629811489641,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8673805896193352,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0005823915296289117
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9991679191589355,
+          "modified_pred": "aleju",
+          "modified_conf": 0.99918133020401,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -1.341104507446289e-05
+        }
+      },
+      "input_tokens": 1580,
+      "output_tokens": 541
+    },
+    {
+      "filename": "check_multiply_hue_and_saturation.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_multiply_hue_and_saturation.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_e09a\\modified_check_multiply_hue_and_saturation.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_4849",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.09321561051977473,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9951639344262295,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9951639344262295,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999997158,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999999960707,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.645084234449314e-12
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9268014087251218,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9240275181109415,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.002773890614180319
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999909400939941,
+          "modified_pred": "aleju",
+          "modified_conf": 0.999987006187439,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.933906555175781e-06
+        }
+      },
+      "input_tokens": 1619,
+      "output_tokens": 650
+    },
+    {
+      "filename": "heatmaps.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\heatmaps.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_e09a\\modified_heatmaps.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_1784",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.2702863732132633,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.887718822421459,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.689873589058704,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.19784523336275506
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999991616,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999998961544688,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.0384469273372332e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.851460053387518,
+          "modified_pred": "aleju",
+          "modified_conf": 0.7414677540523219,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.10999229933519605
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999711513519287,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9983417987823486,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0016293525695800781
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 2429
+    },
+    {
+      "filename": "multicore.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\multicore.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 25.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 0.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_heatmaps.py",
+    "check_impulse_noise.py",
+    "check_multiply_hue_and_saturation.py",
+    "heatmaps.py",
+    "multicore.py"
+  ],
+  "batch_id": "batch_dead_code_20260406_e09a",
+  "saved_at": "2026-04-06T12:15:43.375694"
+}

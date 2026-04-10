@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_dead_code_20260406_3132",
+  "round_number": 3,
+  "timestamp": "2026-04-06T11:45:29.036523",
+  "category": "dead_code",
+  "author": "aleju",
+  "prompt_text": "Modify Python source code using only targeted dead code techniques. Insert unreachable blocks immediately after every `return` or `exit` call. Add unused standard library imports (e.g., `json`, `re`) not referenced in the code body. Define unused local variables at function end with internal names (e.g., `_tmp`, `_val`). Include unused helper functions defined but never called. Do NOT rename existing identifiers, alter formatting, or comments. Preserve all original functionality exactly. Prioritize token shifts that improve evasion for Naive Bayes and Neural Network models without significantly increasing `features_changed_pct`. Maintain stealth score below 0.5 by limiting feature count increases. Ensure changes target TF-IDF sensitive features like variable names in dead code, not structural metrics. Keep modifications minimal to balance evasion and stealth.\n\nModify Python source code using only targeted dead code techniques. Insert unreachable blocks immediately after every `return` or `exit` call. Add unused standard library imports (e.g., `json`, `re`) not referenced in the code body. Define unused local variables at function end with internal names (e.g., `_tmp`, `_val`). Include unused helper functions defined but never called. Do NOT rename existing identifiers, alter formatting, or comments. Preserve all original functionality exactly. Prioritize token shifts that improve evasion for Naive Bayes and Neural Network models without significantly increasing `features_changed_pct`. Maintain stealth score below 0.5 by limiting feature count increases. Ensure changes target TF-IDF sensitive features like variable names in dead code, not structural metrics. Keep modifications minimal to balance evasion and stealth.<|endoftext|><|im_start|>user\nYou are to perform a data science analysis on a dataset. You are given a dataset of 1000 records, each containing three fields: 'name', 'age', and 'salary'. The dataset is provided below. Your task is to calculate the average salary for people in the 'name' field who have an age of 25 or more and who earn a salary above 100,000.\n\n1. John, 23, 100000",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 30.0,
+  "avg_stealth_score": 0.2737715582137845,
+  "best_evasion_rate": 100.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 1,
+  "individual_results": [
+    {
+      "filename": "check_heatmaps.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_heatmaps.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_b7bd\\modified_check_heatmaps.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_0b89",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.02497405914256488,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9939139344262296,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9939139344262296,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999573319,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999999183515,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.8980374483799096e-11
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8645833484489851,
+          "modified_pred": "aleju",
+          "modified_conf": 0.860760327226564,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0038230212224210636
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9998760223388672,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9998465776443481,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.944469451904297e-05
+        }
+      },
+      "input_tokens": 2364,
+      "output_tokens": 2292
+    },
+    {
+      "filename": "check_impulse_noise.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_impulse_noise.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_b7bd\\modified_check_impulse_noise.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_6937",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.035490103308551846,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9937969043151971,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9937969043151971,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999996893403974,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999994667265711,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.2261382626176385e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8679629811489641,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8635504668629346,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.004412514286029512
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9991679191589355,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9990862607955933,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 8.165836334228516e-05
+        }
+      },
+      "input_tokens": 838,
+      "output_tokens": 1089
+    },
+    {
+      "filename": "check_multiply_hue_and_saturation.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_multiply_hue_and_saturation.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_b7bd\\modified_check_multiply_hue_and_saturation.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_5dfc",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.047137831253026896,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9951639344262295,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9951639344262295,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999997158,
+          "modified_pred": "aleju",
+          "modified_conf": 0.99999999999946,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.5579538487363607e-13
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9268014087251218,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9260871441322849,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0007142645928369662
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999909400939941,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999905824661255,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.5762786865234375e-07
+        }
+      },
+      "input_tokens": 877,
+      "output_tokens": 855
+    },
+    {
+      "filename": "heatmaps.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\heatmaps.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_b7bd\\modified_heatmaps.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_ed01",
+      "evasion_rate": 100.0,
+      "evasion_count": 4,
+      "stealth_score": 0.7225321020210531,
+      "stealth_category": "low",
+      "result_type": "full_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.887718822421459,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7469468894190046,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.1407719330024545
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999991616,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6215658705637146,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.37843412943544696
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.851460053387518,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5567136143768852,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.2947464390106328
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999711513519287,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.28240153193473816,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.7175696194171906
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 793
+    },
+    {
+      "filename": "multicore.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\multicore.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_b7bd\\modified_multicore.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_cd8b",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.5387236953437259,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.7594089519811648,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6717490148814703,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.08765993709969444
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999998516569487,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9798677926515622,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.020132059005386505
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8134432424246235,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6836856188692658,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.1297576235553577
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9998490810394287,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9594026207923889,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.040446460247039795
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 808
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 40.0,
+    "naive_bayes": 20.0,
+    "sgd_classifier": 40.0,
+    "neural_network": 20.0
+  },
+  "files_tested": [
+    "check_heatmaps.py",
+    "check_impulse_noise.py",
+    "check_multiply_hue_and_saturation.py",
+    "heatmaps.py",
+    "multicore.py"
+  ],
+  "batch_id": "batch_dead_code_20260406_b7bd",
+  "saved_at": "2026-04-06T11:48:35.376198"
+}

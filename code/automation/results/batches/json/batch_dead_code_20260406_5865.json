@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_dead_code_20260406_63fc",
+  "round_number": 10,
+  "timestamp": "2026-04-06T15:22:10.146043",
+  "category": "dead_code",
+  "author": "clips",
+  "prompt_text": "Aggressively prune deeply nested dead branches and complex control flow patterns that contribute to feature vectors, specifically targeting unused imports and functions aligned with the hardest unevaded models while preserving active functionality. Ensure all transformations remove only strictly unused elements without introducing new feature modifications to maximize evasion while maintaining stealth scores below target.<|endoftext|><|im_start|>user\n\u4f60\u662f\u4e00\u540d\u4f18\u79c0\u7684 Prompt \u4f18\u5316\u4e13\u5bb6\uff0c\u8bf7\u5e2e\u6211\u4f18\u5316\u4ee5\u4e0b Prompt\u3002\n# Prompt \u6a21\u677f\uff1a",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 50.0,
+  "avg_stealth_score": 0.49661411915266396,
+  "best_evasion_rate": 100.0,
+  "worst_evasion_rate": 25.0,
+  "full_evasion_count": 1,
+  "individual_results": [
+    {
+      "filename": "01-database.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\01-database.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_5865\\modified_01-database.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_c103",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.21248425548295888,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.99,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4773631222854655,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5126368777145345
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999996888818,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999996089599091,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.9072897262126816e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8673850039872699,
+          "modified_pred": "clips",
+          "modified_conf": 0.8243647220462382,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.04302028194103169
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999557733535767,
+          "modified_pred": "clips",
+          "modified_conf": 0.9993865489959717,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0005692243576049805
+        }
+      },
+      "input_tokens": 1103,
+      "output_tokens": 968
+    },
+    {
+      "filename": "04-tree.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\04-tree.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_5865\\modified_04-tree.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_7b17",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.4870613504451648,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.995,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6997902521766887,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.29520974782331133
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999998153,
+          "modified_pred": "clips",
+          "modified_conf": 0.999999646061474,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.5393834130204027e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.88039439106267,
+          "modified_pred": "clips",
+          "modified_conf": 0.8181372128115513,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.06225717825111876
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999985694885254,
+          "modified_pred": "clips",
+          "modified_conf": 0.9957810640335083,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00421750545501709
+        }
+      },
+      "input_tokens": 487,
+      "output_tokens": 534
+    },
+    {
+      "filename": "07-graphml.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\07-graphml.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_5865\\modified_07-graphml.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_011c",
+      "evasion_rate": 100.0,
+      "evasion_count": 4,
+      "stealth_score": 0.7405986246933126,
+      "stealth_category": "low",
+      "result_type": "full_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9898714411829619,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7507183948424734,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.2391530463404885
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999922835,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4408163820314681,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5591836179608154
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8922090266277651,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.2422453322224615,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.6499636944053037
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999986886978149,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.41570404171943665,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5842946469783783
+        }
+      },
+      "input_tokens": 459,
+      "output_tokens": 806
+    },
+    {
+      "filename": "14-flickr.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\14-flickr.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_5865\\modified_14-flickr.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_0e26",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.3815743160997012,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9897826086956522,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5864299733558958,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4033526353397564
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999652687,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999347894968603,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 6.521046840834988e-05
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8952370652766092,
+          "modified_pred": "clips",
+          "modified_conf": 0.7899253622855449,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.1053117029910643
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999955892562866,
+          "modified_pred": "clips",
+          "modified_conf": 0.9954769015312195,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.004518687725067139
+        }
+      },
+      "input_tokens": 595,
+      "output_tokens": 1144
+    },
+    {
+      "filename": "__init__1.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\__init__1.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_5865\\modified___init__1.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_a536",
+      "evasion_rate": 75.0,
+      "evasion_count": 3,
+      "stealth_score": 0.661352049042182,
+      "stealth_category": "low",
+      "result_type": "strong_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9602557094184803,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7936580459758261,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.16659766344265414
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999998408107571,
+          "modified_pred": "clips",
+          "modified_conf": 0.9543906136928022,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0456092271179549
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.7716336022105597,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.2652623371364493,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5063712650741103
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9997547268867493,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6799421906471252,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.319812536239624
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 601
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 100.0,
+    "naive_bayes": 20.0,
+    "sgd_classifier": 40.0,
+    "neural_network": 40.0
+  },
+  "files_tested": [
+    "01-database.py",
+    "04-tree.py",
+    "07-graphml.py",
+    "14-flickr.py",
+    "__init__1.py"
+  ],
+  "batch_id": "batch_dead_code_20260406_5865",
+  "saved_at": "2026-04-06T15:24:25.353320"
+}

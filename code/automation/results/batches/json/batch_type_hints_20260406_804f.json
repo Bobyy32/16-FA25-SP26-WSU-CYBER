@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_type_hints_20260406_baad",
+  "round_number": 5,
+  "timestamp": "2026-04-06T19:15:24.655787",
+  "category": "type_hints",
+  "author": "clips",
+  "prompt_text": "Prioritize adding type hints to every untyped local variable assignment and function signature using Any or Union to increase token divergence against Naive Bayes, SGD, and Neural Network. Maintain strict adherence to existing variable names and whitespace while introducing these annotations to shift feature distributions without raising the stealth score.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 15.0,
+  "avg_stealth_score": 0.14229792672013203,
+  "best_evasion_rate": 75.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "01-database.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\01-database.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_804f\\modified_01-database.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_e94d",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.049939015407446045,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.99,
+          "modified_pred": "clips",
+          "modified_conf": 0.97,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.020000000000000018
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999996888818,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999999988854995,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 8.033822496145149e-10
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8673850039872699,
+          "modified_pred": "clips",
+          "modified_conf": 0.8623888106704719,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.004996193316798014
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999557733535767,
+          "modified_pred": "clips",
+          "modified_conf": 0.99994957447052,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 6.198883056640625e-06
+        }
+      },
+      "input_tokens": 1076,
+      "output_tokens": 3354
+    },
+    {
+      "filename": "03-lemmata.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\03-lemmata.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_804f\\modified_03-lemmata.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_4984",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.10767573846140781,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 1.0,
+          "modified_pred": "clips",
+          "modified_conf": 0.975,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.025000000000000022
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999992042,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999999999680966,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.1107560971577186e-11
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.9042006086949498,
+          "modified_pred": "clips",
+          "modified_conf": 0.895812664647646,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.008387944047303808
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999964237213135,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999946355819702,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.7881393432617188e-06
+        }
+      },
+      "input_tokens": 539,
+      "output_tokens": 1065
+    },
+    {
+      "filename": "04-tree.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\04-tree.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_804f\\modified_04-tree.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_5093",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.08428242780030695,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.995,
+          "modified_pred": "clips",
+          "modified_conf": 0.97,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.025000000000000022
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999998153,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999999999974847,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.3305801732931286e-12
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.88039439106267,
+          "modified_pred": "clips",
+          "modified_conf": 0.865088888793116,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.015305502269554072
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999985694885254,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999982118606567,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.5762786865234375e-07
+        }
+      },
+      "input_tokens": 460,
+      "output_tokens": 2534
+    },
+    {
+      "filename": "__init__12.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\__init__12.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_804f\\modified___init__12.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_7d45",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.1242296097913243,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 1.0,
+          "modified_pred": "clips",
+          "modified_conf": 0.96,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.040000000000000036
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 1.0,
+          "modified_pred": "clips",
+          "modified_conf": 1.0,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.891903287826969,
+          "modified_pred": "clips",
+          "modified_conf": 0.8810928478795861,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.010810439947382955
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999997615814209,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999997615814209,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        }
+      },
+      "input_tokens": 1071,
+      "output_tokens": 1264
+    },
+    {
+      "filename": "utils.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\utils.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_804f\\modified_utils.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_3f99",
+      "evasion_rate": 75.0,
+      "evasion_count": 3,
+      "stealth_score": 0.345362842140175,
+      "stealth_category": "medium",
+      "result_type": "strong_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "UNKNOWN",
+          "original_conf": 0.7710328698951875,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7957998667686756,
+          "original_correct": false,
+          "modified_correct": false,
+          "evasion": false,
+          "confidence_drop": -0.024766996873488156
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.855336873051511,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7827306354932453,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.07260623755826567
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.7141836774820308,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.40848778203579805,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.30569589544623277
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9923089742660522,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.694063127040863,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.2982458472251892
+        }
+      },
+      "input_tokens": 559,
+      "output_tokens": 1256
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 0.0,
+    "naive_bayes": 20.0,
+    "sgd_classifier": 20.0,
+    "neural_network": 20.0
+  },
+  "files_tested": [
+    "01-database.py",
+    "03-lemmata.py",
+    "04-tree.py",
+    "__init__12.py",
+    "utils.py"
+  ],
+  "batch_id": "batch_type_hints_20260406_804f",
+  "saved_at": "2026-04-06T19:20:07.877356"
+}

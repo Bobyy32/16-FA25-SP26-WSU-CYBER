@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_type_hints_20260406_a7c0",
+  "round_number": 2,
+  "timestamp": "2026-04-06T16:28:31.600341",
+  "category": "type_hints",
+  "author": "aleju",
+  "prompt_text": "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:4b",
+  "num_files": 5,
+  "avg_evasion_rate": 15.0,
+  "avg_stealth_score": 0.4304952184653358,
+  "best_evasion_rate": 50.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "bbs.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\bbs.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_ced3\\modified_bbs.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_ebb0",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.670759202062481,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9118660740062691,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7401589541898496,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.1717071198164195
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999999147,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9990451679571277,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0009548320427870127
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8418970866952423,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.42028091473704454,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4216161719581978
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999618530273438,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9064376354217529,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.09352421760559082
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 1130
+    },
+    {
+      "filename": "check_average_blur.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_average_blur.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_ced3\\modified_check_average_blur.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_9fd9",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.14932392026899702,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.965809434213076,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9509608792331272,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.014848554979948747
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999760973,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999998079119,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.6818546555441571e-10
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9164935013168126,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9137967175135121,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0026967838033005176
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999771118164062,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999467134475708,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.039836883544922e-05
+        }
+      },
+      "input_tokens": 581,
+      "output_tokens": 1415
+    },
+    {
+      "filename": "check_cartoon.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_cartoon.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_ced3\\modified_check_cartoon.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_a17a",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.019311156247723095,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.8811609571561617,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8513878100785973,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0297731470775644
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999829009668,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999795183145,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 3.382652269401376e-09
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.7981938429109714,
+          "modified_pred": "aleju",
+          "modified_conf": 0.7953351913318815,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0028586515790899325
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9978821873664856,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9978380799293518,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 4.410743713378906e-05
+        }
+      },
+      "input_tokens": 1475,
+      "output_tokens": 3268
+    },
+    {
+      "filename": "geometric.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\geometric.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_ced3\\modified_geometric.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_421a",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.681967503865203,
+      "stealth_category": "low",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9901715828031619,
+          "modified_pred": "aleju",
+          "modified_conf": 0.5444725758376598,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.445699006965502
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999975044328497,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.4955671502624455e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9074788486976022,
+          "modified_pred": "aleju",
+          "modified_conf": 0.843415396299768,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.06406345239783418
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9966726303100586,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0033273696899414062
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 2162
+    },
+    {
+      "filename": "poly_point_isect_py2py3.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\poly_point_isect_py2py3.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_ced3\\modified_poly_point_isect_py2py3.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_4429",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.6311143098822748,
+      "stealth_category": "low",
+      "result_type": "original_unknown",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "UNKNOWN",
+          "original_conf": 0.7294384122096744,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.757206885891067,
+          "original_correct": false,
+          "modified_correct": false,
+          "evasion": false,
+          "confidence_drop": -0.02776847368139257
+        },
+        "naive_bayes": {
+          "original_pred": "UNKNOWN",
+          "original_conf": 0.4881360917642625,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.8796014306327887,
+          "original_correct": false,
+          "modified_correct": false,
+          "evasion": false,
+          "confidence_drop": -0.39146533886852625
+        },
+        "sgd_classifier": {
+          "original_pred": "UNKNOWN",
+          "original_conf": 0.6333760753230941,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.24808651051352176,
+          "original_correct": false,
+          "modified_correct": false,
+          "evasion": false,
+          "confidence_drop": 0.3852895648095724
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9987332224845886,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.29565298557281494,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.7030802369117737
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 619
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 20.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 20.0,
+    "neural_network": 20.0
+  },
+  "files_tested": [
+    "bbs.py",
+    "check_average_blur.py",
+    "check_cartoon.py",
+    "geometric.py",
+    "poly_point_isect_py2py3.py"
+  ],
+  "batch_id": "batch_type_hints_20260406_ced3",
+  "saved_at": "2026-04-06T16:31:38.112365"
+}

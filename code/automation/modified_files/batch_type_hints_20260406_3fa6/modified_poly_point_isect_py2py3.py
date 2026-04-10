@@ -1,0 +1,3 @@
+def _delete(self, key, parent=None, direction=None):
+    node = self._search_node(key, self._root)
+    ...

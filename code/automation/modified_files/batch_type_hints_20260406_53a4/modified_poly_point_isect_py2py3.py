@@ -1,0 +1,1 @@
+parent[int(parent.right is node)] = node[int(node.left is None)]

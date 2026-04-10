@@ -1,0 +1,313 @@
+{
+  "evolution_id": "evo_dead_code_20260406_63fc",
+  "round_number": 2,
+  "timestamp": "2026-04-06T14:18:40.025611",
+  "category": "dead_code",
+  "author": "clips",
+  "prompt_text": "Use surgical modifications to add unused variable assignments and unused imports with internal names like `x` or `y` to enhance evasion without inflating feature count. Avoid obvious dummy code or pass statements that could inflate stealth scores, ensuring all changes remain natural to maintain stealth below 0.3.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too high. RULE 5: DO NOT mix in other techniques. RULE 6: DO NOT reduce the scope or change the logic. RULE 7: DO NOT add dummy/dead code... these inflate stealth scores.\n\n**Action**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Category Constraint**: Only use techniques that belong to the 'dead_code' transformation category.\n\n**Reasoning**: The analysis notes indicate that while evasion is good, stealth is too high, suggesting the need for more surgical, less obvious changes. By using surgical modifications within the 'dead_code' category, specifically focusing on unused variable assignments and unused imports rather than obvious dummy code, the evasion remains effective without inflating the stealth score. This aligns with the rules against mixing techniques or reducing scope, while adhering to the specific category constraints and the requirement to avoid dummy code that inflates detection risk.\n\n**Final Prompt**: Modify the model by integrating unused variable assignments and unreachable blocks with internal names like `x` or `y` to enhance evasion without inflating feature count. Ensure modifications are surgical and natural to maintain stealth below 0.3, strictly avoiding obvious dummy code or pass statements.\n\n**Round 3 (Stealth 0.27...)**: Evasion is GOOD but stealth is too",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 45.0,
+  "avg_stealth_score": 0.36180764075238697,
+  "best_evasion_rate": 100.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 1,
+  "individual_results": [
+    {
+      "filename": "01-database.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\01-database.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_a8af\\modified_01-database.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_0958",
+      "evasion_rate": 75.0,
+      "evasion_count": 3,
+      "stealth_score": 0.6938486664676743,
+      "stealth_category": "low",
+      "result_type": "strong_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.99,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7001516518725875,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.28984834812741245
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999996888818,
+          "modified_pred": "clips",
+          "modified_conf": 0.9088653693104165,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.09113463037846525
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8673850039872699,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.1843106632510712,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.6830743407361988
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999557733535767,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.3993333578109741,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.6006224155426025
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 458
+    },
+    {
+      "filename": "04-tree.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\04-tree.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_a8af\\modified_04-tree.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_4178",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.015228456107051412,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.995,
+          "modified_pred": "clips",
+          "modified_conf": 0.995,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999998153,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999999999997868,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.842170943040401e-14
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.88039439106267,
+          "modified_pred": "clips",
+          "modified_conf": 0.8804917208686499,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -9.732980597987329e-05
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999985694885254,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999984502792358,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.1920928955078125e-07
+        }
+      },
+      "input_tokens": 3883,
+      "output_tokens": 785
+    },
+    {
+      "filename": "07-graphml.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\07-graphml.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_a8af\\modified_07-graphml.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_db55",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.02114910261704007,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9898714411829619,
+          "modified_pred": "clips",
+          "modified_conf": 0.9898714411829619,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999922835,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999999999905214,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.7621459846850485e-12
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8922090266277651,
+          "modified_pred": "clips",
+          "modified_conf": 0.8909584121194627,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.001250614508302439
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999986886978149,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999986886978149,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        }
+      },
+      "input_tokens": 3855,
+      "output_tokens": 762
+    },
+    {
+      "filename": "14-flickr.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\14-flickr.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_a8af\\modified_14-flickr.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_98b6",
+      "evasion_rate": 100.0,
+      "evasion_count": 4,
+      "stealth_score": 0.7331195105232408,
+      "stealth_category": "low",
+      "result_type": "full_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9897826086956522,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6970706896989838,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.2927119189966684
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999652687,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.8049559235131328,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.19504407645213584
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8952370652766092,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.28128976947362433,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.6139472958029848
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999955892562866,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4742377698421478,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.5257578194141388
+        }
+      },
+      "input_tokens": 3991,
+      "output_tokens": 564
+    },
+    {
+      "filename": "__init__1.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\__init__1.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_dead_code_20260406_a8af\\modified___init__1.py",
+      "transform_success": true,
+      "run_id": "dead_code_20260406_de50",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.3456924680469284,
+      "stealth_category": "medium",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.9602557094184803,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7026699691145091,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.2575857403039712
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999998408107571,
+          "modified_pred": "clips",
+          "modified_conf": 0.9998697336804627,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00013010713029437682
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.7716336022105597,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6828297295336899,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.08880387267686973
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9997547268867493,
+          "modified_pred": "clips",
+          "modified_conf": 0.9939234852790833,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.005831241607666016
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 2715
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 60.0,
+    "naive_bayes": 20.0,
+    "sgd_classifier": 60.0,
+    "neural_network": 40.0
+  },
+  "files_tested": [
+    "01-database.py",
+    "04-tree.py",
+    "07-graphml.py",
+    "14-flickr.py",
+    "__init__1.py"
+  ],
+  "batch_id": "batch_dead_code_20260406_a8af",
+  "saved_at": "2026-04-06T14:26:49.220764"
+}

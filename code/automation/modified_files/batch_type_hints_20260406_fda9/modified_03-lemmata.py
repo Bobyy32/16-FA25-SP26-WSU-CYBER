@@ -1,0 +1,1 @@
+Add type annotations to function parameters and return types throughout the codebase, using both `typing` module imports and bare type names interchangeably. Preserve all original whitespace and comments while introducing structural variance through annotation patterns that maintain full functionality.

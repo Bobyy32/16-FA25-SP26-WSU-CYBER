@@ -1,0 +1,266 @@
+{
+  "evolution_id": "evo_type_hints_20260406_baad",
+  "round_number": 12,
+  "timestamp": "2026-04-06T20:13:57.460338",
+  "category": "type_hints",
+  "author": "clips",
+  "prompt_text": "```python\nfrom typing import Union, Dict, Any, List, Tuple, Optional, Set, Callable, TypeVar\nimport typing\nimport re\nimport math\n\ndef parse_user_input() -> typing.Tuple[typing.Union[typing.Dict[str, typing.Any], typing.List[typing.Any]], typing.Optional[typing.Union[typing.Dict[str, int], typing.List[typing.Any]]]]:\n    \"\"\"\n    Parse and validate user input for processing.\n    This function handles parsing JSON-like inputs and converting them to internal objects.\n    \"\"\"\n    user_data: typing.Dict[str, typing.Any] = {}\n    metadata: typing.Optional[typing.Dict[str, int]] = None\n    tags: typing.Set[str] = set()\n    flags: typing.List[bool] = []\n    errors: typing.Optional[typing.List[str]] = None\n    config: typing.Dict[str, str] = {}\n    user_id: typing.Optional[str] = None\n    status: typing.Optional[str] = None\n    user_name: typing.Optional[str] = None\n    permissions: typing.Optional[typing.Set[str]] = None\n    timestamps: typing.Optional[typing.List[str]] = None\n    locations: typing.Optional[typing.List[str]] = None\n    devices: typing.Optional[typing.List[str]] = None\n    sessions: typing.Optional[typing.List[str]] = None\n    browsers: typing.Optional[typing.List[str]] = None\n    operating_systems: typing.Optional[typing.List[str]] = None\n    ip_addresses: typing.Optional[typing.List[str]] = None\n    user_agents: typing.Optional[typing.List[str]] = None\n    referers: typing.Optional[typing.List[str]] = None\n    referrers: typing.Optional[typing.List[str]] = None\n    paths: typing.Optional[typing.List[str]] = None\n    queries: typing.Optional[typing.List[str]] = None\n    methods: typing.Optional[typing.List[str]] = None\n    statuses: typing.Optional[typing.List[str]] = None\n    bodies: typing.Optional[typing.List[str]] = None\n    headers: typing.Optional[typing.Dict[str, typing.List[str]]] = None\n    cookies: typing.Optional[typing.Dict[str, typing.Any]] = None\n    query_params: typing.Optional[typing.List[str]] = None\n    auth_params: typing.Optional[typing.List[str]] = None\n    api_keys: typing.Optional[typing.List[str]] = None\n    client_ips: typing.Optional[typing.List[str]] = None\n    client_ua: typing.Optional[typing.List[str]] = None\n    client_ref: typing.Optional[typing.List[str]] = None\n    client_path: typing.Optional[typing.List[str]] = None\n    client_query: typing.Optional[typing.List[str]] = None\n    client_body: typing.Optional[typing.List[str]] = None\n    client_headers: typing.Optional[typing.Dict[str, typing.List[str]]] = None\n    client_cookies: typing.Optional[typing.Dict[str, typing.Any]] = None\n    client_auth: typing.Optional[typing.Dict[str, typing.Any]] = None\n    client_api_keys: typing.Optional[typing.List[str]] = None\n    client_ips: typing.Optional[typing.List[str]] = None\n    client_ua: typing.Optional[typing.List[str]] = None\n    client_ref: typing.Optional[typing.List[str]] = None\n    client_path: typing.Optional[typing.List[str]] = None\n    client_query: typing.Optional[typing.List[str]] = None\n    client_body: typing.Optional[typing.List[str]] = None\n    client_headers: typing.Optional[typing.Dict[str, typing.List[str]]] = None\n    client_cookies: typing.Optional[typing.Dict[str, typing.Any]] = None\n    client_auth: typing.Optional[typing.Dict[str, typing.Any]] = None\n    client_api_keys: typing.Optional[typing.List[str]] = None\n\n    try:\n        # Parsing logic would be here, but for brevity, we simulate\n        # The internal variables are kept identical to maintain structural integrity\n        # while the signature change shifts lexical tokens\n        \n        # Parsing user data from input (mock logic)\n        if not user_data:\n            user_data = {\"default\": \"data\"}\n        \n        # Processing metadata\n        if metadata is None:\n            metadata = {}\n            \n        # Processing tags\n        if not tags:\n            tags = set()\n            \n        # Processing flags\n        if not flags:\n            flags = []\n            \n        # Processing errors\n        if errors is None:\n            errors = []\n            \n        # Processing config\n        if not config:\n            config = {}\n            \n        # Processing user info\n        if not user_id:\n            user_id = None\n            \n        # Processing status\n        if not status:\n            status = None\n            \n        # Processing user name\n        if not user_name:\n            user_name = None\n            \n        # Processing permissions\n        if permissions is None:\n            permissions = set()\n            \n        # Processing timestamps\n        if timestamps is None:\n            timestamps = []\n            \n        # Processing locations\n        if locations is None:\n            locations = []\n            \n        # Processing devices\n        if devices is None:\n            devices = []\n            \n        # Processing sessions\n        if sessions is None:\n            sessions = []\n            \n        # Processing browsers\n        if browsers is None:\n            browsers = []\n            \n        # Processing operating systems\n        if operating_systems is None:\n            operating_systems = []\n            \n        # Processing IP addresses\n        if ip_addresses is None:\n            ip_addresses = []\n            \n        # Processing user agents\n        if user_agents is None:\n            user_agents = []\n            \n        # Processing referers\n        if referers is None:\n            referers = []\n            \n        # Processing paths\n        if paths is None:\n            paths = []\n            \n        # Processing queries\n        if queries is None:\n            queries = []\n            \n        # Processing methods\n        if methods is None:\n            methods = []\n            \n        # Processing statuses\n        if statuses is None:\n            statuses = []\n            \n        # Processing bodies\n        if bodies is None:\n            bodies = []\n            \n        # Processing headers\n        if headers is None:\n            headers = {}\n            \n        # Processing cookies\n        if cookies is None:\n            cookies = {}\n            \n        # Processing query_params\n        if query_params is None:\n            query_params = []\n            \n        # Processing auth_params\n        if auth_params is None:\n            auth_params = []\n            \n        # Processing api_keys\n        if api_keys is None:\n            api_keys = []\n            \n        # Processing client IPs\n        if client_ips is None:\n            client_ips = []\n            \n        # Processing client UA\n        if client_ua is None:\n            client_ua = []\n            \n        # Processing client ref\n        if client_ref is None:\n            client_ref = []\n            \n        # Processing client path\n        if client_path is None:\n            client_path = []\n            \n        # Processing client query\n        if client_query is None:\n            client_query = []\n            \n        # Processing client body\n        if client_body is None:\n            client_body = []\n            \n        # Processing client headers\n        if client_headers is None:\n            client_headers = {}\n            \n        # Processing client cookies\n        if client_cookies is None:\n            client_cookies = {}\n            \n        # Processing client auth\n        if client_auth is None:\n            client_auth = {}\n            \n        # Processing client api keys\n        if client_api_keys is None:\n            client_api_keys = []\n            \n    except Exception as e:\n        # Handle exceptions and return error details\n        user_data = {\"error\": str(e)}\n        metadata = {\"error\": str(e)}\n        tags = {\"error\": str(e)}\n        flags = [True]\n        errors = [str(e)]\n        config = {\"error\": str(e)}\n        user_id = None\n        status = \"ERROR\"\n        user_name = None\n        permissions = set()\n        timestamps = []\n        locations = []\n        devices = []\n        sessions = []\n        browsers = []\n        operating_systems = []\n        ip_addresses = []\n        user_agents = []\n        referers = []\n        referrers = []\n        paths = []\n        queries = []\n        methods = []\n        statuses = []\n        bodies = []\n        headers = {}\n        cookies = {}\n        query_params = []\n        auth_params = []\n        api_keys = []\n        client_ips = []\n        client_ua = []\n        client_ref = []\n        client_path = []\n        client_query = []\n        client_body = []\n        client_headers = {}\n        client_cookies = {}\n        client_auth = {}\n        client_api_keys = []\n        \n    return user_data, metadata\n\ndef generate_user_data_hash() -> typing.Optional[typing.Union[str, int]]:\n    \"\"\"\n    Generate a hash for user data.\n    Uses a simple algorithm to hash user data.\n    \"\"\"\n    user_data: typing.Optional[typing.Dict[str, typing.Any]] = None\n    if user_data is not None:\n        # Hash user data\n        import hashlib\n        import json\n        user_data_json = json.dumps(user_data, sort_keys=True)\n        user_data_hash = hashlib.sha256(user_data_json.encode()).hexdigest()[:16]\n        \n        return user_data_hash\n    else:\n        # Return None if user_data is empty\n        return None\n\ndef process_user_data(user_data: typing.Dict[str, typing.Any], metadata: typing.Dict[str, int], tags: typing.Set[str], flags: typing.List[bool], errors: typing.Optional[typing.List[str]], config: typing.Dict[str, str], user_id: typing.Optional[str], status: typing.Optional[str], user_name: typing.Optional[str], permissions: typing.Optional[typing.Set[str]], timestamps: typing.Optional[typing.List[str]], locations: typing.Optional[typing.List[str]], devices: typing.Optional[typing.List[str]], sessions: typing.Optional[typing.List[str]], browsers: typing.Optional[typing.List[str]], operating_systems: typing.Optional[typing.List[str]], ip_addresses: typing.Optional[typing.List[str]], user_agents: typing.Optional[typing.List[str]], referers: typing.Optional[typing.List[str]], referrers: typing.Optional[typing.List[str]], paths: typing.Optional[typing.List[str]], queries: typing.Optional[typing.List[str]], methods: typing.Optional[typing.List[str]], statuses: typing.Optional[typing.List[str]], bodies: typing.Optional[typing.List[str]], headers: typing.Optional[typing.Dict[str, typing.List[str]]], cookies: typing.Optional[typing.Dict[str, typing.Any]], query_params: typing.Optional[typing.List[str]], auth_params: typing.Optional[typing.List[str]], api_keys: typing.Optional[typing.List[str]], client_ips: typing.Optional[typing.List[str]], client_ua: typing.Optional[typing.List[str]], client_ref: typing.Optional[typing.List[str]], client_path: typing.Optional[typing.List[str]], client_query: typing.Optional[typing.List[str]], client_body: typing.Optional[typing.List[str]], client_headers: typing.Optional[typing.Dict[str, typing.List[str]]], client_cookies: typing.Optional[typing.Dict[str, typing.Any]], client_auth: typing.Optional[typing.Dict[str, typing.Any]], client_api_keys: typing.Optional[typing.List[str]]) -> typing.Tuple[typing.Optional[typing.Union[str, int]], typing.Optional[typing.Union[str, int]], typing.Optional[typing.Union[str, int]]]:\n    \"\"\"\n    Process user data and generate hashes.\n    \"\"\"\n    # Logic for processing user data\n    return None, None, None\n```",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 37.5,
+  "avg_stealth_score": 0.48228285385032776,
+  "best_evasion_rate": 75.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "01-database.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\01-database.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_6568\\modified_01-database.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_c1f1",
+      "evasion_rate": 75.0,
+      "evasion_count": 3,
+      "stealth_score": 0.48159038238482205,
+      "stealth_category": "medium",
+      "result_type": "strong_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 0.99,
+          "modified_pred": "clips",
+          "modified_conf": 0.8301251494572023,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.1598748505427977
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999996888818,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5164904751100245,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4835095245788572
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.8673850039872699,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4906602598927673,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.37672474409450263
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999557733535767,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.8677710294723511,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.13218474388122559
+        }
+      },
+      "input_tokens": 3538,
+      "output_tokens": 2710
+    },
+    {
+      "filename": "03-lemmata.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\03-lemmata.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_6568\\modified_03-lemmata.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_73a8",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.3855633448504863,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 1.0,
+          "modified_pred": "clips",
+          "modified_conf": 0.9600551371031972,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.03994486289680277
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.9999999999992042,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999998781122702,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.218869339902895e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.9042006086949498,
+          "modified_pred": "clips",
+          "modified_conf": 0.772410504602094,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.13179010409285574
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999964237213135,
+          "modified_pred": "clips",
+          "modified_conf": 0.9996377229690552,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0003587007522583008
+        }
+      },
+      "input_tokens": 3001,
+      "output_tokens": 995
+    },
+    {
+      "filename": "04-tree.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\04-tree.py",
+      "transform_success": false,
+      "transform_error": "Model returned identical code",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "__init__12.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\__init__12.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_6568\\modified___init__12.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_80b6",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.43597828960073937,
+      "stealth_category": "medium",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "clips",
+          "original_conf": 1.0,
+          "modified_pred": "clips",
+          "modified_conf": 0.6309200572457945,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.3690799427542055
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 1.0,
+          "modified_pred": "clips",
+          "modified_conf": 0.9999978942065585,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.105793441509185e-06
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.891903287826969,
+          "modified_pred": "clips",
+          "modified_conf": 0.7343910903320507,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.1575121974949183
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9999997615814209,
+          "modified_pred": "clips",
+          "modified_conf": 0.9970845580101013,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00291520357131958
+        }
+      },
+      "input_tokens": 3533,
+      "output_tokens": 3152
+    },
+    {
+      "filename": "utils.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\clips\\testing\\utils.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260406_6568\\modified_utils.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260406_77c9",
+      "evasion_rate": 75.0,
+      "evasion_count": 3,
+      "stealth_score": 0.6259993985652632,
+      "stealth_category": "low",
+      "result_type": "strong_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "UNKNOWN",
+          "original_conf": 0.7710328698951878,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7630000258365983,
+          "original_correct": false,
+          "modified_correct": false,
+          "evasion": false,
+          "confidence_drop": 0.008032844058589506
+        },
+        "naive_bayes": {
+          "original_pred": "clips",
+          "original_conf": 0.855336873051511,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.9432023269745438,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": -0.0878654539230328
+        },
+        "sgd_classifier": {
+          "original_pred": "clips",
+          "original_conf": 0.7141836774820308,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7139222961057752,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.00026138137625564273
+        },
+        "neural_network": {
+          "original_pred": "clips",
+          "original_conf": 0.9923089742660522,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.991113007068634,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.0011959671974182129
+        }
+      },
+      "input_tokens": 3021,
+      "output_tokens": 2146
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 0.0,
+    "naive_bayes": 50.0,
+    "sgd_classifier": 50.0,
+    "neural_network": 50.0
+  },
+  "files_tested": [
+    "01-database.py",
+    "03-lemmata.py",
+    "04-tree.py",
+    "__init__12.py",
+    "utils.py"
+  ],
+  "batch_id": "batch_type_hints_20260406_6568",
+  "saved_at": "2026-04-06T20:18:58.496997"
+}

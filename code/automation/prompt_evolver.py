@@ -78,6 +78,14 @@ CATEGORY_CONSTRAINTS = {
         "You MUST NOT rename variables/functions, change comments, change formatting/whitespace,\n"
         "or change import styles. Those belong to other categories."
     ),
+    "type_hints": (
+        "CATEGORY CONSTRAINT — TYPE HINTS ONLY:\n"
+        "You may ONLY use these techniques: add or remove type annotations on function parameters,\n"
+        "return types, and variable assignments. Add/remove imports from typing (Optional, List,\n"
+        "Dict, Tuple, Union, Any, etc.).\n"
+        "You MUST NOT rename variables/functions, change comments, change formatting/whitespace,\n"
+        "restructure control flow, or change import styles. Those belong to other categories."
+    ),
 }
 
 
@@ -189,14 +197,15 @@ RULES:
    more surgical and natural.
 4. If evasion was low: try a different strategy WITHIN THIS CATEGORY targeting the
    specific un-evaded models.
-5. Keep the prompt CONCISE — under 150 words. Focus on 3-4 high-impact changes.
+5. Keep the prompt SHORT — 2-3 sentences MAX. No bullet lists, no numbered steps.
 6. Preserve code functionality.
 7. DO NOT add dummy/dead code, random whitespace, or pass statements — these inflate
    stealth scores without helping evasion.
 
 The prompt should instruct an AI to modify Python source code. Be specific and actionable.
 
-Return ONLY the new transformation prompt, nothing else.
+CRITICAL: Return ONLY the new transformation prompt. It must be 2-3 sentences, no more.
+Do NOT return a list, do NOT use bullet points, do NOT explain your reasoning.
 """
     return context.strip()
 

@@ -1,0 +1,1 @@
+Add or remove type annotations on function parameters, return types, and variable assignments throughout the codebase while varying between typing module imports and bare types to maximize structural variance. Preserve all original whitespace and comments strictly to ensure consistent evasion rates and valid functionality.

@@ -1,0 +1,1 @@
+# Add or remove type annotations to parameters, return types, and variable assignments while preserving all original structure, whitespace, and comments. Use typing.X and bare X types interchangeably for maximum variance.

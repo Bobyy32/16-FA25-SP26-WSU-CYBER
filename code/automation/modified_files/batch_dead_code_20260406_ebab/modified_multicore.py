@@ -1,0 +1,1 @@
+@ia.deprecated(alt_func="imgaug.multicore.Pool")

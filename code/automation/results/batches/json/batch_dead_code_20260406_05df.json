@@ -1,0 +1,73 @@
+{
+  "evolution_id": "evo_dead_code_20260406_fc87",
+  "round_number": 1,
+  "timestamp": "2026-04-06T11:16:43.901195",
+  "category": "dead_code",
+  "author": "aleju",
+  "prompt_text": "Inject dead code into this Python file to disguise the author's style. Add unused variable assignments with generic names (e.g. _tmp, _unused, _val). Insert no-op statements like redundant reassignments (x = x) after real assignments. Add unused imports for common stdlib modules (e.g. os, sys, math, itertools). Insert unreachable code blocks after return statements. Add decoy helper functions that are defined but never called. Sprinkle dummy constants at module level (e.g. _SENTINEL = None, _FLAG = False). Do NOT rename any existing variables or functions. Do NOT change control flow, formatting, or comments. Preserve all real functionality exactly.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3-coder:9b",
+  "num_files": 5,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.0,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_average_blur.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_average_blur.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen3-coder:9b' not found in Ollama. Available models: ['qwen3.5:4b', 'qwen3.5:9b']. Pull it with: ollama pull qwen3-coder:9b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_impulse_noise.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_impulse_noise.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen3-coder:9b' not found in Ollama. Available models: ['qwen3.5:4b', 'qwen3.5:9b']. Pull it with: ollama pull qwen3-coder:9b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_jpeg_compression.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_jpeg_compression.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen3-coder:9b' not found in Ollama. Available models: ['qwen3.5:4b', 'qwen3.5:9b']. Pull it with: ollama pull qwen3-coder:9b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_rot90.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_rot90.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen3-coder:9b' not found in Ollama. Available models: ['qwen3.5:4b', 'qwen3.5:9b']. Pull it with: ollama pull qwen3-coder:9b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "multicore.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\multicore.py",
+      "transform_success": false,
+      "transform_error": "Model 'qwen3-coder:9b' not found in Ollama. Available models: ['qwen3.5:4b', 'qwen3.5:9b']. Pull it with: ollama pull qwen3-coder:9b",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {},
+  "files_tested": [
+    "check_average_blur.py",
+    "check_impulse_noise.py",
+    "check_jpeg_compression.py",
+    "check_rot90.py",
+    "multicore.py"
+  ],
+  "batch_id": "batch_dead_code_20260406_05df",
+  "saved_at": "2026-04-06T11:16:54.015974"
+}
