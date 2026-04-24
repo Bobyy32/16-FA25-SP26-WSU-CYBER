@@ -1,0 +1,53 @@
+{
+  "evolution_id": "",
+  "round_number": 0,
+  "timestamp": "2026-04-24T08:26:24.631041",
+  "category": "dead_code",
+  "author": "aleju",
+  "prompt_text": "Modify existing conditional statements by embedding deeply nested unreachable blocks containing complex non-functional logic rather than adding isolated or dummy dead code. Prioritize integrating these blocks into the main execution flow's logic gates to maximize token disruption while avoiding the use of simple pass statements or random whitespace which degrade stealth efficacy.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:4b",
+  "num_files": 3,
+  "avg_evasion_rate": 0.0,
+  "avg_stealth_score": 0.0,
+  "best_evasion_rate": 0.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "arithmetic.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\arithmetic.py",
+      "transform_success": false,
+      "transform_error": "Cannot connect to Ollama at http://localhost:11434. Is Ollama running? Start it with: ollama serve",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_bb_augmentation.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_bb_augmentation.py",
+      "transform_success": false,
+      "transform_error": "Cannot connect to Ollama at http://localhost:11434. Is Ollama running? Start it with: ollama serve",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_jpeg_compression.py",
+      "original_path": "C:\\Users\\ees10\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_jpeg_compression.py",
+      "transform_success": false,
+      "transform_error": "Cannot connect to Ollama at http://localhost:11434. Is Ollama running? Start it with: ollama serve",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    }
+  ],
+  "per_model_evasion_rates": {},
+  "files_tested": [
+    "arithmetic.py",
+    "check_bb_augmentation.py",
+    "check_jpeg_compression.py"
+  ],
+  "batch_id": "batch_dead_code_20260424_c452",
+  "saved_at": "2026-04-24T08:26:37.013188"
+}

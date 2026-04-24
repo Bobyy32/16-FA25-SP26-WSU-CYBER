@@ -1,8 +1,8 @@
 """
-Configuration for the Adversarial Stylometry Automation System.
+Configuration for the Adversarial Stylometry API.
 
 This module defines categories, paths, and model configurations used
-throughout the automation pipeline.
+throughout the stylometry_api pipeline.
 """
 
 import os
@@ -10,11 +10,11 @@ from pathlib import Path
 
 # Base paths
 BASE_DIR = Path(__file__).parent.parent
-AUTOMATION_DIR = Path(__file__).parent
+API_DIR = Path(__file__).parent
 SAVED_MODELS_DIR = BASE_DIR / "saved_models" / "attribution"
-RESULTS_DIR = AUTOMATION_DIR / "results"
+RESULTS_DIR = API_DIR / "results"
 DATASET_DIR = BASE_DIR / "dataset_splits"
-MODIFIED_FILES_DIR = AUTOMATION_DIR / "modified_files"
+MODIFIED_FILES_DIR = API_DIR / "modified_files"
 
 # Transformation categories
 CATEGORIES = [

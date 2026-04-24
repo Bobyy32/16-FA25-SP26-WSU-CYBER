@@ -8,12 +8,11 @@ attribution models' features to craft targeted transformations.
 
 from typing import Any, Dict, List, Optional
 
-from automation.providers import get_provider
-from automation.config import MODEL_TYPES
+from stylometry_api.providers import get_provider
+from stylometry_api.config import MODEL_TYPES
 
 
 # Description of what the attribution models analyze - used in the meta-prompt
-# so the AI understands what features to target
 FEATURE_DESCRIPTION = """
 The authorship attribution system uses 4 models (Random Forest, Naive Bayes, SGD Classifier, Neural Network).
 Each model analyzes code using:

@@ -14,19 +14,19 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-from automation.config import (
+from stylometry_api.config import (
     BATCH_DEFAULTS,
     MODIFIED_FILES_DIR,
     ensure_results_dirs,
 )
-from automation.providers import get_provider
-from automation.utils.dataset_scanner import (
+from stylometry_api.providers import get_provider
+from stylometry_api.utils.dataset_scanner import (
     get_all_authors,
     resolve_author_from_path,
     select_files_for_batch,
 )
-from automation.utils.batch_tracker import BatchTracker, generate_batch_id
-from automation.run_tests import run_adversarial_test
+from stylometry_api.utils.batch_tracker import BatchTracker, generate_batch_id
+from stylometry_api.run_tests import run_adversarial_test
 
 
 def run_batch_test(

@@ -1,20 +1,15 @@
 """
-Google Gemini AI provider.
+OpenAI (GPT) AI provider.
 
-Uses the Google GenAI Python SDK for code transformations and prompt evolution.
-Requires GEMINI_API_KEY environment variable (free from https://aistudio.google.com).
-
-Available free models (set via model parameter):
-    "gemini-2.5-pro"         - Best quality, 100 requests/day
-    "gemini-2.5-flash"       - Fast + capable, 250 requests/day
-    "gemini-2.5-flash-lite"  - Fastest, 1000 requests/day
+Uses the OpenAI Python SDK for code transformations and prompt evolution.
+Requires OPENAI_API_KEY environment variable.
 """
 
 import os
 from typing import Optional
 
-from automation.config import AI_PROVIDER_DEFAULTS
-from automation.providers.base import (
+from stylometry_api.config import AI_PROVIDER_DEFAULTS
+from stylometry_api.providers.base import (
     AIProvider,
     TransformationResult,
     CODE_TRANSFORM_SYSTEM_PROMPT,
@@ -22,46 +17,46 @@ from automation.providers.base import (
 )
 
 
-class GoogleProvider(AIProvider):
-    """Google Gemini API provider."""
+class OpenAIProvider(AIProvider):
+    """OpenAI GPT API provider."""
 
     def __init__(
         self,
         model: Optional[str] = None,
+        max_tokens: Optional[int] = None,
         api_key: Optional[str] = None,
     ):
-        defaults = AI_PROVIDER_DEFAULTS["google"]
+        defaults = AI_PROVIDER_DEFAULTS["openai"]
         self.model = model or defaults["model"]
-        self._api_key = api_key or os.environ.get("GEMINI_API_KEY")
+        self.max_tokens = max_tokens or defaults["max_tokens"]
+        self._api_key = api_key or os.environ.get("OPENAI_API_KEY")
         self._client = None
 
     def _get_client(self):
-        """Lazily initialize the Google GenAI client."""
+        """Lazily initialize the OpenAI client."""
         if self._client is None:
             if not self._api_key:
                 raise RuntimeError(
-                    "GEMINI_API_KEY not set. "
-                    "Get a free key at https://aistudio.google.com and set it "
-                    "as an environment variable or pass api_key to the provider."
+                    "OPENAI_API_KEY not set. "
+                    "Set it as an environment variable or pass api_key to the provider."
                 )
             try:
-                from google import genai
+                import openai
             except ImportError:
                 raise ImportError(
-                    "google-genai package not installed. Install with: pip install google-genai"
+                    "openai package not installed. Install with: pip install openai"
                 )
-            self._client = genai.Client(api_key=self._api_key)
+            self._client = openai.OpenAI(api_key=self._api_key)
         return self._client
 
     @property
     def name(self) -> str:
-        return "google"
+        return "openai"
 
     def transform_code(self, original_code: str, prompt: str) -> TransformationResult:
-        """Transform code using Gemini API."""
+        """Transform code using OpenAI GPT API."""
         try:
             client = self._get_client()
-            from google.genai import types
 
             user_message = (
                 f"Apply the following transformation to this Python code:\n\n"
@@ -69,19 +64,20 @@ class GoogleProvider(AIProvider):
                 f"**Original code:**\n```python\n{original_code}\n```"
             )
 
-            response = client.models.generate_content(
+            response = client.chat.completions.create(
                 model=self.model,
-                contents=user_message,
-                config=types.GenerateContentConfig(
-                    system_instruction=CODE_TRANSFORM_SYSTEM_PROMPT,
-                ),
+                max_tokens=self.max_tokens,
+                messages=[
+                    {"role": "system", "content": CODE_TRANSFORM_SYSTEM_PROMPT},
+                    {"role": "user", "content": user_message},
+                ],
             )
 
-            content = response.text
+            content = response.choices[0].message.content
             modified_code = extract_code_from_response(content)
 
-            input_tokens = response.usage_metadata.prompt_token_count or 0
-            output_tokens = response.usage_metadata.candidates_token_count or 0
+            input_tokens = response.usage.prompt_tokens if response.usage else 0
+            output_tokens = response.usage.completion_tokens if response.usage else 0
 
             if not modified_code:
                 return TransformationResult(
@@ -119,9 +115,8 @@ class GoogleProvider(AIProvider):
             )
 
     def generate_evolved_prompt(self, analysis_context: str) -> str:
-        """Generate an evolved prompt using Gemini."""
+        """Generate an evolved prompt using GPT."""
         client = self._get_client()
-        from google.genai import types
 
         system_prompt = (
             "You are a prompt engineering expert specializing in adversarial code transformations. "
@@ -135,12 +130,13 @@ class GoogleProvider(AIProvider):
             "Violating any rule makes the output unusable. Output ONLY the 2-3 sentence prompt."
         )
 
-        response = client.models.generate_content(
+        response = client.chat.completions.create(
             model=self.model,
-            contents=analysis_context,
-            config=types.GenerateContentConfig(
-                system_instruction=system_prompt,
-            ),
+            max_tokens=self.max_tokens,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": analysis_context},
+            ],
         )
 
-        return response.text.strip()
+        return response.choices[0].message.content.strip()

@@ -10,11 +10,11 @@ Supported providers:
 
 from typing import Optional
 
-from automation.providers.base import AIProvider, TransformationResult
-from automation.providers.ollama_provider import OllamaProvider
-from automation.providers.anthropic_provider import AnthropicProvider
-from automation.providers.openai_provider import OpenAIProvider
-from automation.providers.google_provider import GoogleProvider
+from stylometry_api.providers.base import AIProvider, TransformationResult
+from stylometry_api.providers.ollama_provider import OllamaProvider
+from stylometry_api.providers.anthropic_provider import AnthropicProvider
+from stylometry_api.providers.openai_provider import OpenAIProvider
+from stylometry_api.providers.google_provider import GoogleProvider
 
 _PROVIDERS = {
     "ollama": OllamaProvider,

@@ -18,7 +18,7 @@ from typing import Dict, Any, Optional, List
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from automation.config import (
+from stylometry_api.config import (
     CATEGORIES,
     MODEL_TYPES,
     get_all_columns,

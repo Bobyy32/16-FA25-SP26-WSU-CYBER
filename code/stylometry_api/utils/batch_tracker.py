@@ -16,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from automation.config import (
+from stylometry_api.config import (
     BATCH_INDEX_COLUMNS,
     ensure_results_dirs,
     get_batch_index_path,

@@ -17,7 +17,7 @@ from typing import Dict, Any, Optional
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from automation.config import MODEL_TYPES, get_model_dir
+from stylometry_api.config import MODEL_TYPES, get_model_dir
 
 
 # Flag to track if classes have been registered for unpickling

@@ -9,7 +9,7 @@ import random
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
-from automation.config import DATASET_DIR
+from stylometry_api.config import DATASET_DIR
 
 
 def get_all_authors() -> Dict[str, Path]:

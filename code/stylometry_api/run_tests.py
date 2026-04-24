@@ -9,7 +9,7 @@ This module provides the primary interface for running adversarial tests:
 - Track lineage between runs
 
 Usage:
-    from automation.run_tests import run_adversarial_test
+    from stylometry_api.run_tests import run_adversarial_test
 
     result = run_adversarial_test(
         original_file="path/to/original.py",
@@ -30,20 +30,20 @@ from typing import Dict, Any, Optional
 # Ensure the automation package is importable
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from automation.config import (
+from stylometry_api.config import (
     CATEGORIES,
     MODEL_TYPES,
     ensure_results_dirs,
 )
-from automation.utils.model_loader import load_all_models
-from automation.utils.feature_extractor import process_code_file
-from automation.utils.metrics import (
+from stylometry_api.utils.model_loader import load_all_models
+from stylometry_api.utils.feature_extractor import process_code_file
+from stylometry_api.utils.metrics import (
     calculate_stealthiness,
     get_model_predictions,
     calculate_aggregate_metrics,
     classify_result_type,
 )
-from automation.utils.results_tracker import ResultsTracker, generate_run_id
+from stylometry_api.utils.results_tracker import ResultsTracker, generate_run_id
 
 
 # Global model cache to avoid reloading

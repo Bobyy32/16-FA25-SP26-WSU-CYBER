@@ -8,8 +8,8 @@ Requires ANTHROPIC_API_KEY environment variable.
 import os
 from typing import Optional
 
-from automation.config import AI_PROVIDER_DEFAULTS
-from automation.providers.base import (
+from stylometry_api.config import AI_PROVIDER_DEFAULTS
+from stylometry_api.providers.base import (
     AIProvider,
     TransformationResult,
     CODE_TRANSFORM_SYSTEM_PROMPT,

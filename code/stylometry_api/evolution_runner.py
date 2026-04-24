@@ -11,11 +11,11 @@ Runs an iterative loop:
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 
-from automation.config import EVOLUTION_DEFAULTS, BATCH_DEFAULTS
-from automation.batch_runner import run_batch_test
-from automation.prompt_evolver import evolve_prompt
-from automation.utils.batch_tracker import BatchTracker, generate_evolution_id
-from automation.utils.dataset_scanner import select_files_for_batch
+from stylometry_api.config import EVOLUTION_DEFAULTS, BATCH_DEFAULTS
+from stylometry_api.batch_runner import run_batch_test
+from stylometry_api.prompt_evolver import evolve_prompt
+from stylometry_api.utils.batch_tracker import BatchTracker, generate_evolution_id
+from stylometry_api.utils.dataset_scanner import select_files_for_batch
 
 
 def run_evolution(
