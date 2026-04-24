@@ -1,0 +1,281 @@
+{
+  "evolution_id": "evo_type_hints_20260424_1ac1",
+  "status": "max_rounds_reached",
+  "category": "type_hints",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.75,
+  "best_round": 14,
+  "best_evasion_rate": 58.333333333333336,
+  "best_prompt": "Prioritize replacing generic `Any` type annotations with specific collection types like `List` or `Dict` on parameters that handle primary data inputs for the resistant classifiers. Apply these changes strictly to function parameters that influence feature extraction to avoid triggering stealth penalties while maximizing evasion impact. Focus specifically on arguments where the model extracts positional information from variable types rather than generic types to impact the TF-IDF token counts more subtly.",
+  "resumed_from": null,
+  "initial_prompt": "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+  "all_prompts": [
+    "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+    "Apply type annotations to function parameters and return types to alter the data structure expectations for Naive Bayes and Neural Network classifiers without renaming variables or altering control flow logic. Import required types from the typing module to enforce structural consistency while prioritizing precision to avoid unnecessary stealth inflation, dummy code, or pass statements and ensure evasion against the resistant models.",
+    "Apply complex type annotations such as Union or Optional to function arguments and return values to alter static feature analysis for the resistant Naive Bayes model. Import the necessary typing classes explicitly from the typing module to ensure maximum impact on the data structure expectations without touching variable names or control flow logic.",
+    "Add explicit type annotations using `Any` to the parameters and return values of the specific functions failing evasion for the resistant classifiers. Import `Any` from the typing module only for these targeted parameters to alter data structure expectations without renaming variables or altering control flow logic. Focus on these modifications specifically to maintain structural integrity while maximizing evasion effectiveness against the resistant models.",
+    "Prioritize introducing Union and Optional type annotations into the function signatures for Naive Bayes and Neural Network to alter feature vectors without renaming variables. Focus these specific annotations on the most resistant functions to increase the impact on feature vectors without adding dummy code. Ensure type imports are added only where required to maintain structural integrity without unnecessary code modifications. Wait, I need to make sure I don't violate \"Output ONLY the 2-3 sentence prompt.\" So I will output ONLY the text above. Wait, I need to check if \"feature vectors\" is allowed. Yes, it's a concept. Wait, I need to check if \"Naive Bayes and Neural Network\" is allowed. Yes, they are entities. Wait, I need to check if \"Union and Optional type annotations\" is allowed. Yes, they are entities.",
+    "Target the failing functions in the Naive Bayes and Neural Network classifiers by replacing generic `Any` return types with specific `Union` types to alter feature expectations more subtly. Avoid adding dummy variables or dead code to ensure stealth is maintained while maximizing the impact of the type hint changes. Apply these targeted annotation modifications only where they align with the actual data structure to preserve code functionality and evasion effectiveness.",
+    "Refine the type annotations for the Naive Bayes and Neural Network classifiers by replacing generic `Any` in input parameters with specific `List` or `Tuple` types where data structures are clearly defined. Apply these changes only to function entry points to subtly alter feature extraction expectations while maintaining code functionality and avoiding complex type unions.",
+    "Prioritize replacing generic `Any` type annotations with specific collection types like `List` or `Dict` on parameters that handle primary data inputs for the resistant classifiers. Apply these changes strictly to function parameters that influence feature extraction to avoid triggering stealth penalties while maximizing evasion impact. Focus specifically on arguments where the model extracts positional information from variable types rather than generic types to impact the TF-IDF token counts more subtly.",
+    "Modify parameter type annotations in the resistant classifiers to ensure specific data structures are reflected accurately to avoid triggering detection mechanisms on feature vectors. Simplify complex type unions and remove redundant imports to keep the code natural and functional while focusing on function parameters that influence feature extraction without dummy variables."
+  ],
+  "files_tested": [
+    "arithmetic.py",
+    "check_bb_augmentation.py",
+    "check_impulse_noise.py",
+    "dtypes.py",
+    "heatmaps.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Add type annotations to all function parameters, return types, and key variable assignments in this Python file. Import necessary types from the typing module. Do NOT rename, reformat, change comments, or alter control flow.",
+      "batch_id": "batch_type_hints_20260424_e7dc",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.480981062489988,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 75.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Apply type annotations to function parameters and return types to alter the data structure expectations for Naive Bayes and Neural Network classifiers without renaming variables or altering control flow logic. Import required types from the typing module to enforce structural consistency while prioritizing precision to avoid unnecessary stealth inflation, dummy code, or pass statements and ensure evasion against the resistant models.",
+      "batch_id": "batch_type_hints_20260424_cddc",
+      "avg_evasion_rate": 40.0,
+      "avg_stealth_score": 0.463892735273811,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 60.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Apply complex type annotations such as Union or Optional to function arguments and return values to alter static feature analysis for the resistant Naive Bayes model. Import the necessary typing classes explicitly from the typing module to ensure maximum impact on the data structure expectations without touching variable names or control flow logic.",
+      "batch_id": "batch_type_hints_20260424_0ac5",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.29049180938342256,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Apply complex type annotations such as Union or Optional to function arguments and return values to alter static feature analysis for the resistant Naive Bayes model. Import the necessary typing classes explicitly from the typing module to ensure maximum impact on the data structure expectations without touching variable names or control flow logic.",
+      "batch_id": "batch_type_hints_20260424_dcfd",
+      "avg_evasion_rate": 16.666666666666668,
+      "avg_stealth_score": 0.4644689874104826,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Apply complex type annotations such as Union or Optional to function arguments and return values to alter static feature analysis for the resistant Naive Bayes model. Import the necessary typing classes explicitly from the typing module to ensure maximum impact on the data structure expectations without touching variable names or control flow logic.",
+      "batch_id": "batch_type_hints_20260424_22a3",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.4387458984485302,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 66.66666666666666,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Apply complex type annotations such as Union or Optional to function arguments and return values to alter static feature analysis for the resistant Naive Bayes model. Import the necessary typing classes explicitly from the typing module to ensure maximum impact on the data structure expectations without touching variable names or control flow logic.",
+      "batch_id": "batch_type_hints_20260424_f9d6",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.5087820527388708,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Add explicit type annotations using `Any` to the parameters and return values of the specific functions failing evasion for the resistant classifiers. Import `Any` from the typing module only for these targeted parameters to alter data structure expectations without renaming variables or altering control flow logic. Focus on these modifications specifically to maintain structural integrity while maximizing evasion effectiveness against the resistant models.",
+      "batch_id": "batch_type_hints_20260424_916b",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.5095940889491003,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Prioritize introducing Union and Optional type annotations into the function signatures for Naive Bayes and Neural Network to alter feature vectors without renaming variables. Focus these specific annotations on the most resistant functions to increase the impact on feature vectors without adding dummy code. Ensure type imports are added only where required to maintain structural integrity without unnecessary code modifications. Wait, I need to make sure I don't violate \"Output ONLY the 2-3 sentence prompt.\" So I will output ONLY the text above. Wait, I need to check if \"feature vectors\" is allowed. Yes, it's a concept. Wait, I need to check if \"Naive Bayes and Neural Network\" is allowed. Yes, they are entities. Wait, I need to check if \"Union and Optional type annotations\" is allowed. Yes, they are entities.",
+      "batch_id": "batch_type_hints_20260424_ae1e",
+      "avg_evasion_rate": 33.333333333333336,
+      "avg_stealth_score": 0.6544703954272789,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 25.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 100.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Prioritize introducing Union and Optional type annotations into the function signatures for Naive Bayes and Neural Network to alter feature vectors without renaming variables. Focus these specific annotations on the most resistant functions to increase the impact on feature vectors without adding dummy code. Ensure type imports are added only where required to maintain structural integrity without unnecessary code modifications. Wait, I need to make sure I don't violate \"Output ONLY the 2-3 sentence prompt.\" So I will output ONLY the text above. Wait, I need to check if \"feature vectors\" is allowed. Yes, it's a concept. Wait, I need to check if \"Naive Bayes and Neural Network\" is allowed. Yes, they are entities. Wait, I need to check if \"Union and Optional type annotations\" is allowed. Yes, they are entities.",
+      "batch_id": "batch_type_hints_20260424_1011",
+      "avg_evasion_rate": 50.0,
+      "avg_stealth_score": 0.6284420958361747,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 50.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 100.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 100.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Target the failing functions in the Naive Bayes and Neural Network classifiers by replacing generic `Any` return types with specific `Union` types to alter feature expectations more subtly. Avoid adding dummy variables or dead code to ensure stealth is maintained while maximizing the impact of the type hint changes. Apply these targeted annotation modifications only where they align with the actual data structure to preserve code functionality and evasion effectiveness.",
+      "batch_id": "batch_type_hints_20260424_8957",
+      "avg_evasion_rate": 50.0,
+      "avg_stealth_score": 0.5383855621866147,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 40.0,
+        "sgd_classifier": 60.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Refine the type annotations for the Naive Bayes and Neural Network classifiers by replacing generic `Any` in input parameters with specific `List` or `Tuple` types where data structures are clearly defined. Apply these changes only to function entry points to subtly alter feature extraction expectations while maintaining code functionality and avoiding complex type unions.",
+      "batch_id": "batch_type_hints_20260424_65d1",
+      "avg_evasion_rate": 41.666666666666664,
+      "avg_stealth_score": 0.4190687477838256,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 66.66666666666666,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 66.66666666666666,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Refine the type annotations for the Naive Bayes and Neural Network classifiers by replacing generic `Any` in input parameters with specific `List` or `Tuple` types where data structures are clearly defined. Apply these changes only to function entry points to subtly alter feature extraction expectations while maintaining code functionality and avoiding complex type unions.",
+      "batch_id": "batch_type_hints_20260424_2e99",
+      "avg_evasion_rate": 31.25,
+      "avg_stealth_score": 0.3625147016800474,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Refine the type annotations for the Naive Bayes and Neural Network classifiers by replacing generic `Any` in input parameters with specific `List` or `Tuple` types where data structures are clearly defined. Apply these changes only to function entry points to subtly alter feature extraction expectations while maintaining code functionality and avoiding complex type unions.",
+      "batch_id": "batch_type_hints_20260424_5f22",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.4240262228834758,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Prioritize replacing generic `Any` type annotations with specific collection types like `List` or `Dict` on parameters that handle primary data inputs for the resistant classifiers. Apply these changes strictly to function parameters that influence feature extraction to avoid triggering stealth penalties while maximizing evasion impact. Focus specifically on arguments where the model extracts positional information from variable types rather than generic types to impact the TF-IDF token counts more subtly.",
+      "batch_id": "batch_type_hints_20260424_b834",
+      "avg_evasion_rate": 58.333333333333336,
+      "avg_stealth_score": 0.6494071193827217,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 50.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 100.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 100.0,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Modify parameter type annotations in the resistant classifiers to ensure specific data structures are reflected accurately to avoid triggering detection mechanisms on feature vectors. Simplify complex type unions and remove redundant imports to keep the code natural and functional while focusing on function parameters that influence feature extraction without dummy variables.",
+      "batch_id": "batch_type_hints_20260424_a63d",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.3880493912360107,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    }
+  ],
+  "started_at": "2026-04-24T01:47:06.245430",
+  "finished_at": "2026-04-24T04:09:41.057637",
+  "saved_at": "2026-04-24T04:09:41.057637"
+}

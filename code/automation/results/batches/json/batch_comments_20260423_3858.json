@@ -1,0 +1,266 @@
+{
+  "evolution_id": "evo_comments_20260423_aec4",
+  "round_number": 2,
+  "timestamp": "2026-04-23T11:45:00.048634",
+  "category": "comments",
+  "author": "aleju",
+  "prompt_text": "Focus on altering inline comment token sequences to disrupt token frequency distributions. Modify block comment phrasing and lengths to alter the feature profile without renaming variables or changing import styles.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:4b",
+  "num_files": 5,
+  "avg_evasion_rate": 37.5,
+  "avg_stealth_score": 0.32947077161678373,
+  "best_evasion_rate": 100.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 1,
+  "individual_results": [
+    {
+      "filename": "check_average_blur.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_average_blur.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_comments_20260423_3858\\modified_check_average_blur.py",
+      "transform_success": true,
+      "run_id": "comments_20260423_b8c3",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.038379719187943244,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.965809434213076,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9656873262439243,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.00012210796915168576
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999760973,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999999617373,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.4360068689711625e-11
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9164935013168126,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9165772994646955,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -8.37981478828409e-05
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999771118164062,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999755620956421,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.5497207641601562e-06
+        }
+      },
+      "input_tokens": 571,
+      "output_tokens": 724
+    },
+    {
+      "filename": "check_impulse_noise.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_impulse_noise.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_comments_20260423_3858\\modified_check_impulse_noise.py",
+      "transform_success": true,
+      "run_id": "comments_20260423_1b52",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.04942832616127474,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9937969043151971,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9887969043151971,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0050000000000000044
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999996893403974,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999995546892105,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.3465118686717403e-07
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8679629811489641,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8711659936254128,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.003203012476448719
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9991679191589355,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9991499185562134,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 1.800060272216797e-05
+        }
+      },
+      "input_tokens": 441,
+      "output_tokens": 4064
+    },
+    {
+      "filename": "check_multiply_hue_and_saturation.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_multiply_hue_and_saturation.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "convolutional.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\convolutional.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_comments_20260423_3858\\modified_convolutional.py",
+      "transform_success": true,
+      "run_id": "comments_20260423_76e1",
+      "evasion_rate": 100.0,
+      "evasion_count": 4,
+      "stealth_score": 0.6784792049620794,
+      "stealth_category": "low",
+      "result_type": "full_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9950383631713555,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7488527649691921,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.24618559820216346
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.7819328755909289,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.21806712440907106
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9058645907134582,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.45216394331788995,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4537006473955682
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999996423721313,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.8476353287696838,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.1523643136024475
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 1688
+    },
+    {
+      "filename": "multicore.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\multicore.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_comments_20260423_3858\\modified_multicore.py",
+      "transform_success": true,
+      "run_id": "comments_20260423_9289",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.5515958361558376,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.759408951981165,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6763177158554321,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.08309123612573288
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999998516569487,
+          "modified_pred": "aleju",
+          "modified_conf": 0.840748327158318,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.15925152449863067
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8134432424246235,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4791763193122248,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.3342669231123987
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9998490810394287,
+          "modified_pred": "aleju",
+          "modified_conf": 0.6711046099662781,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.32874447107315063
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 4585
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 50.0,
+    "naive_bayes": 25.0,
+    "sgd_classifier": 50.0,
+    "neural_network": 25.0
+  },
+  "files_tested": [
+    "check_average_blur.py",
+    "check_impulse_noise.py",
+    "check_multiply_hue_and_saturation.py",
+    "convolutional.py",
+    "multicore.py"
+  ],
+  "batch_id": "batch_comments_20260423_3858",
+  "saved_at": "2026-04-23T11:51:15.562589"
+}

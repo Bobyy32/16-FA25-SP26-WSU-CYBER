@@ -1,0 +1,219 @@
+{
+  "evolution_id": "evo_type_hints_20260424_1ac1",
+  "round_number": 5,
+  "timestamp": "2026-04-24T02:22:44.759662",
+  "category": "type_hints",
+  "author": "aleju",
+  "prompt_text": "Apply complex type annotations such as Union or Optional to function arguments and return values to alter static feature analysis for the resistant Naive Bayes model. Import the necessary typing classes explicitly from the typing module to ensure maximum impact on the data structure expectations without touching variable names or control flow logic.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:4b",
+  "num_files": 5,
+  "avg_evasion_rate": 25.0,
+  "avg_stealth_score": 0.4387458984485302,
+  "best_evasion_rate": 50.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "arithmetic.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\arithmetic.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260424_22a3\\modified_arithmetic.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260424_3fd3",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.6307845769090127,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9802724229338046,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5387251797744057,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.44154724315939886
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 1.0,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999398210213236,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 6.0178978676384e-05
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9121138276902667,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6718064867267064,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.24030734096356032
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999998807907104,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9521914720535278,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.04780840873718262
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 685
+    },
+    {
+      "filename": "check_bb_augmentation.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_bb_augmentation.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_impulse_noise.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_impulse_noise.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260424_22a3\\modified_check_impulse_noise.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260424_78ef",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.05623492582414784,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9937969043151971,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9702734164759254,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.023523487839271717
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999996893403974,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999996175004909,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 7.183990646808525e-08
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.8679629811489641,
+          "modified_pred": "aleju",
+          "modified_conf": 0.8768945109192964,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -0.008931529770332292
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9991679191589355,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9992048144340515,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": -3.68952751159668e-05
+        }
+      },
+      "input_tokens": 465,
+      "output_tokens": 659
+    },
+    {
+      "filename": "dtypes.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\dtypes.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "heatmaps.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\heatmaps.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_type_hints_20260424_22a3\\modified_heatmaps.py",
+      "transform_success": true,
+      "run_id": "type_hints_20260424_1aa8",
+      "evasion_rate": 25.0,
+      "evasion_count": 1,
+      "stealth_score": 0.6292181926124301,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.887718822421459,
+          "modified_pred": "aleju",
+          "modified_conf": 0.5003674988955443,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.3873513235259147
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999991616,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9980063067437515,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0019936932554101006
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.851460053387518,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.5993380999381427,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.25212195344937527
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999711513519287,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9652897119522095,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.03468143939971924
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 1800
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 33.33333333333333,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 66.66666666666666,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "arithmetic.py",
+    "check_bb_augmentation.py",
+    "check_impulse_noise.py",
+    "dtypes.py",
+    "heatmaps.py"
+  ],
+  "batch_id": "batch_type_hints_20260424_22a3",
+  "saved_at": "2026-04-24T02:31:20.796653"
+}

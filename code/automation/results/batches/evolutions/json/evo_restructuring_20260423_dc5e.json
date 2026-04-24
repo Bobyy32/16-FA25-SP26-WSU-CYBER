@@ -1,0 +1,280 @@
+{
+  "evolution_id": "evo_restructuring_20260423_dc5e",
+  "status": "max_rounds_reached",
+  "category": "restructuring",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.75,
+  "best_round": 6,
+  "best_evasion_rate": 35.0,
+  "best_prompt": "Prioritize aggressive reordering of logical blocks and conditionals to maximize the disruption of token-level n-gram patterns across the Random Forest and Neural Network classifiers. Extract significant complex logic into new helper functions and relocate code segments between modules to alter cosine distance without modifying any variable names or formatting. Merge existing class hierarchies and reorder function call structures to increase the JS divergence while strictly maintaining code functionality and semantic integrity.",
+  "resumed_from": null,
+  "initial_prompt": "Restructure this Python code to disguise the author's style. Extract inline logic into helper functions, reorder statements, and split or merge functions. Do NOT rename variables, change comments, alter formatting, or modify control flow.",
+  "all_prompts": [
+    "Restructure this Python code to disguise the author's style. Extract inline logic into helper functions, reorder statements, and split or merge functions. Do NOT rename variables, change comments, alter formatting, or modify control flow.",
+    "Reorder critical statements to modify token sequence patterns and extract complex logic into smaller helper functions to disrupt control flow detection without renaming variables. Move code segments across different modules to shift indentation depth and execution order while maintaining semantic integrity and import consistency. Prioritize these structural alterations to maximize evasion against the four classification models while minimizing stylistic deviations.",
+    "Prioritize aggressive reordering of logical blocks and conditionals to maximize the disruption of token-level n-gram patterns across the Random Forest and Neural Network classifiers. Extract significant complex logic into new helper functions and relocate code segments between modules to alter cosine distance without modifying any variable names or formatting. Merge existing class hierarchies and reorder function call structures to increase the JS divergence while strictly maintaining code functionality and semantic integrity.",
+    "Focus on reordering logical blocks and conditions to disrupt token-level n-gram patterns specifically detected by Naive Bayes and SGD classifiers. Extract complex logic into new helper functions and relocate code segments between modules to maintain semantic equivalence while altering control flow. Preserve full functionality and avoid adding unnecessary whitespace or pass statements.",
+    "Split existing monolithic functions into smaller units and relocate these segments between distinct modules to increase structural distance. Prioritize reordering the internal statement sequences within these blocks to disrupt token-level n-gram patterns without altering variable names or function signatures. Ensure all import styles and whitespace remain unchanged across the new structure to maintain structural integrity.",
+    "Aggressively restructure the code by modifying the class hierarchy to increase the relative L2 distance between models while maintaining functional equivalence. Split monolithic classes into smaller subclasses and move logic between modules to disrupt the cosine distance. Do not rename any variables or identifiers; focus entirely on the structural depth and nesting to evade the four models' detection patterns.",
+    "Aggressively split monolithic functions into smaller helper units to disrupt sequential token patterns detected by classifiers. Reorder the internal sequence of control flow statements within these blocks to alter execution order without renaming any variable or function names. Ensure all import styles and whitespace formatting remain strictly unchanged while moving logic segments between distinct modules.",
+    "Refactor the provided code by rearranging its logical blocks and modifying control flow variables to create a distinct implementation structure while maintaining the original functional behavior and input-output mapping. Ensure that all data transformations and error handling mechanisms remain consistent with the initial requirements. The modified structure should ensure better maintainability and alignment with current development standards."
+  ],
+  "files_tested": [
+    "check_average_blur.py",
+    "check_bb_augmentation.py",
+    "check_cartoon.py",
+    "check_piecewise_affine.py",
+    "kps.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Restructure this Python code to disguise the author's style. Extract inline logic into helper functions, reorder statements, and split or merge functions. Do NOT rename variables, change comments, alter formatting, or modify control flow.",
+      "batch_id": "batch_restructuring_20260423_f857",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.3563357637816301,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Restructure this Python code to disguise the author's style. Extract inline logic into helper functions, reorder statements, and split or merge functions. Do NOT rename variables, change comments, alter formatting, or modify control flow.",
+      "batch_id": "batch_restructuring_20260423_fdae",
+      "avg_evasion_rate": 5.0,
+      "avg_stealth_score": 0.16857074630384614,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Restructure this Python code to disguise the author's style. Extract inline logic into helper functions, reorder statements, and split or merge functions. Do NOT rename variables, change comments, alter formatting, or modify control flow.",
+      "batch_id": "batch_restructuring_20260423_5ef3",
+      "avg_evasion_rate": 18.75,
+      "avg_stealth_score": 0.21577949803392338,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Restructure this Python code to disguise the author's style. Extract inline logic into helper functions, reorder statements, and split or merge functions. Do NOT rename variables, change comments, alter formatting, or modify control flow.",
+      "batch_id": "batch_restructuring_20260423_44e6",
+      "avg_evasion_rate": 33.333333333333336,
+      "avg_stealth_score": 0.2832607792550503,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 33.33333333333333,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Reorder critical statements to modify token sequence patterns and extract complex logic into smaller helper functions to disrupt control flow detection without renaming variables. Move code segments across different modules to shift indentation depth and execution order while maintaining semantic integrity and import consistency. Prioritize these structural alterations to maximize evasion against the four classification models while minimizing stylistic deviations.",
+      "batch_id": "batch_restructuring_20260423_4660",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.11356808291170158,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Prioritize aggressive reordering of logical blocks and conditionals to maximize the disruption of token-level n-gram patterns across the Random Forest and Neural Network classifiers. Extract significant complex logic into new helper functions and relocate code segments between modules to alter cosine distance without modifying any variable names or formatting. Merge existing class hierarchies and reorder function call structures to increase the JS divergence while strictly maintaining code functionality and semantic integrity.",
+      "batch_id": "batch_restructuring_20260423_1897",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.3364460239479177,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Focus on reordering logical blocks and conditions to disrupt token-level n-gram patterns specifically detected by Naive Bayes and SGD classifiers. Extract complex logic into new helper functions and relocate code segments between modules to maintain semantic equivalence while altering control flow. Preserve full functionality and avoid adding unnecessary whitespace or pass statements.",
+      "batch_id": "batch_restructuring_20260423_87e9",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.11778227238512944,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Focus on reordering logical blocks and conditions to disrupt token-level n-gram patterns specifically detected by Naive Bayes and SGD classifiers. Extract complex logic into new helper functions and relocate code segments between modules to maintain semantic equivalence while altering control flow. Preserve full functionality and avoid adding unnecessary whitespace or pass statements.",
+      "batch_id": "batch_restructuring_20260423_bb77",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.16574799855296218,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Split existing monolithic functions into smaller units and relocate these segments between distinct modules to increase structural distance. Prioritize reordering the internal statement sequences within these blocks to disrupt token-level n-gram patterns without altering variable names or function signatures. Ensure all import styles and whitespace remain unchanged across the new structure to maintain structural integrity.",
+      "batch_id": "batch_restructuring_20260423_b16c",
+      "avg_evasion_rate": 12.5,
+      "avg_stealth_score": 0.18109958140942697,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Split existing monolithic functions into smaller units and relocate these segments between distinct modules to increase structural distance. Prioritize reordering the internal statement sequences within these blocks to disrupt token-level n-gram patterns without altering variable names or function signatures. Ensure all import styles and whitespace remain unchanged across the new structure to maintain structural integrity.",
+      "batch_id": "batch_restructuring_20260423_8f17",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.2155756847705324,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Aggressively restructure the code by modifying the class hierarchy to increase the relative L2 distance between models while maintaining functional equivalence. Split monolithic classes into smaller subclasses and move logic between modules to disrupt the cosine distance. Do not rename any variables or identifiers; focus entirely on the structural depth and nesting to evade the four models' detection patterns.",
+      "batch_id": "batch_restructuring_20260423_f4cb",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.36887154669093475,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Aggressively split monolithic functions into smaller helper units to disrupt sequential token patterns detected by classifiers. Reorder the internal sequence of control flow statements within these blocks to alter execution order without renaming any variable or function names. Ensure all import styles and whitespace formatting remain strictly unchanged while moving logic segments between distinct modules.",
+      "batch_id": "batch_restructuring_20260423_2690",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.33863630296340846,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Refactor the provided code by rearranging its logical blocks and modifying control flow variables to create a distinct implementation structure while maintaining the original functional behavior and input-output mapping. Ensure that all data transformations and error handling mechanisms remain consistent with the initial requirements. The modified structure should ensure better maintainability and alignment with current development standards.",
+      "batch_id": "batch_restructuring_20260423_cc93",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.3775453730057394,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Refactor the provided code by rearranging its logical blocks and modifying control flow variables to create a distinct implementation structure while maintaining the original functional behavior and input-output mapping. Ensure that all data transformations and error handling mechanisms remain consistent with the initial requirements. The modified structure should ensure better maintainability and alignment with current development standards.",
+      "batch_id": "batch_restructuring_20260423_73b9",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.2880880355251155,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Refactor the provided code by rearranging its logical blocks and modifying control flow variables to create a distinct implementation structure while maintaining the original functional behavior and input-output mapping. Ensure that all data transformations and error handling mechanisms remain consistent with the initial requirements. The modified structure should ensure better maintainability and alignment with current development standards.",
+      "batch_id": "batch_restructuring_20260423_fd36",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.35320346836776073,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    }
+  ],
+  "started_at": "2026-04-23T17:15:02.956882",
+  "finished_at": "2026-04-23T19:17:37.852206",
+  "saved_at": "2026-04-23T19:17:37.852206"
+}

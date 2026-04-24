@@ -1,0 +1,172 @@
+{
+  "evolution_id": "evo_restructuring_20260423_dc5e",
+  "round_number": 1,
+  "timestamp": "2026-04-23T17:15:02.956882",
+  "category": "restructuring",
+  "author": "aleju",
+  "prompt_text": "Restructure this Python code to disguise the author's style. Extract inline logic into helper functions, reorder statements, and split or merge functions. Do NOT rename variables, change comments, alter formatting, or modify control flow.",
+  "ai_provider": "ollama",
+  "ai_model": "qwen3.5:4b",
+  "num_files": 5,
+  "avg_evasion_rate": 25.0,
+  "avg_stealth_score": 0.3563357637816301,
+  "best_evasion_rate": 50.0,
+  "worst_evasion_rate": 0.0,
+  "full_evasion_count": 0,
+  "individual_results": [
+    {
+      "filename": "check_average_blur.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_average_blur.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_bb_augmentation.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_bb_augmentation.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_cartoon.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_cartoon.py",
+      "transform_success": false,
+      "transform_error": "Empty code in response",
+      "evasion_rate": 0.0,
+      "stealth_score": null,
+      "run_id": null
+    },
+    {
+      "filename": "check_piecewise_affine.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\check_piecewise_affine.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_restructuring_20260423_f857\\modified_check_piecewise_affine.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260423_3179",
+      "evasion_rate": 0.0,
+      "evasion_count": 0,
+      "stealth_score": 0.0948242612443033,
+      "stealth_category": "high",
+      "result_type": "failed",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9950764006791172,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9950764006791172,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999999716,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999999999996803,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 2.913225216616411e-13
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.9264083761108075,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9168675421605783,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0095408339502292
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999970197677612,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9999909400939941,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 6.079673767089844e-06
+        }
+      },
+      "input_tokens": 908,
+      "output_tokens": 1544
+    },
+    {
+      "filename": "kps.py",
+      "original_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\dataset_splits\\aleju\\testing\\kps.py",
+      "modified_path": "C:\\Users\\ees10\\OneDrive\\Documents\\Repos\\Adversarial_Stylometry\\automation\\modified_files\\batch_restructuring_20260423_f857\\modified_kps.py",
+      "transform_success": true,
+      "run_id": "restructuring_20260423_b5d7",
+      "evasion_rate": 50.0,
+      "evasion_count": 2,
+      "stealth_score": 0.6178472663189569,
+      "stealth_category": "low",
+      "result_type": "partial_evasion",
+      "model_results": {
+        "random_forest": {
+          "original_pred": "aleju",
+          "original_conf": 0.9486860222282388,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.6078456481099697,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.3408403741182692
+        },
+        "naive_bayes": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999999999996447,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9988985304120818,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.0011014695875629643
+        },
+        "sgd_classifier": {
+          "original_pred": "aleju",
+          "original_conf": 0.851413045716782,
+          "modified_pred": "UNKNOWN",
+          "modified_conf": 0.4284378025085135,
+          "original_correct": true,
+          "modified_correct": false,
+          "evasion": true,
+          "confidence_drop": 0.4229752432082685
+        },
+        "neural_network": {
+          "original_pred": "aleju",
+          "original_conf": 0.9999781847000122,
+          "modified_pred": "aleju",
+          "modified_conf": 0.9134402871131897,
+          "original_correct": true,
+          "modified_correct": true,
+          "evasion": false,
+          "confidence_drop": 0.08653789758682251
+        }
+      },
+      "input_tokens": 4096,
+      "output_tokens": 1001
+    }
+  ],
+  "per_model_evasion_rates": {
+    "random_forest": 50.0,
+    "naive_bayes": 0.0,
+    "sgd_classifier": 50.0,
+    "neural_network": 0.0
+  },
+  "files_tested": [
+    "check_average_blur.py",
+    "check_bb_augmentation.py",
+    "check_cartoon.py",
+    "check_piecewise_affine.py",
+    "kps.py"
+  ],
+  "batch_id": "batch_restructuring_20260423_f857",
+  "saved_at": "2026-04-23T17:24:36.022333"
+}

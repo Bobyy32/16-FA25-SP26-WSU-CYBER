@@ -30,6 +30,7 @@ def run_evolution(
     target_stealth_max: float = EVOLUTION_DEFAULTS["target_stealth_max"],
     seed: Optional[int] = None,
     auto_resume: bool = True,
+    run_to_completion: bool = False,
 ) -> Dict[str, Any]:
     """
     Run a multi-round prompt evolution loop.
@@ -158,7 +159,8 @@ def run_evolution(
             print(f"\n>>> TARGET MET in round {round_num}!")
             print(f"    Evasion: {avg_evasion:.1f}% >= {target_evasion_rate}%")
             print(f"    Stealth: {avg_stealth:.4f} <= {target_stealth_max}")
-            break
+            if not run_to_completion:
+                break
 
         if avg_evasion >= target_evasion_rate:
             # Evasion met but stealth too high

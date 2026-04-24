@@ -1,0 +1,1 @@
+iaa.ContrastNormalization(alpha=0.8, per_channel=True)

@@ -1,0 +1,3 @@
+class EdgeDetect(Convolve):
+    direction = None  # If None, applies fixed kernel
+    # ...

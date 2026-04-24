@@ -1,0 +1,1 @@
+super(EdgeDetect, self).__init__(...)

@@ -1,0 +1,284 @@
+{
+  "evolution_id": "evo_renaming_20260423_9b1d",
+  "status": "max_rounds_reached",
+  "category": "renaming",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.75,
+  "best_round": 8,
+  "best_evasion_rate": 45.0,
+  "best_prompt": "Systematically rename all variables, functions, classes, and parameters to disrupt the statistical token distributions relied upon by the authorship models. Ensure every identifier receives a distinct naming convention shift, such as uniform case inversion or unique prefixes, while preserving all logic and structure without modifying comments, whitespace, or formatting.",
+  "resumed_from": null,
+  "initial_prompt": "Rename all variables, functions, parameters, and classes in this Python file to generic alternatives. Use common neutral names like data, result, value, item, process and avoid author-specific patterns. Do NOT restructure, reformat, change comments, or alter control flow.",
+  "all_prompts": [
+    "Rename all variables, functions, parameters, and classes in this Python file to generic alternatives. Use common neutral names like data, result, value, item, process and avoid author-specific patterns. Do NOT restructure, reformat, change comments, or alter control flow.",
+    "Prioritize renaming variables, functions, and classes using aggressive naming conventions to disrupt token recognition patterns. Apply varied casing styles and identifier changes to classes and functions to alter the distribution of features without affecting logic. Ensure every identifier is changed to a distinct style to prevent easy identification by the attribution system.",
+    "Prioritize renaming frequently occurring variables and functions using distinct prefixes and mixed casing styles to disrupt the high-frequency TF-IDF token patterns. Target identifiers located within loops and conditional branches to maximize evasion against all models while maintaining strict logic and control flow integrity.",
+    "Prioritize renaming identifiers with the highest token frequency in data processing logic to disrupt the statistical distributions relied upon by statistical classifiers. Apply aggressive mixed casing and unique prefixes to these core identifiers to maximize token distribution divergence without altering the underlying data values. Ensure every identifier is changed to a unique variant that maintains consistent variable types to minimize feature vector changes while preserving control flow.",
+    "Focus on renaming class names, function signatures, and parameters directly involved in data processing to disrupt the statistical signatures used by Naive Bayes, SGD, and Neural Network classifiers. Apply aggressive, unique prefixes to these critical identifiers to alter token frequency distributions without modifying control flow or data values. Ensure every identifier involved in core data manipulation receives a distinct naming convention to maximize evasion.",
+    "Target only variables, functions, parameters, classes, and naming conventions that are critical to statistical aggregation and data distribution analysis. Rename these identifiers using unique prefixes and randomized suffixes to disrupt the token frequencies relied upon by Naive Bayes and Neural Network classifiers. Apply this naming transformation exclusively without restructuring code, adding comments, or modifying the underlying logic or control flow.",
+    "Target the Naive Bayes and Neural Network models by renaming core data processing identifiers to disrupt their statistical token distributions without altering control flow. Apply aggressive identifier variations that combine case changes with unique prefixes to shift TF-IDF characteristics while maintaining consistent variable types across all affected functions. Ensure every critical data manipulation identifier receives a distinct name without adding dummy code or modifying logic.",
+    "Systematically rename all variables, functions, classes, and parameters to disrupt the statistical token distributions relied upon by the authorship models. Ensure every identifier receives a distinct naming convention shift, such as uniform case inversion or unique prefixes, while preserving all logic and structure without modifying comments, whitespace, or formatting.",
+    "Apply aggressive renaming to all core variables, functions, and parameters involved in token frequency and statistical aggregation for the Naive Bayes, SGD, and Neural Network models. Use unique prefixes and suffixes for these identifiers to disrupt the underlying calculations while preserving the original code logic and type safety. Ensure that every modified identifier maintains its specific role within the distribution processing workflow without creating any dead or dummy code.",
+    "Prioritize renaming core function identifiers over variables to disrupt the high-frequency TF-IDF tokens that Naive Bayes specifically analyzes for authorship. Apply distinct naming convention shifts between camelCase and snake_case for functions involved in statistical aggregation to alter token distribution without touching logic or comments. Ensure every function used in statistical processing receives a unique prefix or suffix modification while preserving the original code structure and type safety.",
+    "Shift all variable, function, and parameter names globally to a mixed-case pattern that drastically alters token frequency and length distributions to evade the TF-IDF features. Ensure every identifier undergoes a unique suffix swap to disrupt the statistical calculations of the Random Forest and Naive Bayes models without touching any logic or imports. Apply this renaming comprehensively across all files to maximize the change in feature vectors while preserving strict code execution flow and type safety.",
+    "Target the Naive Bayes and Neural Network models specifically by renaming core functions and variables that directly feed into their token distribution and statistical aggregation vectors. Implement aggressive unique naming patterns for these identifiers to maximize disruption of their feature vectors without altering any logic, comments, or control flow. Ensure every identifier used in frequency calculations receives a distinct modification to break the statistical correlations recognized by these specific classifiers."
+  ],
+  "files_tested": [
+    "check_average_blur.py",
+    "check_cartoon.py",
+    "check_jpeg_compression.py",
+    "check_polygons_stay_valid_during_augmentation.py",
+    "kps.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Rename all variables, functions, parameters, and classes in this Python file to generic alternatives. Use common neutral names like data, result, value, item, process and avoid author-specific patterns. Do NOT restructure, reformat, change comments, or alter control flow.",
+      "batch_id": "batch_renaming_20260423_221b",
+      "avg_evasion_rate": 12.5,
+      "avg_stealth_score": 0.3721944542931106,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Prioritize renaming variables, functions, and classes using aggressive naming conventions to disrupt token recognition patterns. Apply varied casing styles and identifier changes to classes and functions to alter the distribution of features without affecting logic. Ensure every identifier is changed to a distinct style to prevent easy identification by the attribution system.",
+      "batch_id": "batch_renaming_20260423_bae8",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.35855841049582526,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Prioritize renaming frequently occurring variables and functions using distinct prefixes and mixed casing styles to disrupt the high-frequency TF-IDF token patterns. Target identifiers located within loops and conditional branches to maximize evasion against all models while maintaining strict logic and control flow integrity.",
+      "batch_id": "batch_renaming_20260423_930e",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.3093461685416583,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Prioritize renaming identifiers with the highest token frequency in data processing logic to disrupt the statistical distributions relied upon by statistical classifiers. Apply aggressive mixed casing and unique prefixes to these core identifiers to maximize token distribution divergence without altering the underlying data values. Ensure every identifier is changed to a unique variant that maintains consistent variable types to minimize feature vector changes while preserving control flow.",
+      "batch_id": "batch_renaming_20260423_17b1",
+      "avg_evasion_rate": 12.5,
+      "avg_stealth_score": 0.18130227635194837,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Focus on renaming class names, function signatures, and parameters directly involved in data processing to disrupt the statistical signatures used by Naive Bayes, SGD, and Neural Network classifiers. Apply aggressive, unique prefixes to these critical identifiers to alter token frequency distributions without modifying control flow or data values. Ensure every identifier involved in core data manipulation receives a distinct naming convention to maximize evasion.",
+      "batch_id": "batch_renaming_20260423_f5de",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.36374904934286173,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Target only variables, functions, parameters, classes, and naming conventions that are critical to statistical aggregation and data distribution analysis. Rename these identifiers using unique prefixes and randomized suffixes to disrupt the token frequencies relied upon by Naive Bayes and Neural Network classifiers. Apply this naming transformation exclusively without restructuring code, adding comments, or modifying the underlying logic or control flow.",
+      "batch_id": "batch_renaming_20260423_cf36",
+      "avg_evasion_rate": 16.666666666666668,
+      "avg_stealth_score": 0.21150914720912553,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Target the Naive Bayes and Neural Network models by renaming core data processing identifiers to disrupt their statistical token distributions without altering control flow. Apply aggressive identifier variations that combine case changes with unique prefixes to shift TF-IDF characteristics while maintaining consistent variable types across all affected functions. Ensure every critical data manipulation identifier receives a distinct name without adding dummy code or modifying logic.",
+      "batch_id": "batch_renaming_20260423_da16",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.24871134817624388,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Systematically rename all variables, functions, classes, and parameters to disrupt the statistical token distributions relied upon by the authorship models. Ensure every identifier receives a distinct naming convention shift, such as uniform case inversion or unique prefixes, while preserving all logic and structure without modifying comments, whitespace, or formatting.",
+      "batch_id": "batch_renaming_20260423_8d81",
+      "avg_evasion_rate": 45.0,
+      "avg_stealth_score": 0.4419895321984698,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 2,
+      "per_model_evasion_rates": {
+        "random_forest": 60.0,
+        "naive_bayes": 40.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Systematically rename all variables, functions, classes, and parameters to disrupt the statistical token distributions relied upon by the authorship models. Ensure every identifier receives a distinct naming convention shift, such as uniform case inversion or unique prefixes, while preserving all logic and structure without modifying comments, whitespace, or formatting.",
+      "batch_id": "batch_renaming_20260423_c863",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.3656347627975516,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Apply aggressive renaming to all core variables, functions, and parameters involved in token frequency and statistical aggregation for the Naive Bayes, SGD, and Neural Network models. Use unique prefixes and suffixes for these identifiers to disrupt the underlying calculations while preserving the original code logic and type safety. Ensure that every modified identifier maintains its specific role within the distribution processing workflow without creating any dead or dummy code.",
+      "batch_id": "batch_renaming_20260423_163d",
+      "avg_evasion_rate": 18.75,
+      "avg_stealth_score": 0.293519068490869,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Prioritize renaming core function identifiers over variables to disrupt the high-frequency TF-IDF tokens that Naive Bayes specifically analyzes for authorship. Apply distinct naming convention shifts between camelCase and snake_case for functions involved in statistical aggregation to alter token distribution without touching logic or comments. Ensure every function used in statistical processing receives a unique prefix or suffix modification while preserving the original code structure and type safety.",
+      "batch_id": "batch_renaming_20260423_7762",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.19499119731161224,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Shift all variable, function, and parameter names globally to a mixed-case pattern that drastically alters token frequency and length distributions to evade the TF-IDF features. Ensure every identifier undergoes a unique suffix swap to disrupt the statistical calculations of the Random Forest and Naive Bayes models without touching any logic or imports. Apply this renaming comprehensively across all files to maximize the change in feature vectors while preserving strict code execution flow and type safety.",
+      "batch_id": "batch_renaming_20260423_6d00",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.3566176278638035,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Shift all variable, function, and parameter names globally to a mixed-case pattern that drastically alters token frequency and length distributions to evade the TF-IDF features. Ensure every identifier undergoes a unique suffix swap to disrupt the statistical calculations of the Random Forest and Naive Bayes models without touching any logic or imports. Apply this renaming comprehensively across all files to maximize the change in feature vectors while preserving strict code execution flow and type safety.",
+      "batch_id": "batch_renaming_20260423_be83",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.3527024253189533,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 66.66666666666666,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Shift all variable, function, and parameter names globally to a mixed-case pattern that drastically alters token frequency and length distributions to evade the TF-IDF features. Ensure every identifier undergoes a unique suffix swap to disrupt the statistical calculations of the Random Forest and Naive Bayes models without touching any logic or imports. Apply this renaming comprehensively across all files to maximize the change in feature vectors while preserving strict code execution flow and type safety.",
+      "batch_id": "batch_renaming_20260423_5b7f",
+      "avg_evasion_rate": 16.666666666666668,
+      "avg_stealth_score": 0.3527168264229313,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Target the Naive Bayes and Neural Network models specifically by renaming core functions and variables that directly feed into their token distribution and statistical aggregation vectors. Implement aggressive unique naming patterns for these identifiers to maximize disruption of their feature vectors without altering any logic, comments, or control flow. Ensure every identifier used in frequency calculations receives a distinct modification to break the statistical correlations recognized by these specific classifiers.",
+      "batch_id": "batch_renaming_20260423_f994",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.3489404099033571,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    }
+  ],
+  "started_at": "2026-04-23T19:17:41.151135",
+  "finished_at": "2026-04-23T21:46:08.753290",
+  "saved_at": "2026-04-23T21:46:08.753290"
+}

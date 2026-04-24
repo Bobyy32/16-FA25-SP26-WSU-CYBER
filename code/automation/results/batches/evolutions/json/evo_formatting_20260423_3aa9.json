@@ -1,0 +1,284 @@
+{
+  "evolution_id": "evo_formatting_20260423_3aa9",
+  "status": "max_rounds_reached",
+  "category": "formatting",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.75,
+  "best_round": 11,
+  "best_evasion_rate": 35.0,
+  "best_prompt": "Prioritize increasing the variance in whitespace immediately surrounding binary operators within the logical conditions of the Naive Bayes model. Vary the blank line usage between function blocks to disrupt feature vector consistency without modifying the code structure.",
+  "resumed_from": null,
+  "initial_prompt": "Reformat this Python file to disguise the author's style. Change indentation width, line lengths, blank line usage, and whitespace around operators. Do NOT rename variables, change comments, restructure logic, or alter control flow.",
+  "all_prompts": [
+    "Reformat this Python file to disguise the author's style. Change indentation width, line lengths, blank line usage, and whitespace around operators. Do NOT rename variables, change comments, restructure logic, or alter control flow.",
+    "Apply targeted line length variations and operator spacing changes to disrupt the token distributions relied upon by Naive Bayes and Neural Network classifiers. Adjust indentation patterns and bracket placement to create subtle whitespace patterns that evade detection mechanisms while maintaining functional equivalence. Focus specifically on whitespace around critical operators to shift structural characteristics for better evasion without altering the variable names.",
+    "To maximize evasion against the remaining models without altering the general document style, apply irregular whitespace patterns around specific operators and non-uniform line lengths to key function bodies. Prioritize these formatting adjustments on the files that failed evasion so that token distributions shift significantly while maintaining the original code structure. Ensure that indentation patterns remain consistent across the file to minimize visual similarity while disrupting the specific feature vectors for Naive Bayes and Neural Network classifiers.",
+    "Since prior formatting adjustments failed to evade any classifier, apply aggressive and diverse variations to indentation, line lengths, and whitespace around operators across the entire codebase. Maximize bracket placement irregularities and blank line usage to disrupt feature vectors for Random Forest, Naive Bayes, and Neural Network while maintaining code functionality. Ensure these changes are distinct enough to alter structural characteristics without introducing logic alterations, variable renames, or control flow changes.",
+    "Focus on targeted operator spacing and indentation adjustments within the functions that remain vulnerable to detection rather than modifying global formatting structures. Adjust line lengths and bracket placements to create statistical divergence in feature vectors without altering the overall feature profile. Ensure these nuanced formatting tweaks shift the model features while preserving code functionality and avoiding structural changes.",
+    "To maximize evasion effectiveness, apply pervasive changes to bracket placement and blank line usage throughout the entire codebase rather than isolated function modifications. Modify indentation styles and operator whitespace uniformly to disrupt detection mechanisms while maintaining full code functionality and ensuring significant structural divergence across all models without introducing any logic alterations or comment variations.",
+    "Apply aggressive variations to operator spacing and indentation styles specifically inside the functions with remaining structural patterns to disrupt the feature vectors for Random Forest and Naive Bayes. Modify line lengths and bracket placement irregularities within logic blocks to create statistical divergence without altering the overall structural characteristics. Ensure these formatting changes are distributed across the codebase to maximize evasion while maintaining code functionality and preserving existing logic flow.",
+    "Prioritize aggressive modifications to line lengths and bracket placements specifically in the logic sections of Naive Bayes and SGD classifiers to disrupt their feature distribution analysis. These unevaded models rely on consistent structural patterns, so increase the variance in whitespace around operators and indentation depths to create distinct formatting signatures that bypass their detection thresholds. Apply these changes consistently across all vulnerable blocks to maximize evasion probability without altering the underlying code semantics or increasing comment density.",
+    "Focus on extreme inconsistency in indentation levels and bracket nesting specifically within the control flow sections of the most complex functions. Vary whitespace around operators and line lengths aggressively inside these critical logic blocks to disrupt the structural patterns without altering code semantics.",
+    "Prioritize increasing the variance in whitespace immediately surrounding binary operators within the logical conditions of the Naive Bayes model. Vary the blank line usage between function blocks to disrupt feature vector consistency without modifying the code structure.",
+    "Adjust the whitespace immediately surrounding binary operators in the logical conditions of the Naive Bayes model to disrupt its token distribution patterns. Introduce inconsistent indentation levels around control flow statements to alter the structural signature without altering semantic functionality. Apply these formatting changes selectively to maintain natural code flow while maximizing the disruption to detection algorithms.",
+    "Modify bracket placement and line length immediately surrounding logical conditions to disrupt the models' token distribution for Naive Bayes, SGD, and Neural Network. Introduce inconsistent whitespace patterns around operators within control flow sections to alter behavior without altering semantic meaning. Focus specifically on modifying these formatting elements to maximize evasion effectiveness while ensuring the code remains fully functional."
+  ],
+  "files_tested": [
+    "check_bb_augmentation.py",
+    "check_cartoon.py",
+    "check_multiply_hue_and_saturation.py",
+    "dtypes.py",
+    "kps.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Reformat this Python file to disguise the author's style. Change indentation width, line lengths, blank line usage, and whitespace around operators. Do NOT rename variables, change comments, restructure logic, or alter control flow.",
+      "batch_id": "batch_formatting_20260423_828e",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.2803308464893601,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Apply targeted line length variations and operator spacing changes to disrupt the token distributions relied upon by Naive Bayes and Neural Network classifiers. Adjust indentation patterns and bracket placement to create subtle whitespace patterns that evade detection mechanisms while maintaining functional equivalence. Focus specifically on whitespace around critical operators to shift structural characteristics for better evasion without altering the variable names.",
+      "batch_id": "batch_formatting_20260423_ab41",
+      "avg_evasion_rate": 31.25,
+      "avg_stealth_score": 0.4067985282195921,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "To maximize evasion against the remaining models without altering the general document style, apply irregular whitespace patterns around specific operators and non-uniform line lengths to key function bodies. Prioritize these formatting adjustments on the files that failed evasion so that token distributions shift significantly while maintaining the original code structure. Ensure that indentation patterns remain consistent across the file to minimize visual similarity while disrupting the specific feature vectors for Naive Bayes and Neural Network classifiers.",
+      "batch_id": "batch_formatting_20260423_b8b9",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.24073310687466135,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Since prior formatting adjustments failed to evade any classifier, apply aggressive and diverse variations to indentation, line lengths, and whitespace around operators across the entire codebase. Maximize bracket placement irregularities and blank line usage to disrupt feature vectors for Random Forest, Naive Bayes, and Neural Network while maintaining code functionality. Ensure these changes are distinct enough to alter structural characteristics without introducing logic alterations, variable renames, or control flow changes.",
+      "batch_id": "batch_formatting_20260423_b786",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.17124517041033485,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Focus on targeted operator spacing and indentation adjustments within the functions that remain vulnerable to detection rather than modifying global formatting structures. Adjust line lengths and bracket placements to create statistical divergence in feature vectors without altering the overall feature profile. Ensure these nuanced formatting tweaks shift the model features while preserving code functionality and avoiding structural changes.",
+      "batch_id": "batch_formatting_20260423_f14f",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.16044178969994033,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "To maximize evasion effectiveness, apply pervasive changes to bracket placement and blank line usage throughout the entire codebase rather than isolated function modifications. Modify indentation styles and operator whitespace uniformly to disrupt detection mechanisms while maintaining full code functionality and ensuring significant structural divergence across all models without introducing any logic alterations or comment variations.",
+      "batch_id": "batch_formatting_20260423_6984",
+      "avg_evasion_rate": 18.75,
+      "avg_stealth_score": 0.16209341435832778,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Apply aggressive variations to operator spacing and indentation styles specifically inside the functions with remaining structural patterns to disrupt the feature vectors for Random Forest and Naive Bayes. Modify line lengths and bracket placement irregularities within logic blocks to create statistical divergence without altering the overall structural characteristics. Ensure these formatting changes are distributed across the codebase to maximize evasion while maintaining code functionality and preserving existing logic flow.",
+      "batch_id": "batch_formatting_20260423_1f95",
+      "avg_evasion_rate": 8.333333333333334,
+      "avg_stealth_score": 0.2074613165265988,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Prioritize aggressive modifications to line lengths and bracket placements specifically in the logic sections of Naive Bayes and SGD classifiers to disrupt their feature distribution analysis. These unevaded models rely on consistent structural patterns, so increase the variance in whitespace around operators and indentation depths to create distinct formatting signatures that bypass their detection thresholds. Apply these changes consistently across all vulnerable blocks to maximize evasion probability without altering the underlying code semantics or increasing comment density.",
+      "batch_id": "batch_formatting_20260423_b581",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.19849817973948222,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Prioritize aggressive modifications to line lengths and bracket placements specifically in the logic sections of Naive Bayes and SGD classifiers to disrupt their feature distribution analysis. These unevaded models rely on consistent structural patterns, so increase the variance in whitespace around operators and indentation depths to create distinct formatting signatures that bypass their detection thresholds. Apply these changes consistently across all vulnerable blocks to maximize evasion probability without altering the underlying code semantics or increasing comment density.",
+      "batch_id": "batch_formatting_20260423_0fbf",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.021053514904462618,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Focus on extreme inconsistency in indentation levels and bracket nesting specifically within the control flow sections of the most complex functions. Vary whitespace around operators and line lengths aggressively inside these critical logic blocks to disrupt the structural patterns without altering code semantics.",
+      "batch_id": "batch_formatting_20260423_8833",
+      "avg_evasion_rate": 33.333333333333336,
+      "avg_stealth_score": 0.43137488578976013,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 66.66666666666666,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Prioritize increasing the variance in whitespace immediately surrounding binary operators within the logical conditions of the Naive Bayes model. Vary the blank line usage between function blocks to disrupt feature vector consistency without modifying the code structure.",
+      "batch_id": "batch_formatting_20260423_ed75",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.27637963698549645,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Adjust the whitespace immediately surrounding binary operators in the logical conditions of the Naive Bayes model to disrupt its token distribution patterns. Introduce inconsistent indentation levels around control flow statements to alter the structural signature without altering semantic functionality. Apply these formatting changes selectively to maintain natural code flow while maximizing the disruption to detection algorithms.",
+      "batch_id": "batch_formatting_20260423_3af5",
+      "avg_evasion_rate": 8.333333333333334,
+      "avg_stealth_score": 0.22346779750479562,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Modify bracket placement and line length immediately surrounding logical conditions to disrupt the models' token distribution for Naive Bayes, SGD, and Neural Network. Introduce inconsistent whitespace patterns around operators within control flow sections to alter behavior without altering semantic meaning. Focus specifically on modifying these formatting elements to maximize evasion effectiveness while ensuring the code remains fully functional.",
+      "batch_id": "batch_formatting_20260423_611e",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.17519023085887786,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Modify bracket placement and line length immediately surrounding logical conditions to disrupt the models' token distribution for Naive Bayes, SGD, and Neural Network. Introduce inconsistent whitespace patterns around operators within control flow sections to alter behavior without altering semantic meaning. Focus specifically on modifying these formatting elements to maximize evasion effectiveness while ensuring the code remains fully functional.",
+      "batch_id": "batch_formatting_20260423_eca2",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.19444528367487676,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Modify bracket placement and line length immediately surrounding logical conditions to disrupt the models' token distribution for Naive Bayes, SGD, and Neural Network. Introduce inconsistent whitespace patterns around operators within control flow sections to alter behavior without altering semantic meaning. Focus specifically on modifying these formatting elements to maximize evasion effectiveness while ensuring the code remains fully functional.",
+      "batch_id": "batch_formatting_20260423_3b2b",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.37907205134475164,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 0.0
+      }
+    }
+  ],
+  "started_at": "2026-04-23T21:46:16.607000",
+  "finished_at": "2026-04-23T23:48:25.004108",
+  "saved_at": "2026-04-23T23:48:25.004782"
+}

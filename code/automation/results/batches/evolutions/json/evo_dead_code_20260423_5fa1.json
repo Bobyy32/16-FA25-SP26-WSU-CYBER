@@ -1,0 +1,284 @@
+{
+  "evolution_id": "evo_dead_code_20260423_5fa1",
+  "status": "max_rounds_reached",
+  "category": "dead_code",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.75,
+  "best_round": 15,
+  "best_evasion_rate": 62.5,
+  "best_prompt": "Target unreachable conditional blocks by introducing deeply nested arithmetic operations that evaluate to false. Modify the internal data type conversions within these dead code regions to alter token patterns without affecting the executed program output. Ensure these modifications disrupt the feature vectors in Neural Networks and Naive Bayes without altering active logic.",
+  "resumed_from": null,
+  "initial_prompt": "Inject dead code into this Python file to disguise the author's style. Add unused imports, unused local variables with short names, and unreachable blocks after return statements. Do NOT rename, reformat, change comments, or alter control flow.",
+  "all_prompts": [
+    "Inject dead code into this Python file to disguise the author's style. Add unused imports, unused local variables with short names, and unreachable blocks after return statements. Do NOT rename, reformat, change comments, or alter control flow.",
+    "Inject nested conditional branches and unreachable exception handlers to obscure token distributions and introduce syntactic complexity. These patterns create variable usage noise that affects feature vectors without triggering code quality detectors. Ensure all injected code is logically inactive but syntactically valid to confuse authorship analysis.",
+    "Focus on Random Forest and Naive Bayes by modifying existing unused variable declarations to obscure token patterns without altering execution flow. Avoid inserting new unreachable blocks or extra statements, as these increase feature divergence without improving evasion efficacy. Adjust the identifiers of current unused code elements to better align with the evasion patterns required for these specific classifiers.",
+    "Inject deeply nested unreachable blocks that contain complex, non-standard identifier patterns to maximize token noise without altering logic. Ensure every dead code block remains structurally intact but completely inert to the execution flow. Include high-density blocks of unused identifiers specifically designed to trigger feature divergence across all four models.",
+    "Modify existing conditional statements by embedding deeply nested unreachable blocks containing complex non-functional logic rather than adding isolated or dummy dead code. Prioritize integrating these blocks into the main execution flow's logic gates to maximize token disruption while avoiding the use of simple pass statements or random whitespace which degrade stealth efficacy.",
+    "Modify existing unused variables by changing their type to non-primitive to disrupt token patterns for Random Forest and Naive Bayes. Ensure that any changes to current dead code elements do not introduce new identifiers or significantly alter the code structure.",
+    "Inject deeply nested unreachable blocks containing complex, non-standard identifier sequences within unused variable initializers to alter the structural characteristics of the code representation. Ensure these dead regions mimic the syntactic behavior of active variables without altering the actual code logic.",
+    "Modify existing unused variable initializations by altering their internal complexity and type to disrupt the token patterns used by Random Forest and Naive Bayes models. Focus on changing the internal structure of these dead regions to disrupt feature vectors without introducing new identifiers or adding unnecessary pass statements.",
+    "Modify unused variable initializations to contain deeply nested arithmetic operations that do not affect variable types. Transform unreachable blocks to replicate the syntactic signatures of active execution paths. Apply these aggressive structural modifications uniformly across all files to maximize disruption of the classification signals.",
+    "Modify the expressions within existing unused variable assignments and unreachable branches to introduce complex arithmetic chains and unique identifier combinations. Ensure these adjustments disrupt the feature patterns without adding new structural elements that would make the code look overly modified. Target the classifiers by maximizing the feature divergence within existing inactive code blocks while maintaining minimal structural deviation.",
+    "Aggressively modify the arithmetic complexity and data types of existing unused variable initializations to disrupt the token patterns used by all four classifiers. Implement deeply nested mathematical chains inside these unreachable blocks to maximize output variation without introducing new identifiers or extra statements. Ensure these changes target the specific inactive code regions to create meaningful token disruption without altering the active logic.",
+    "Target unreachable conditional blocks by introducing deeply nested arithmetic operations that evaluate to false. Modify the internal data type conversions within these dead code regions to alter token patterns without affecting the executed program output. Ensure these modifications disrupt the feature vectors in Neural Networks and Naive Bayes without altering active logic."
+  ],
+  "files_tested": [
+    "check_average_blur.py",
+    "check_bb_augmentation.py",
+    "check_cartoon.py",
+    "check_jpeg_compression.py",
+    "dtypes.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Inject dead code into this Python file to disguise the author's style. Add unused imports, unused local variables with short names, and unreachable blocks after return statements. Do NOT rename, reformat, change comments, or alter control flow.",
+      "batch_id": "batch_dead_code_20260423_cd9a",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.19089559009398635,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Inject nested conditional branches and unreachable exception handlers to obscure token distributions and introduce syntactic complexity. These patterns create variable usage noise that affects feature vectors without triggering code quality detectors. Ensure all injected code is logically inactive but syntactically valid to confuse authorship analysis.",
+      "batch_id": "batch_dead_code_20260423_8539",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.3287305553042401,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Inject nested conditional branches and unreachable exception handlers to obscure token distributions and introduce syntactic complexity. These patterns create variable usage noise that affects feature vectors without triggering code quality detectors. Ensure all injected code is logically inactive but syntactically valid to confuse authorship analysis.",
+      "batch_id": "batch_dead_code_20260424_a9d1",
+      "avg_evasion_rate": 37.5,
+      "avg_stealth_score": 0.5161580406311462,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Focus on Random Forest and Naive Bayes by modifying existing unused variable declarations to obscure token patterns without altering execution flow. Avoid inserting new unreachable blocks or extra statements, as these increase feature divergence without improving evasion efficacy. Adjust the identifiers of current unused code elements to better align with the evasion patterns required for these specific classifiers.",
+      "batch_id": "batch_dead_code_20260424_a994",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.2252033458665096,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Inject deeply nested unreachable blocks that contain complex, non-standard identifier patterns to maximize token noise without altering logic. Ensure every dead code block remains structurally intact but completely inert to the execution flow. Include high-density blocks of unused identifiers specifically designed to trigger feature divergence across all four models.",
+      "batch_id": "batch_dead_code_20260424_430f",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.7057150347975488,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 25.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 100.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Inject deeply nested unreachable blocks that contain complex, non-standard identifier patterns to maximize token noise without altering logic. Ensure every dead code block remains structurally intact but completely inert to the execution flow. Include high-density blocks of unused identifiers specifically designed to trigger feature divergence across all four models.",
+      "batch_id": "batch_dead_code_20260424_847e",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.3462408570701345,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Modify existing conditional statements by embedding deeply nested unreachable blocks containing complex non-functional logic rather than adding isolated or dummy dead code. Prioritize integrating these blocks into the main execution flow's logic gates to maximize token disruption while avoiding the use of simple pass statements or random whitespace which degrade stealth efficacy.",
+      "batch_id": "batch_dead_code_20260424_1064",
+      "avg_evasion_rate": 31.25,
+      "avg_stealth_score": 0.3311128368611738,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Modify existing unused variables by changing their type to non-primitive to disrupt token patterns for Random Forest and Naive Bayes. Ensure that any changes to current dead code elements do not introduce new identifiers or significantly alter the code structure.",
+      "batch_id": "batch_dead_code_20260424_d290",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.22314247503484624,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Inject deeply nested unreachable blocks containing complex, non-standard identifier sequences within unused variable initializers to alter the structural characteristics of the code representation. Ensure these dead regions mimic the syntactic behavior of active variables without altering the actual code logic.",
+      "batch_id": "batch_dead_code_20260424_3501",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.2721007435059615,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Modify existing unused variable initializations by altering their internal complexity and type to disrupt the token patterns used by Random Forest and Naive Bayes models. Focus on changing the internal structure of these dead regions to disrupt feature vectors without introducing new identifiers or adding unnecessary pass statements.",
+      "batch_id": "batch_dead_code_20260424_7bca",
+      "avg_evasion_rate": 20.0,
+      "avg_stealth_score": 0.18483302587693756,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Modify unused variable initializations to contain deeply nested arithmetic operations that do not affect variable types. Transform unreachable blocks to replicate the syntactic signatures of active execution paths. Apply these aggressive structural modifications uniformly across all files to maximize disruption of the classification signals.",
+      "batch_id": "batch_dead_code_20260424_6a13",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.14722512505705135,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Modify the expressions within existing unused variable assignments and unreachable branches to introduce complex arithmetic chains and unique identifier combinations. Ensure these adjustments disrupt the feature patterns without adding new structural elements that would make the code look overly modified. Target the classifiers by maximizing the feature divergence within existing inactive code blocks while maintaining minimal structural deviation.",
+      "batch_id": "batch_dead_code_20260424_d3ea",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.19064588767047405,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Aggressively modify the arithmetic complexity and data types of existing unused variable initializations to disrupt the token patterns used by all four classifiers. Implement deeply nested mathematical chains inside these unreachable blocks to maximize output variation without introducing new identifiers or extra statements. Ensure these changes target the specific inactive code regions to create meaningful token disruption without altering the active logic.",
+      "batch_id": "batch_dead_code_20260424_2234",
+      "avg_evasion_rate": 16.666666666666668,
+      "avg_stealth_score": 0.22887620533151784,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Aggressively modify the arithmetic complexity and data types of existing unused variable initializations to disrupt the token patterns used by all four classifiers. Implement deeply nested mathematical chains inside these unreachable blocks to maximize output variation without introducing new identifiers or extra statements. Ensure these changes target the specific inactive code regions to create meaningful token disruption without altering the active logic.",
+      "batch_id": "batch_dead_code_20260424_04fb",
+      "avg_evasion_rate": 16.666666666666668,
+      "avg_stealth_score": 0.18266963255024715,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Target unreachable conditional blocks by introducing deeply nested arithmetic operations that evaluate to false. Modify the internal data type conversions within these dead code regions to alter token patterns without affecting the executed program output. Ensure these modifications disrupt the feature vectors in Neural Networks and Naive Bayes without altering active logic.",
+      "batch_id": "batch_dead_code_20260424_a9ad",
+      "avg_evasion_rate": 62.5,
+      "avg_stealth_score": 0.5736919033726371,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 25.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 50.0,
+        "sgd_classifier": 100.0,
+        "neural_network": 50.0
+      }
+    }
+  ],
+  "started_at": "2026-04-23T23:48:32.462325",
+  "finished_at": "2026-04-24T01:47:03.163064",
+  "saved_at": "2026-04-24T01:47:03.166403"
+}

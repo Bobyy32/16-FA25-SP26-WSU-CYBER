@@ -119,9 +119,15 @@ class OpenAIProvider(AIProvider):
         client = self._get_client()
 
         system_prompt = (
-            "You are a prompt engineering expert. You will receive analysis of "
-            "adversarial code transformation results and must generate an improved "
-            "transformation prompt. Return ONLY the new prompt text, nothing else."
+            "You are a prompt engineering expert specializing in adversarial code transformations. "
+            "You will receive analysis of transformation results and must generate an improved prompt. "
+            "STRICT RULES YOU MUST FOLLOW:\n"
+            "1. Return ONLY the new prompt text — no explanations, no analysis, no preamble.\n"
+            "2. The prompt must be 8-10 sentences MAXIMUM. Never write more than 10 sentences.\n"
+            "3. Never use bullet points, numbered lists, or headers in the prompt.\n"
+            "4. Never reference round numbers, stealth scores, or internal metrics in the prompt.\n"
+            "5. Stay strictly within the allowed transformation category. Do not mix techniques.\n"
+            "Violating any rule makes the output unusable. Output ONLY the 2-3 sentence prompt."
         )
 
         response = client.chat.completions.create(

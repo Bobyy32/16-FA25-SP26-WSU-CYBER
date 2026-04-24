@@ -243,7 +243,37 @@ def evolve_prompt(
     if not new_prompt:
         raise RuntimeError("AI provider returned empty prompt")
 
+    new_prompt = _sanitize_prompt(new_prompt)
+
     return new_prompt
+
+
+def _sanitize_prompt(prompt: str) -> str:
+    """Strip rule violations from an evolved prompt as a safety net."""
+    import re
+
+    lines = prompt.strip().splitlines()
+
+    # Drop lines that look like bullet points, numbered steps, or headers
+    cleaned = []
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if re.match(r"^(\*|-|•|\d+[.)]) ", stripped):
+            continue
+        if stripped.startswith("#"):
+            continue
+        cleaned.append(stripped)
+
+    # Rejoin into sentences and enforce 3-sentence max
+    text = " ".join(cleaned)
+    sentences = re.split(r"(?<=[.!?])\s+", text.strip())
+    sentences = [s for s in sentences if s]
+    if len(sentences) > 10:
+        sentences = sentences[:10]
+
+    return " ".join(sentences)
 
 
 def _analyze_trends(batch_results: Dict[str, Any], round_number: int) -> str:

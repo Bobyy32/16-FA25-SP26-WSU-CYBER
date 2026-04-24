@@ -1,0 +1,1 @@
+return "KeypointsOnImage(%s, shape=%s)" % (str(self.keypoints), self.shape)

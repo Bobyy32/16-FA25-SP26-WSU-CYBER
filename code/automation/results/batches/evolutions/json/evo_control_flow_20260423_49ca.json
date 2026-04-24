@@ -1,0 +1,283 @@
+{
+  "evolution_id": "evo_control_flow_20260423_49ca",
+  "status": "max_rounds_reached",
+  "category": "control_flow",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.75,
+  "best_round": 7,
+  "best_evasion_rate": 50.0,
+  "best_prompt": "Aggressively restructure conditional logic into nested dict dispatch or match/case blocks to disrupt keyword n-grams for Naive Bayes and SGD Classifier. Replace linear if-else chains with complex nested boolean evaluations while converting critical for loops to comprehensions to alter token distributions. Ensure all four models are affected by applying these structural changes across diverse control flow patterns without modifying variable names.",
+  "resumed_from": null,
+  "initial_prompt": "Rewrite the control flow of this Python file to disguise the author's style. Convert loops to comprehensions or vice versa, replace if/elif chains with dict dispatch, and swap ternary expressions for full if/else blocks. Do NOT rename variables, change comments, reformat, or add dead code.",
+  "all_prompts": [
+    "Rewrite the control flow of this Python file to disguise the author's style. Convert loops to comprehensions or vice versa, replace if/elif chains with dict dispatch, and swap ternary expressions for full if/else blocks. Do NOT rename variables, change comments, reformat, or add dead code.",
+    "Invert boolean conditions in critical logical operators to alter token sequences and change keyword usage. Replace simple if-else blocks with deeply nested conditionals and convert standard for loops to comprehensions where possible. Ensure loop structures remain functional while preserving functionality without changing variable names.",
+    "Modify the control flow to invert boolean conditions in critical logical operators to alter token sequences for Naive Bayes evasion. Apply comprehension swaps selectively to minimize feature changes while preserving functionality without introducing dead code or random whitespace.",
+    "Modify critical boolean conditions to invert specific token sequences that Random Forest and Naive Bayes rely on for classification. Replace direct ternary operators with deeply nested if-else blocks to introduce structural variation without altering variables. Transform complex elif chains into dict dispatch logic to disrupt keyword sequences while maintaining exact functionality.",
+    "Aggressively restructure conditional logic into nested dict dispatch or match/case blocks to disrupt keyword n-grams for Naive Bayes and SGD Classifier. Replace linear if-else chains with complex nested boolean evaluations while converting critical for loops to comprehensions to alter token distributions. Ensure all four models are affected by applying these structural changes across diverse control flow patterns without modifying variable names.",
+    "Target the remaining classification models by inverting boolean conditions in critical logical operators to disrupt token sequences without altering variable names. Replace specific ternary operators with deeply nested if-else blocks to introduce structural variation that affects token distributions while preserving code functionality. Ensure all control flow adjustments remain minimal and functional to maintain code behavior without introducing structural noise.",
+    "Target the failing models (Naive Bayes, SGD, Random Forest, NN) by converting linear if-elif chains into early-return nested conditionals to disrupt their token sequences. Swap while loops for for loops where applicable to alter token distributions while ensuring all code functionality remains identical to the original. Prioritize these changes in the modules currently exhibiting zero evasion to maximize evasion without triggering a violation of functionality.",
+    "Target the specific models with incomplete evasion by nesting complex conditional blocks inside loops to generate unique token sequences that disrupt n-gram patterns without altering variable names. Apply inverted logical operators to critical branches to maintain code functionality while creating complex keyword distributions. Prioritize these surgical adjustments to ensure the code changes remain minimal and unobtrusive.",
+    "Aggressively replace linear if-elif chains with match/case statements or complex boolean combinations to create distinct token sequences that evade detection. Convert while loops to for loops or vice versa in critical execution paths to alter keyword distributions without modifying variable names. Ensure all structural modifications strictly maintain the original code logic to prevent functionality violations while maximizing evasion rates.",
+    "Target the remaining un-evaded models by replacing linear if-elif chains with deeply nested match/case structures to create dense token sequences. Apply inverted boolean logic to critical decision branches inside while loops to maximize n-gram variation without altering variable names. Focus these structural modifications exclusively on critical execution paths that previously failed evasion while ensuring functionality is preserved.",
+    "Focus on converting linear for and while loops into dense comprehensions or match/case structures to disrupt n-gram patterns in the most resistant models. Use inverted boolean conditions and complex conditional blocks to alter keyword distributions without modifying variable names or code formatting. Ensure logical execution order remains unchanged to maintain functionality."
+  ],
+  "files_tested": [
+    "check_bb_augmentation.py",
+    "check_polygons_stay_valid_during_augmentation.py",
+    "convolutional.py",
+    "kps.py",
+    "poly_point_isect_py2py3.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Rewrite the control flow of this Python file to disguise the author's style. Convert loops to comprehensions or vice versa, replace if/elif chains with dict dispatch, and swap ternary expressions for full if/else blocks. Do NOT rename variables, change comments, reformat, or add dead code.",
+      "batch_id": "batch_control_flow_20260423_362f",
+      "avg_evasion_rate": 41.666666666666664,
+      "avg_stealth_score": 0.47329540451905655,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 33.33333333333333,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 66.66666666666666
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Invert boolean conditions in critical logical operators to alter token sequences and change keyword usage. Replace simple if-else blocks with deeply nested conditionals and convert standard for loops to comprehensions where possible. Ensure loop structures remain functional while preserving functionality without changing variable names.",
+      "batch_id": "batch_control_flow_20260423_ec86",
+      "avg_evasion_rate": 31.25,
+      "avg_stealth_score": 0.37278582032887303,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Invert boolean conditions in critical logical operators to alter token sequences and change keyword usage. Replace simple if-else blocks with deeply nested conditionals and convert standard for loops to comprehensions where possible. Ensure loop structures remain functional while preserving functionality without changing variable names.",
+      "batch_id": "batch_control_flow_20260423_542f",
+      "avg_evasion_rate": 43.75,
+      "avg_stealth_score": 0.5150569660591099,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Modify the control flow to invert boolean conditions in critical logical operators to alter token sequences for Naive Bayes evasion. Apply comprehension swaps selectively to minimize feature changes while preserving functionality without introducing dead code or random whitespace.",
+      "batch_id": "batch_control_flow_20260423_1d52",
+      "avg_evasion_rate": 45.0,
+      "avg_stealth_score": 0.4155122061662884,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 2,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 40.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 60.0
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Modify critical boolean conditions to invert specific token sequences that Random Forest and Naive Bayes rely on for classification. Replace direct ternary operators with deeply nested if-else blocks to introduce structural variation without altering variables. Transform complex elif chains into dict dispatch logic to disrupt keyword sequences while maintaining exact functionality.",
+      "batch_id": "batch_control_flow_20260423_befc",
+      "avg_evasion_rate": 12.5,
+      "avg_stealth_score": 0.4112339139697192,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Aggressively restructure conditional logic into nested dict dispatch or match/case blocks to disrupt keyword n-grams for Naive Bayes and SGD Classifier. Replace linear if-else chains with complex nested boolean evaluations while converting critical for loops to comprehensions to alter token distributions. Ensure all four models are affected by applying these structural changes across diverse control flow patterns without modifying variable names.",
+      "batch_id": "batch_control_flow_20260423_77a5",
+      "avg_evasion_rate": 31.25,
+      "avg_stealth_score": 0.44510530660423836,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Aggressively restructure conditional logic into nested dict dispatch or match/case blocks to disrupt keyword n-grams for Naive Bayes and SGD Classifier. Replace linear if-else chains with complex nested boolean evaluations while converting critical for loops to comprehensions to alter token distributions. Ensure all four models are affected by applying these structural changes across diverse control flow patterns without modifying variable names.",
+      "batch_id": "batch_control_flow_20260423_b54b",
+      "avg_evasion_rate": 50.0,
+      "avg_stealth_score": 0.5020478251342058,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 75.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Aggressively restructure conditional logic into nested dict dispatch or match/case blocks to disrupt keyword n-grams for Naive Bayes and SGD Classifier. Replace linear if-else chains with complex nested boolean evaluations while converting critical for loops to comprehensions to alter token distributions. Ensure all four models are affected by applying these structural changes across diverse control flow patterns without modifying variable names.",
+      "batch_id": "batch_control_flow_20260423_fecf",
+      "avg_evasion_rate": 30.0,
+      "avg_stealth_score": 0.439751441309516,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Target the remaining classification models by inverting boolean conditions in critical logical operators to disrupt token sequences without altering variable names. Replace specific ternary operators with deeply nested if-else blocks to introduce structural variation that affects token distributions while preserving code functionality. Ensure all control flow adjustments remain minimal and functional to maintain code behavior without introducing structural noise.",
+      "batch_id": "batch_control_flow_20260423_74df",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.3904509540725576,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Target the failing models (Naive Bayes, SGD, Random Forest, NN) by converting linear if-elif chains into early-return nested conditionals to disrupt their token sequences. Swap while loops for for loops where applicable to alter token distributions while ensuring all code functionality remains identical to the original. Prioritize these changes in the modules currently exhibiting zero evasion to maximize evasion without triggering a violation of functionality.",
+      "batch_id": "batch_control_flow_20260423_5d38",
+      "avg_evasion_rate": 43.75,
+      "avg_stealth_score": 0.4889519575319779,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "Target the specific models with incomplete evasion by nesting complex conditional blocks inside loops to generate unique token sequences that disrupt n-gram patterns without altering variable names. Apply inverted logical operators to critical branches to maintain code functionality while creating complex keyword distributions. Prioritize these surgical adjustments to ensure the code changes remain minimal and unobtrusive.",
+      "batch_id": "batch_control_flow_20260423_2d68",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.3702828249513791,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Aggressively replace linear if-elif chains with match/case statements or complex boolean combinations to create distinct token sequences that evade detection. Convert while loops to for loops or vice versa in critical execution paths to alter keyword distributions without modifying variable names. Ensure all structural modifications strictly maintain the original code logic to prevent functionality violations while maximizing evasion rates.",
+      "batch_id": "batch_control_flow_20260423_dc19",
+      "avg_evasion_rate": 35.0,
+      "avg_stealth_score": 0.39169361750408405,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 40.0,
+        "neural_network": 40.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Aggressively replace linear if-elif chains with match/case statements or complex boolean combinations to create distinct token sequences that evade detection. Convert while loops to for loops or vice versa in critical execution paths to alter keyword distributions without modifying variable names. Ensure all structural modifications strictly maintain the original code logic to prevent functionality violations while maximizing evasion rates.",
+      "batch_id": "batch_control_flow_20260423_c9a9",
+      "avg_evasion_rate": 12.5,
+      "avg_stealth_score": 0.37651479515694763,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Target the remaining un-evaded models by replacing linear if-elif chains with deeply nested match/case structures to create dense token sequences. Apply inverted boolean logic to critical decision branches inside while loops to maximize n-gram variation without altering variable names. Focus these structural modifications exclusively on critical execution paths that previously failed evasion while ensuring functionality is preserved.",
+      "batch_id": "batch_control_flow_20260423_ba6e",
+      "avg_evasion_rate": 37.5,
+      "avg_stealth_score": 0.490491830384235,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 25.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 25.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Focus on converting linear for and while loops into dense comprehensions or match/case structures to disrupt n-gram patterns in the most resistant models. Use inverted boolean conditions and complex conditional blocks to alter keyword distributions without modifying variable names or code formatting. Ensure logical execution order remains unchanged to maintain functionality.",
+      "batch_id": "batch_control_flow_20260423_acbc",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.3867504937023281,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 20.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 40.0
+      }
+    }
+  ],
+  "started_at": "2026-04-23T12:53:57.502371",
+  "finished_at": "2026-04-23T14:31:50.859405",
+  "saved_at": "2026-04-23T14:31:50.861411"
+}

@@ -1,0 +1,3 @@
+You_0to1_resized = np.clip(arr_0to1_resized, 0.0, 1.0)
+    # ...
+    return HeatmapsOnImage.from_0to1(...)

@@ -1,0 +1,285 @@
+{
+  "evolution_id": "evo_comments_20260423_a49f",
+  "status": "max_rounds_reached",
+  "category": "comments",
+  "author": "aleju",
+  "provider": "ollama",
+  "model": "qwen3.5:4b",
+  "batch_size": 5,
+  "max_rounds": 15,
+  "rounds_completed": 15,
+  "target_evasion_rate": 75.0,
+  "target_stealth_max": 0.75,
+  "best_round": 1,
+  "best_evasion_rate": 50.0,
+  "best_prompt": "Rewrite the comments and docstrings in this Python file to disguise the author's style. Add, remove, or rewrite inline comments, block comments, and docstrings \u2014 changing density, tone, and style. Do NOT rename variables, reformat, restructure, or alter control flow.",
+  "resumed_from": null,
+  "initial_prompt": "Rewrite the comments and docstrings in this Python file to disguise the author's style. Add, remove, or rewrite inline comments, block comments, and docstrings \u2014 changing density, tone, and style. Do NOT rename variables, reformat, restructure, or alter control flow.",
+  "all_prompts": [
+    "Rewrite the comments and docstrings in this Python file to disguise the author's style. Add, remove, or rewrite inline comments, block comments, and docstrings \u2014 changing density, tone, and style. Do NOT rename variables, reformat, restructure, or alter control flow.",
+    "Focus your modifications on rewriting inline comments, docstrings, and block comments to create varied token patterns while maintaining code functionality. Strictly avoid renaming variables, restructuring control flow, or altering formatting to prevent triggering detection penalties. Generate targeted comment changes that evade model detection without introducing empty code blocks or unnecessary structural modifications.",
+    "Focus on the textual content of comments to disrupt detection without altering code structure. Aggressively vary the density and length of docstrings, inline, and block comments to create unique pattern variations. Ensure all changes maintain functionality while avoiding the introduction of dummy or random content.",
+    "Aggressively vary comment text content to disrupt authorship features by shifting phrasing, vocabulary, and length across inline, block, and docstring styles. Modify comment structures to maximize token distribution changes without altering any functional code or introducing unnecessary whitespace. Ensure all modifications remain within the original codebase structure while avoiding dummy statements or dead code.",
+    "Focus on varying the text density and vocabulary within inline and block comments to create unique content without significantly altering comment counts or line lengths. Ensure all changes remain functional and avoid introducing structural modifications or extra whitespace that might trigger detection algorithms.",
+    "Diversify the vocabulary and structure within inline, block, and docstring comments to create more readable and varied documentation. Ensure all variations remain functionally consistent without introducing dummy code or unnecessary structural changes. Prioritize using distinct phrasing to improve the overall clarity and expressiveness of the code documentation.",
+    "Inject unique technical terminology into existing docstrings and inline comments to shift the statistical divergence of token distributions for the failing Naive Bayes and Neural Network models. Maximize token variety in this targeted rewriting without altering comment counts or introducing structural changes that inflate the stealth score.",
+    "Rewrite inline, block, and docstring content to introduce unique semantic phrasing that shifts lexical patterns significantly across the targeted models. Replace common comment patterns with specific technical jargon and vary sentence structures to increase stylistic distance from the original code. Add or remove comments based on function to modify comment counts without altering variable names, import styles, or control flow structures.",
+    "Aggressively rewrite all existing docstrings and inline comments specifically for the failing Naive Bayes and Neural Network models to maximize token divergence through unique semantic phrasing and specific domain jargon. Replace common standard library references while varying sentence structures, ensuring no variable names, imports, code structure are altered, no blank lines or dead code added, and focusing exclusively on modifying lexical content to bypass classification.",
+    "The prompt should instruct the AI to modify existing comment text to increase linguistic diversity and improve code readability without altering the original function logic. It should also request the exclusion of technical jargon that is easily identifiable in standard codebases to ensure better integration.",
+    "Diversify the linguistic structure by varying the length and position of inline and block comments without altering variable names or logic. Rewrite existing docstrings to include distinct phrasing patterns that increase lexical distance while ensuring the code remains functional and readable.",
+    "Rewrite all existing inline, block, and docstring comments to maximize semantic divergence while preserving exact function logic. Prioritize rephrasing technical terminology and altering sentence structures in every comment to confuse the attribution models without introducing new code patterns. Do not add new comments or modify variable names, imports, or code formatting, as these patterns may be detected.",
+    "Focus on rewriting existing docstrings and inline comment text to introduce high lexical variance that disrupts token-level feature extraction. Ensure the rephrasing uses specific technical terminology distinct from standard patterns to mislead classifiers like Naive Bayes without altering logic. Avoid expanding comment density or changing syntax, as these actions increase the attribution risk and do not improve evasion rates."
+  ],
+  "files_tested": [
+    "arithmetic.py",
+    "bbs.py",
+    "check_impulse_noise.py",
+    "check_multiply_hue_and_saturation.py",
+    "check_polygons_stay_valid_during_augmentation.py"
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "prompt": "Rewrite the comments and docstrings in this Python file to disguise the author's style. Add, remove, or rewrite inline comments, block comments, and docstrings \u2014 changing density, tone, and style. Do NOT rename variables, reformat, restructure, or alter control flow.",
+      "batch_id": "batch_comments_20260423_0a5a",
+      "avg_evasion_rate": 50.0,
+      "avg_stealth_score": 0.3792542759299954,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 50.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 2,
+      "prompt": "Focus your modifications on rewriting inline comments, docstrings, and block comments to create varied token patterns while maintaining code functionality. Strictly avoid renaming variables, restructuring control flow, or altering formatting to prevent triggering detection penalties. Generate targeted comment changes that evade model detection without introducing empty code blocks or unnecessary structural modifications.",
+      "batch_id": "batch_comments_20260423_4e13",
+      "avg_evasion_rate": 18.75,
+      "avg_stealth_score": 0.40732203500064157,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 3,
+      "prompt": "Focus on the textual content of comments to disrupt detection without altering code structure. Aggressively vary the density and length of docstrings, inline, and block comments to create unique pattern variations. Ensure all changes maintain functionality while avoiding the introduction of dummy or random content.",
+      "batch_id": "batch_comments_20260423_56e0",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.4177319081189331,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 4,
+      "prompt": "Aggressively vary comment text content to disrupt authorship features by shifting phrasing, vocabulary, and length across inline, block, and docstring styles. Modify comment structures to maximize token distribution changes without altering any functional code or introducing unnecessary whitespace. Ensure all modifications remain within the original codebase structure while avoiding dummy statements or dead code.",
+      "batch_id": "batch_comments_20260423_4457",
+      "avg_evasion_rate": 33.333333333333336,
+      "avg_stealth_score": 0.46645877299514793,
+      "best_evasion_rate": 100.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 1,
+      "per_model_evasion_rates": {
+        "random_forest": 33.33333333333333,
+        "naive_bayes": 33.33333333333333,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 33.33333333333333
+      }
+    },
+    {
+      "round": 5,
+      "prompt": "Focus on varying the text density and vocabulary within inline and block comments to create unique content without significantly altering comment counts or line lengths. Ensure all changes remain functional and avoid introducing structural modifications or extra whitespace that might trigger detection algorithms.",
+      "batch_id": "batch_comments_20260423_5948",
+      "avg_evasion_rate": 6.25,
+      "avg_stealth_score": 0.4476494716311486,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 25.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 6,
+      "prompt": "Diversify the vocabulary and structure within inline, block, and docstring comments to create more readable and varied documentation. Ensure all variations remain functionally consistent without introducing dummy code or unnecessary structural changes. Prioritize using distinct phrasing to improve the overall clarity and expressiveness of the code documentation.",
+      "batch_id": "batch_comments_20260423_c1e1",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.4235737540617961,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 7,
+      "prompt": "Diversify the vocabulary and structure within inline, block, and docstring comments to create more readable and varied documentation. Ensure all variations remain functionally consistent without introducing dummy code or unnecessary structural changes. Prioritize using distinct phrasing to improve the overall clarity and expressiveness of the code documentation.",
+      "batch_id": "batch_comments_20260423_7212",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.38712169573989114,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 8,
+      "prompt": "Inject unique technical terminology into existing docstrings and inline comments to shift the statistical divergence of token distributions for the failing Naive Bayes and Neural Network models. Maximize token variety in this targeted rewriting without altering comment counts or introducing structural changes that inflate the stealth score.",
+      "batch_id": "batch_comments_20260423_ce14",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.19974485047736643,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 9,
+      "prompt": "Rewrite inline, block, and docstring content to introduce unique semantic phrasing that shifts lexical patterns significantly across the targeted models. Replace common comment patterns with specific technical jargon and vary sentence structures to increase stylistic distance from the original code. Add or remove comments based on function to modify comment counts without altering variable names, import styles, or control flow structures.",
+      "batch_id": "batch_comments_20260423_a573",
+      "avg_evasion_rate": 18.75,
+      "avg_stealth_score": 0.42276339016991726,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 25.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 10,
+      "prompt": "Aggressively rewrite all existing docstrings and inline comments specifically for the failing Naive Bayes and Neural Network models to maximize token divergence through unique semantic phrasing and specific domain jargon. Replace common standard library references while varying sentence structures, ensuring no variable names, imports, code structure are altered, no blank lines or dead code added, and focusing exclusively on modifying lexical content to bypass classification.",
+      "batch_id": "batch_comments_20260423_d68c",
+      "avg_evasion_rate": 10.0,
+      "avg_stealth_score": 0.3202737803143236,
+      "best_evasion_rate": 25.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 40.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 11,
+      "prompt": "The prompt should instruct the AI to modify existing comment text to increase linguistic diversity and improve code readability without altering the original function logic. It should also request the exclusion of technical jargon that is easily identifiable in standard codebases to ensure better integration.",
+      "batch_id": "batch_comments_20260423_cfd0",
+      "avg_evasion_rate": 15.0,
+      "avg_stealth_score": 0.42417669735544294,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 20.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 20.0,
+        "neural_network": 20.0
+      }
+    },
+    {
+      "round": 12,
+      "prompt": "Diversify the linguistic structure by varying the length and position of inline and block comments without altering variable names or logic. Rewrite existing docstrings to include distinct phrasing patterns that increase lexical distance while ensuring the code remains functional and readable.",
+      "batch_id": "batch_comments_20260423_fa24",
+      "avg_evasion_rate": 0.0,
+      "avg_stealth_score": 0.32507415725707284,
+      "best_evasion_rate": 0.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 0.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 0.0,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 13,
+      "prompt": "Rewrite all existing inline, block, and docstring comments to maximize semantic divergence while preserving exact function logic. Prioritize rephrasing technical terminology and altering sentence structures in every comment to confuse the attribution models without introducing new code patterns. Do not add new comments or modify variable names, imports, or code formatting, as these patterns may be detected.",
+      "batch_id": "batch_comments_20260423_3187",
+      "avg_evasion_rate": 37.5,
+      "avg_stealth_score": 0.5901146152948233,
+      "best_evasion_rate": 75.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 50.0
+      }
+    },
+    {
+      "round": 14,
+      "prompt": "Rewrite all existing inline, block, and docstring comments to maximize semantic divergence while preserving exact function logic. Prioritize rephrasing technical terminology and altering sentence structures in every comment to confuse the attribution models without introducing new code patterns. Do not add new comments or modify variable names, imports, or code formatting, as these patterns may be detected.",
+      "batch_id": "batch_comments_20260423_2966",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.46182598252346785,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 66.66666666666666,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 33.33333333333333,
+        "neural_network": 0.0
+      }
+    },
+    {
+      "round": 15,
+      "prompt": "Focus on rewriting existing docstrings and inline comment text to introduce high lexical variance that disrupts token-level feature extraction. Ensure the rephrasing uses specific technical terminology distinct from standard patterns to mislead classifiers like Naive Bayes without altering logic. Avoid expanding comment density or changing syntax, as these actions increase the attribution risk and do not improve evasion rates.",
+      "batch_id": "batch_comments_20260423_4639",
+      "avg_evasion_rate": 25.0,
+      "avg_stealth_score": 0.44521031690204776,
+      "best_evasion_rate": 50.0,
+      "worst_evasion_rate": 0.0,
+      "full_evasion_count": 0,
+      "per_model_evasion_rates": {
+        "random_forest": 50.0,
+        "naive_bayes": 0.0,
+        "sgd_classifier": 50.0,
+        "neural_network": 0.0
+      }
+    }
+  ],
+  "started_at": "2026-04-23T14:48:18.185448",
+  "finished_at": "2026-04-23T16:49:32.605169",
+  "saved_at": "2026-04-23T16:49:32.605169"
+}
